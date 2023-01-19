@@ -8,7 +8,7 @@ int main()
 }
 
 // 10164
-// int f[15][15], a[15]; // f[i][j]´ú±íiÎ»Êý×îºóÒ»Î»È¡j¿ÉÒÔµÃµ½µÄ×Ü·½°¸Êý
+// int f[15][15], a[15]; // f[i][j]ï¿½ï¿½ï¿½ï¿½iÎ»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»È¡jï¿½ï¿½ï¿½ÔµÃµï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½ï¿½ï¿½
 // inline void nt()
 // {
 // 	register int i, j, k;
@@ -33,12 +33,12 @@ int main()
 // 	register int i, j;
 // 	for (i = k; i >= 1; --i)
 // 	{
-// 		for (j = last; j <= a[i] - 1; ++j) //²»ÌùÉÏ½çÈ¡
+// 		for (j = last; j <= a[i] - 1; ++j) //ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½È¡
 // 			ans += f[i][j];
 // 		if (a[i] < last)
 // 			break;
 // 		last = a[i];
-// 		if (i == 1) //µ½×îºóÒ»´ÎÒ²Ã»breakµô£¬ËµÃ÷Õâ¸öÊý±¾ÉíÒ²ÄÜÂú×ã²»µÝ¼õµÄÐÔÖÊ£¬ËùÒÔans+1
+// 		if (i == 1) //ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ò²Ã»breakï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ã²»ï¿½Ý¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ans+1
 // 			++ans;
 // 	}
 // 	return ans;
@@ -75,7 +75,7 @@ int main()
 //  		int g = gcd(c, d);
 //  		a = c / g, b = d / g;
 //  	}
-//  	Node() { a = 0, b = 1; } //Ò»¶¨ÒªÐ´Õâ¾ä£¬·ñÔò»á±¨´í
+//  	Node() { a = 0, b = 1; } //Ò»ï¿½ï¿½ÒªÐ´ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½á±¨ï¿½ï¿½
 //  	bool operator<(const Node &t) const { return a * t.b < b * t.a; }
 //  	bool operator<=(const Node &t) const { return a * t.b <= b * t.a; }
 //  	bool operator>(const Node &t) const { return a * t.b > b * t.a; }
@@ -187,7 +187,7 @@ int main()
 //  	int l, r, val, key, size;
 //  } tree[R];
 //  mt19937 rd;
-//  int tot, root; //Ã¿´Î²Ù×÷ºó¶¼Òª¸üÐÂroot
+//  int tot, root; //Ã¿ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½root
 //  int create(int val)
 //  {
 //  	tree[++tot].key = rd();
@@ -235,7 +235,7 @@ int main()
 //  		return y;
 //  	}
 //  }
-//  int x, y, z; //ÁÙÊ±±äÁ¿£¬¸ÉÔÓ»î£¬ÎÞÊµ¼Êº¬Òå
+//  int x, y, z; //ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó»î£¬ï¿½ï¿½Êµï¿½Êºï¿½ï¿½ï¿½
 //  void insert(int val)
 //  {
 //  	split(root, val, x, y);
@@ -247,13 +247,13 @@ int main()
 //  	split(x, val - 1, x, z);
 //  	if (tree[z].size)
 //  	{
-//  		z = merge(tree[z].l, tree[z].r); //¸ù½Úµã²»ÒªÁË£¬°ÑÁ½¸ö×ÓÊ÷ºÏ²¢ÆðÀ´¾ÍÏàµ±ÓÚÈ¥µô¸ù½Úµã
+//  		z = merge(tree[z].l, tree[z].r); //ï¿½ï¿½ï¿½Úµã²»Òªï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½àµ±ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½
 //  		root = merge(merge(x, z), y);
 //  	}
 //  }
 //  int rankx(int val)
 //  {
-//  	split(root, val - 1, x, y); //×¢ÒâÊÇÒª½«ËùÓÐ<valµÄÊ÷·Öµ½×ÓÊ÷xÉÏ£¬¶ø·Ç<=
+//  	split(root, val - 1, x, y); //×¢ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<valï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½<=
 //  	int res = tree[x].size + 1;
 //  	root = merge(x, y);
 //  	return res;
@@ -269,7 +269,7 @@ int main()
 //  			x = tree[x].l;
 //  		else
 //  		{
-//  			k = k - (tree[tree[x].l].size + 1); //×¢Òâ¼õµÄÊÇ×ó×ÓÊ÷µÄ´óÐ¡+1
+//  			k = k - (tree[tree[x].l].size + 1); //×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½Ð¡+1
 //  			x = tree[x].r;
 //  		}
 //  	}

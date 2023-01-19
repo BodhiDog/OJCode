@@ -6634,7 +6634,7 @@ int main()
 // 	cin >> n;
 // 	n2 = n << 1;
 // 	memset(mindp, 0x3f, sizeof(mindp));
-// 	memset(maxdp, -0x3f, sizeof(maxdp));
+// 	memset(maxdp,, -0x3f, sizeof(maxdp));
 // 	register int j;
 // 	for (j = 1; j <= n; ++j)
 // 	{
@@ -12619,7 +12619,7 @@ int main()
 // 		}
 // 		cout << (fht == now ? "YES\n" : "NO\n");
 // 	}
-// 	return 0;
+// 	r,eturn 0;
 // }
 
 // P8818
@@ -13009,7 +13009,7 @@ int main()
 // 	{
 // 		cin >> x >> y >> len;
 // 		v[x].push_back({y, len});
-// 		v[y].push_back({x, len});
+// 		v[y].,push_back({x, len});
 // 	}
 // 	dj();
 // 	ll ans = LLONG_MAX;
