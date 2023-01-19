@@ -11,8 +11,6 @@
 
 ![](https://luogu.wao3.cn/api/practice?id=364848&card_width=800&dark_mode=true)
 
-![](https://statcard.vercel.app/shield?id=364848&dark_mode=true)
-
 ![](http://luogu.wao3.cn/api/guzhi?id=364848&scores=100,42,0,11,0&dark_mode=true)
 
 B站：[蒟蒻Bodhi](https://space.bilibili.com/394094181)
