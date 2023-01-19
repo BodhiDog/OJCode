@@ -4592,804 +4592,804 @@ int main()
 //----------------------------Practice.cpp----------------------------
 
 // 判断素数
-//  int k(int i)
-//{
-//	bool f = 0;
-//	int x = 2;
-//	int s;
-//	while (x <= floor(sqrt(i)) && (i % x != 0))
-//	{
-//		x++;
-//	}
-//	if (x > floor(sqrt(i)))
-//	{
-//		f = 1;
-//	}
-//	return f;
+// int k(int i)
+// {
+// 	bool f = 0;
+// 	int x = 2;
+// 	int s;
+// 	while (x <= floor(sqrt(i)) && (i % x != 0))
+// 	{
+// 		x++;
+// 	}
+// 	if (x > floor(sqrt(i)))
+// 	{
+// 		f = 1;
+// 	}
+// 	return f;
 // }
-//  int main()
-//{
-//	int n;
-//	cin >> n;
-//	if (k(n) == 1)
-//	{
-//		cout << "yes" << endl;
-//	}
-//	else
-//	{
-//		cout << "no" << endl;
-//	}
-//	system("pause");
-//	return 0;
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	if (k(n) == 1)
+// 	{
+// 		cout << "yes" << endl;
+// 	}
+// 	else
+// 	{
+// 		cout << "no" << endl;
+// 	}
+// 	system("pause");
+// 	return 0;
 // }
 
-// 求max(a, b, c) / (max(a + b, b, c) * max(a, b, b + c))的值
-//  double max1(int x, int y, int z)
-//  {
-//  	int k = x;
-//  	if (k < y)
-//  	{
-//  		k = y;
-//  	}
-//  	if (k < z)
-//  	{
-//  		k = z;
-//  	}
-//  	return k;
-//  }
-//  int main()
-//  {
-//  	int a, b, c, m;
-//  	cin >> a >> b >> c;
-//  	m = max1(a, b, c) / (max1(a + b, b, c) * max1(a, b, b + c)) * 1.0;
-//  	cout << m << endl;
-//  	system("pause");
-//  	return 0;
-//  }
+// 求max(a, b, c) / (max(a + b, b, c) * max(a, b, b + c)) 的值
+// 	double max1(int x, int y, int z)
+// {
+// 	int k = x;
+// 	if (k < y)
+// 	{
+// 		k = y;
+// 	}
+// 	if (k < z)
+// 	{
+// 		k = z;
+// 	}
+// 	return k;
+// }
+// int main()
+// {
+// 	int a, b, c, m;
+// 	cin >> a >> b >> c;
+// 	m = max1(a, b, c) / (max1(a + b, b, c) * max1(a, b, b + c)) * 1.0;
+// 	cout << m << endl;
+// 	system("pause");
+// 	return 0;
+// }
 
 // 既是素数又是回文数的三位数
-//  int sh(int i)
-//  {
-//  	bool f = 0;
-//  	int x = 2;
-//  	while (x <= floor(sqrt(i)) && (i % x != 0))
-//  	{
-//  		x++;
-//  	}
-//  	if (x > floor(sqrt(i)))
-//  	{
-//  		f = 1;
-//  	}
-//  	return f;
-//  }
-//  int main()
-//  {
-//  	for (int i = 100; i <= 999; i++)
-//  	{
-//  		if ((sh(i) == 1) && (i / 100 == i % 10))
-//  		{
-//  			cout << i << endl;
-//  		}
-//  	}
-//  	return 0;
-//  }
+// int sh(int i)
+// {
+// 	bool f = 0;
+// 	int x = 2;
+// 	while (x <= floor(sqrt(i)) && (i % x != 0))
+// 	{
+// 		x++;
+// 	}
+// 	if (x > floor(sqrt(i)))
+// 	{
+// 		f = 1;
+// 	}
+// 	return f;
+// }
+// int main()
+// {
+// 	for (int i = 100; i <= 999; i++)
+// 	{
+// 		if ((sh(i) == 1) && (i / 100 == i % 10))
+// 		{
+// 			cout << i << endl;
+// 		}
+// 	}
+// 	return 0;
+// }
 
-// 将6~100所有偶数表示为两个素数之和
-//  bool k(int i)
-//  {
-//  	bool f = 0;
-//  	int x = 2;
-//  	int s;
-//  	while (x <= floor(sqrt(i)) && (i % x != 0))
-//  	{
-//  		x++;
-//  	}
-//  	if (x > floor(sqrt(i)))
-//  	{
-//  		f = 1;
-//  	}
-//  	return f;
-//  }
-//  int main()
-//  {
-//  	int n;
-//  	cin >> n;
-//  	for (int i = 2; i <= n; i += 2)
-//  	{
-//  		for (int j = 2; j <= i / 2; j++)
-//  		{
-//  			if (k(j) && k(i - j))
-//  			{
-//  				cout << i << "=" << j << "+" << i - j << endl;
-//  				break;
-//  			}
-//  		}
-//  	}
-//  	return 0;
-//  }
+// 将6 ~100所有偶数表示为两个素数之和
+// bool k(int i)
+// {
+// 	bool f = 0;
+// 	int x = 2;
+// 	int s;
+// 	while (x <= floor(sqrt(i)) && (i % x != 0))
+// 	{
+// 		x++;
+// 	}
+// 	if (x > floor(sqrt(i)))
+// 	{
+// 		f = 1;
+// 	}
+// 	return f;
+// }
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	for (int i = 2; i <= n; i += 2)
+// 	{
+// 		for (int j = 2; j <= i / 2; j++)
+// 		{
+// 			if (k(j) && k(i - j))
+// 			{
+// 				cout << i << "=" << j << "+" << i - j << endl;
+// 				break;
+// 			}
+// 		}
+// 	}
+// 	return 0;
+// }
 
-// 求1+2+3+……+n
-//  int fac(int n)
-//  {
-//  	if (n == 0)
-//  	{
-//  		return 0;
-//  	}
-//  	else
-//  	{
-//  		return n + fac(n - 1);
-//  	}
-//  }
-//  int main()
-//  {
-//  	int n;
-//  	cin >> n;
-//  	cout << fac(n);
-//  	return 0;
-//  }
+// 求1 + 2 + 3 +……+ n
+// int fac(int n)
+// {
+// 	if (n == 0)
+// 	{
+// 		return 0;
+// 	}
+// 	else
+// 	{
+// 		return n + fac(n - 1);
+// 	}
+// }
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	cout << fac(n);
+// 	return 0;
+// }
 
 // 斐波那契数列的第n个数
-//  int f(int n)
-//  {
-//  	if (n == 1)
-//  	{
-//  		return 0;
-//  	}
-//  	if (n == 2)
-//  	{
-//  		return 1;
-//  	}
-//  	else
-//  	{
-//  		return f(n - 1) + f(n - 2);
-//  	}
-//  }
-//  int main()
-//  {
-//  	int n;
-//  	cin >> n;
-//  	cout << f(n);
-//  	return 0;
-//  }
+// int f(int n)
+// {
+// 	if (n == 1)
+// 	{
+// 		return 0;
+// 	}
+// 	if (n == 2)
+// 	{
+// 		return 1;
+// 	}
+// 	else
+// 	{
+// 		return f(n - 1) + f(n - 2);
+// 	}
+// }
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	cout << f(n);
+// 	return 0;
+// }
 
-// 逆序输出字符串，到“!”截止
-//  char s[10000];
-//  void a1(int x)
-//  {
-//  	if (s[x] != '!')
-//  	{
-//  		a1(x + 1);
-//  	}
-//  	else
-//  	{
-//  		return;
-//  	}
-//  	cout << s[x];
-//  }
-//  int main()
-//  {
-//  	gets(s);
-//  	a1(0);
-//  	return 0;
-//  }
+// 逆序输出字符串，到“ !”截止
+// char s[10000];
+// void a1(int x)
+// {
+// 	if (s[x] != '!')
+// 	{
+// 		a1(x + 1);
+// 	}
+// 	else
+// 	{
+// 		return;
+// 	}
+// 	cout << s[x];
+// }
+// int main()
+// {
+// 	gets(s);
+// 	a1(0);
+// 	return 0;
+// }
 
 // 阿克曼函数
-//  int A(int m, int n)
-//  {
-//  	if (m == 0)
-//  	{
-//  		return n + 1;
-//  	}
-//  	if (m > 0 && n == 0)
-//  	{
-//  		return A(m - 1, 1);
-//  	}
-//  	if (m > 0 && n > 0)
-//  	{
-//  		return A(m - 1, A(m, n - 1));
-//  	}
-//  }
-//  int main()
-//  {
-//  	int m, n;
-//  	cin >> m >> n;
-//  	int temp;
-//  	temp = A(m, n);
-//  	cout << temp << endl;
-//  	return 0;
-//  }
+// int A(int m, int n)
+// {
+// 	if (m == 0)
+// 	{
+// 		return n + 1;
+// 	}
+// 	if (m > 0 && n == 0)
+// 	{
+// 		return A(m - 1, 1);
+// 	}
+// 	if (m > 0 && n > 0)
+// 	{
+// 		return A(m - 1, A(m, n - 1));
+// 	}
+// }
+// int main()
+// {
+// 	int m, n;
+// 	cin >> m >> n;
+// 	int temp;
+// 	temp = A(m, n);
+// 	cout << temp << endl;
+// 	return 0;
+// }
 
 // 输出数字n的第k位
-//  int digit(int n, int k)
-//  {
-//  	k--;
-//  	if (k == 0)
-//  	{
-//  		n % 10;
-//  	}
-//  	else
-//  	{
-//  		return digit(n / 10, k);
-//  	}
-//  }
-//  int main()
-//  {
-//  	int n, k;
-//  	cin >> n >> k;
-//  	cout << digit(n, k);
-//  	return 0;
-//  }
+// int digit(int n, int k)
+// {
+// 	k--;
+// 	if (k == 0)
+// 	{
+// 		n % 10;
+// 	}
+// 	else
+// 	{
+// 		return digit(n / 10, k);
+// 	}
+// }
+// int main()
+// {
+// 	int n, k;
+// 	cin >> n >> k;
+// 	cout << digit(n, k);
+// 	return 0;
+// }
 
 // 求Hermite多项式的值
-//  double h(int n, int x)
-//  {
-//  	if (n == 0)
-//  	{
-//  		return 1;
-//  	}
-//  	if (n == 1)
-//  	{
-//  		return 2 * x;
-//  	}
-//  	if (n > 1)
-//  	{
-//  		return 2 * x * h(n - 1, x) - 2 * (n - 1) * h(n - 2, x);
-//  	}
-//  }
-//  int main()
-//  {
-//  	int n, x;
-//  	cin >> n >> x;
-//  	cout << fixed << setprecision(2) << h(n, x) << endl;
-//  	return 0;
-//  }
+// double h(int n, int x)
+// {
+// 	if (n == 0)
+// 	{
+// 		return 1;
+// 	}
+// 	if (n == 1)
+// 	{
+// 		return 2 * x;
+// 	}
+// 	if (n > 1)
+// 	{
+// 		return 2 * x * h(n - 1, x) - 2 * (n - 1) * h(n - 2, x);
+// 	}
+// }
+// int main()
+// {
+// 	int n, x;
+// 	cin >> n >> x;
+// 	cout << fixed << setprecision(2) << h(n, x) << endl;
+// 	return 0;
+// }
 
-// 计算sqrt(n+sqrt(n-1+sqrt(n-2+...+sqrt(2+sqrt(x+1)))))的值
-//  double f(double x, double n)
-//  {
-//  	if (n == 1)
-//  	{
-//  		return sqrt(x + 1);
-//  	}
-//  	else
-//  	{
-//  		return sqrt(n + f(x, n - 1));
-//  	}
-//  }
-//  int main()
-//  {
-//  	double x, n;
-//  	cin >> x >> n;
-//  	cout << fixed << setprecision(2) << f(x, n) << endl;
-//  	return 0;
-//  }
+// 计算sqrt(n + sqrt(n - 1 + sqrt(n - 2 + ... + sqrt(2 + sqrt(x + 1))))) 的值
+// 	double f(double x, double n)
+// {
+// 	if (n == 1)
+// 	{
+// 		return sqrt(x + 1);
+// 	}
+// 	else
+// 	{
+// 		return sqrt(n + f(x, n - 1));
+// 	}
+// }
+// int main()
+// {
+// 	double x, n;
+// 	cin >> x >> n;
+// 	cout << fixed << setprecision(2) << f(x, n) << endl;
+// 	return 0;
+// }
 
-// 求x/(n+(x/((n-1)+(x/(n-2)+...+x/(x+1)))))的值
-//  double f(double x, double n)
-//  {
-//  	if (n == 1)
-//  	{
-//  		return x / (x + 1);
-//  	}
-//  	else
-//  	{
-//  		return x / (n + f(x, n - 1));
-//  	}
-//  }
-//  int main()
-//  {
-//  	int x, n;
-//  	cin >> x >> n;
-//  	cout << fixed << setprecision(2) << f(x, n) << endl;
-//  	return 0;
-//  }
+// 求x / (n + (x / ((n - 1) + (x / (n - 2) + ... + x / (x + 1))))) 的值
+// 	double f(double x, double n)
+// {
+// 	if (n == 1)
+// 	{
+// 		return x / (x + 1);
+// 	}
+// 	else
+// 	{
+// 		return x / (n + f(x, n - 1));
+// 	}
+// }
+// int main()
+// {
+// 	int x, n;
+// 	cin >> x >> n;
+// 	cout << fixed << setprecision(2) << f(x, n) << endl;
+// 	return 0;
+// }
 
 // 大整数加法
-//  int a[205], b[205], sum[205];
-//  string sa, sb;
-//  int main()
-//  {
-//  	int lena, lenb, lenc = 1, jw = 0;
-//  	cin >> sa >> sb;
-//  	lena = sa.size();
-//  	lenb = sb.size();
-//  	for (int i = 0; i < lena; i++)
-//  	{
-//  		a[lena - i] = sa[i] - '0';
-//  	}
-//  	for (int i = 0; i < lenb; i++)
-//  	{
-//  		b[lenb - i] = sb[i] - '0';
-//  	}
-//  	while (lenc <= lena || lenc <= lenb)
-//  	{
-//  		sum[lenc] = a[lenc] + b[lenc] + jw;
-//  		jw = sum[lenc] / 10;
-//  		sum[lenc] %= 10;
-//  		lenc++;
-//  	}
-//  	sum[lenc] = jw;
-//  	while (sum[lenc] == 0 && lenc > 1)
-//  	{
-//  		lenc--;
-//  	}
-//  	for (int i = lenc; i > 0; i--)
-//  	{
-//  		cout << sum[i];
-//  	}
-//  	return 0;
-//  }
+// int a[205], b[205], sum[205];
+// string sa, sb;
+// int main()
+// {
+// 	int lena, lenb, lenc = 1, jw = 0;
+// 	cin >> sa >> sb;
+// 	lena = sa.size();
+// 	lenb = sb.size();
+// 	for (int i = 0; i < lena; i++)
+// 	{
+// 		a[lena - i] = sa[i] - '0';
+// 	}
+// 	for (int i = 0; i < lenb; i++)
+// 	{
+// 		b[lenb - i] = sb[i] - '0';
+// 	}
+// 	while (lenc <= lena || lenc <= lenb)
+// 	{
+// 		sum[lenc] = a[lenc] + b[lenc] + jw;
+// 		jw = sum[lenc] / 10;
+// 		sum[lenc] %= 10;
+// 		lenc++;
+// 	}
+// 	sum[lenc] = jw;
+// 	while (sum[lenc] == 0 && lenc > 1)
+// 	{
+// 		lenc--;
+// 	}
+// 	for (int i = lenc; i > 0; i--)
+// 	{
+// 		cout << sum[i];
+// 	}
+// 	return 0;
+// }
 
 // 大整数减法
-//  int const maxn = 202;
-//  int a[maxn], b[maxn], c[maxn];
-//  void input(int arr[])
-//  {
-//  	string s;
-//  	cin >> s;
-//  	arr[0] = s.size();
-//  	for (int i = arr[0] - 1, j = 1; i >= 0; i--, j++)
-//  	{
-//  		arr[j] = s[i] - '0';
-//  	}
-//  }
-//  void sub(int a[], int b[], int cha[])
-//  {
-//  	cha[0] = a[0];
-//  	int jw = 0;
-//  	for (int i = 1; i <= cha[0]; i++)
-//  	{
-//  		cha[i] = a[i] - b[i] - jw;
-//  		if (cha[i] < 0)
-//  		{
-//  			jw = 1;
-//  			cha[i] += 10;
-//  		}
-//  		else
-//  		{
-//  			jw = 0;
-//  		}
-//  	}
-//  	while (cha[0] > 1 && cha[cha[0]] == 0)
-//  	{
-//  		cha[0]--;
-//  	}
-//  }
-//  void output(int arr[])
-//  {
-//  	for (int i = arr[0]; i >= 1; i--)
-//  	{
-//  		cout << arr[i];
-//  	}
-//  }
-//  int main()
-//  {
-//  	input(a);
-//  	input(b);
-//  	sub(a, b, c);
-//  	output(c);
-//  	return 0;
-//  }
+// int const maxn = 202;
+// int a[maxn], b[maxn], c[maxn];
+// void input(int arr[])
+// {
+// 	string s;
+// 	cin >> s;
+// 	arr[0] = s.size();
+// 	for (int i = arr[0] - 1, j = 1; i >= 0; i--, j++)
+// 	{
+// 		arr[j] = s[i] - '0';
+// 	}
+// }
+// void sub(int a[], int b[], int cha[])
+// {
+// 	cha[0] = a[0];
+// 	int jw = 0;
+// 	for (int i = 1; i <= cha[0]; i++)
+// 	{
+// 		cha[i] = a[i] - b[i] - jw;
+// 		if (cha[i] < 0)
+// 		{
+// 			jw = 1;
+// 			cha[i] += 10;
+// 		}
+// 		else
+// 		{
+// 			jw = 0;
+// 		}
+// 	}
+// 	while (cha[0] > 1 && cha[cha[0]] == 0)
+// 	{
+// 		cha[0]--;
+// 	}
+// }
+// void output(int arr[])
+// {
+// 	for (int i = arr[0]; i >= 1; i--)
+// 	{
+// 		cout << arr[i];
+// 	}
+// }
+// int main()
+// {
+// 	input(a);
+// 	input(b);
+// 	sub(a, b, c);
+// 	output(c);
+// 	return 0;
+// }
 
 // 2的n次方_1
-//  int n, s, len = 1, a[10005], x;
-//  int main()
-//  {
-//  	cin >> n;
-//  	a[1] = 1;
-//  	for (int i = 1; i <= n; i++)
-//  	{
-//  		for (int j = 1; j <= len; j++)
-//  		{
-//  			a[j] *= 2;
-//  		}
-//  		for (int j = 1; j <= len; j++)
-//  		{
-//  			s = 0;
-//  			if (a[j] > 9)
-//  			{
-//  				a[j + 1] += a[j] / 10;
-//  				a[j] %= 10;
-//  				s = max(s, j + 1);
-//  			}
-//  		}
-//  		len = max(len, s);
-//  	}
-//  	for (int i = len; i >= 1; i--)
-//  	{
-//  		cout << a[i];
-//  	}
-//  	return 0;
-//  }
+// int n, s, len = 1, a[10005], x;
+// int main()
+// {
+// 	cin >> n;
+// 	a[1] = 1;
+// 	for (int i = 1; i <= n; i++)
+// 	{
+// 		for (int j = 1; j <= len; j++)
+// 		{
+// 			a[j] *= 2;
+// 		}
+// 		for (int j = 1; j <= len; j++)
+// 		{
+// 			s = 0;
+// 			if (a[j] > 9)
+// 			{
+// 				a[j + 1] += a[j] / 10;
+// 				a[j] %= 10;
+// 				s = max(s, j + 1);
+// 			}
+// 		}
+// 		len = max(len, s);
+// 	}
+// 	for (int i = len; i >= 1; i--)
+// 	{
+// 		cout << a[i];
+// 	}
+// 	return 0;
+// }
 
 // 2的n次方_2
-//  int n, len = 1, a[10005], x;
-//  int main()
-//  {
-//  	cin >> n;
-//  	a[1] = 1;
-//  	for (int i = 1; i <= n; i++)
-//  	{
-//  		for (int j = 1; j <= len; j++)
-//  		{
-//  			a[j] = a[j] * 2 + x;
-//  			x = a[j] / 10;
-//  			a[j] %= 10;
-//  			if (x != 0 && j == len)
-//  			{
-//  				len++;
-//  			}
-//  		}
-//  	}
-//  	for (int i = len; i >= 1; i--)
-//  	{
-//  		cout << a[i];
-//  	}
-//  	return 0;
-//  }
+// int n, len = 1, a[10005], x;
+// int main()
+// {
+// 	cin >> n;
+// 	a[1] = 1;
+// 	for (int i = 1; i <= n; i++)
+// 	{
+// 		for (int j = 1; j <= len; j++)
+// 		{
+// 			a[j] = a[j] * 2 + x;
+// 			x = a[j] / 10;
+// 			a[j] %= 10;
+// 			if (x != 0 && j == len)
+// 			{
+// 				len++;
+// 			}
+// 		}
+// 	}
+// 	for (int i = len; i >= 1; i--)
+// 	{
+// 		cout << a[i];
+// 	}
+// 	return 0;
+// }
 
 // 高精度乘法
-//  int const maxn = 205;
-//  int a[maxn], b[maxn], c[maxn], lena, lenb, lenc;
-//  void input(int arr[])
-//  {
-//  	string s;
-//  	cin >> s;
-//  	arr[0] = s.size();
-//  	for (int i = arr[0], j = 0; i > 0; i--, ++j)
-//  	{
-//  		arr[i] = s[j] - '0';
-//  	}
-//  }
-//  void multiplication(int a[], int b[], int c[])
-//  {
-//  	c[0] = a[0] + b[0];
-//  	for (int i = 1; i <= b[0]; i++)
-//  	{
-//  		for (int j = 1; j <= a[0]; j++)
-//  		{
-//  			c[i + j - 1] += a[j] * b[i];
-//  		}
-//  	}
-//  	for (int i = 1; i < c[0]; ++i)
-//  	{
-//  		if (c[i] > 9)
-//  		{
-//  			c[i + 1] += c[i] / 10;
-//  			c[i] %= 10;
-//  		}
-//  	}
-//  	int i = c[0];
-//  	while (c[i] == 0 && c[0] > 0)
-//  	{
-//  		c[0]--;
-//  		i--;
-//  	}
-//  }
-//  void output(int arr[])
-//  {
-//  	for (int i = c[0]; i >= 1; i--)
-//  	{
-//  		cout << arr[i];
-//  	}
-//  }
-//  int main()
-//  {
-//  	input(a);
-//  	input(b);
-//  	multiplication(a, b, c);
-//  	output(c);
-//  	return 0;
-//  }
+// int const maxn = 205;
+// int a[maxn], b[maxn], c[maxn], lena, lenb, lenc;
+// void input(int arr[])
+// {
+// 	string s;
+// 	cin >> s;
+// 	arr[0] = s.size();
+// 	for (int i = arr[0], j = 0; i > 0; i--, ++j)
+// 	{
+// 		arr[i] = s[j] - '0';
+// 	}
+// }
+// void multiplication(int a[], int b[], int c[])
+// {
+// 	c[0] = a[0] + b[0];
+// 	for (int i = 1; i <= b[0]; i++)
+// 	{
+// 		for (int j = 1; j <= a[0]; j++)
+// 		{
+// 			c[i + j - 1] += a[j] * b[i];
+// 		}
+// 	}
+// 	for (int i = 1; i < c[0]; ++i)
+// 	{
+// 		if (c[i] > 9)
+// 		{
+// 			c[i + 1] += c[i] / 10;
+// 			c[i] %= 10;
+// 		}
+// 	}
+// 	int i = c[0];
+// 	while (c[i] == 0 && c[0] > 0)
+// 	{
+// 		c[0]--;
+// 		i--;
+// 	}
+// }
+// void output(int arr[])
+// {
+// 	for (int i = c[0]; i >= 1; i--)
+// 	{
+// 		cout << arr[i];
+// 	}
+// }
+// int main()
+// {
+// 	input(a);
+// 	input(b);
+// 	multiplication(a, b, c);
+// 	output(c);
+// 	return 0;
+// }
 
 // 高精度除以低精度_运算部分
-//  int const maxn = 205;
-//  int a[maxn], b[maxn], c[maxn], ys = 0;
-//  void div(int bcs, int cs, int shang[])
-//  {
-//  	shang[0] = bcs[0];
-//  	for (int i = bcs[0]; i >= 1; i++)
-//  	{
-//  		ys = ys * 10 + bcs[i];
-//  		shang[i] = ys / cs;
-//  		ys %= cs;
-//  	}
-//  	for (int i = shang[0]; i > 1 && shang[i] == 0; i--)
-//  	{
-//  		shang[0]--;
-//  	}
-//  }
+// int const maxn = 205;
+// int a[maxn], b[maxn], c[maxn], ys = 0;
+// void div(int bcs, int cs, int shang[])
+// {
+// 	shang[0] = bcs[0];
+// 	for (int i = bcs[0]; i >= 1; i++)
+// 	{
+// 		ys = ys * 10 + bcs[i];
+// 		shang[i] = ys / cs;
+// 		ys %= cs;
+// 	}
+// 	for (int i = shang[0]; i > 1 && shang[i] == 0; i--)
+// 	{
+// 		shang[0]--;
+// 	}
+// }
 
 // 最高分数的学生姓名
-//  struct stu
-//  {
-//  	int score;
-//  	string name;
-//  } stu[101];
-//  int main()
-//  {
-//  	int n;
-//  	cin >> n;
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		cin >> stu[i].score;
-//  		cin >> stu[i].name;
-//  	}
-//  	int max = -1, maxp;
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		if (stu[i].score > max)
-//  		{
-//  			maxp = i;
-//  			max = stu[i].score;
-//  		}
-//  	}
-//  	cout << stu[maxp].name;
-//  	return 0;
-//  }
+// struct stu
+// {
+// 	int score;
+// 	string name;
+// } stu[101];
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> stu[i].score;
+// 		cin >> stu[i].name;
+// 	}
+// 	int max = -1, maxp;
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		if (stu[i].score > max)
+// 		{
+// 			maxp = i;
+// 			max = stu[i].score;
+// 		}
+// 	}
+// 	cout << stu[maxp].name;
+// 	return 0;
+// }
 
 // 甲流病人初筛
-//  struct jialiu
-//  {
-//  	string name;
-//  	float temp;
-//  	short cough;
-//  } jialiu[200];
-//  int main()
-//  {
-//  	int n, k;
-//  	cin >> n;
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		cin >> jialiu[i].name >> jialiu[i].temp >> jialiu[i].cough;
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		if (jialiu[i].temp >= 37.5 && jialiu[i].cough == 1)
-//  		{
-//  			k++;
-//  			cout << jialiu[i].name << endl;
-//  		}
-//  	}
-//  	cout << k;
-//  	return 0;
-//  }
+// struct jialiu
+// {
+// 	string name;
+// 	float temp;
+// 	short cough;
+// } jialiu[200];
+// int main()
+// {
+// 	int n, k;
+// 	cin >> n;
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> jialiu[i].name >> jialiu[i].temp >> jialiu[i].cough;
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		if (jialiu[i].temp >= 37.5 && jialiu[i].cough == 1)
+// 		{
+// 			k++;
+// 			cout << jialiu[i].name << endl;
+// 		}
+// 	}
+// 	cout << k;
+// 	return 0;
+// }
 
 // 谁考了第k名
-//  struct score
-//  {
-//  	int number;
-//  	float score;
-//  } score[101];
-//  int main()
-//  {
-//  	int n, k;
-//  	cin >> n >> k;
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		cin >> score[i].number >> score[i].score;
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		for (int j = i; j < n; j++)
-//  		{
-//  			if (score[i].score < score[j].score)
-//  			{
-//  				swap(score[i], score[j]);
-//  			}
-//  		}
-//  	}
-//  	cout << score[k - 1].number << " " << score[k - 1].score;
-//  	return 0;
-//  }
+// struct score
+// {
+// 	int number;
+// 	float score;
+// } score[101];
+// int main()
+// {
+// 	int n, k;
+// 	cin >> n >> k;
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> score[i].number >> score[i].score;
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		for (int j = i; j < n; j++)
+// 		{
+// 			if (score[i].score < score[j].score)
+// 			{
+// 				swap(score[i], score[j]);
+// 			}
+// 		}
+// 	}
+// 	cout << score[k - 1].number << " " << score[k - 1].score;
+// 	return 0;
+// }
 
 // 成绩排序
-//  struct score
-//  {
-//  	string name;
-//  	float score;
-//  } score[101];
-//  int main()
-//  {
-//  	int n;
-//  	cin >> n;
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		cin >> score[i].name >> score[i].score;
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		for (int j = i; j < n; j++)
-//  		{
-//  			if (score[i].score < score[j].score)
-//  			{
-//  				swap(score[i], score[j]);
-//  			}
-//  		}
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		cout << score[i].name << " " << score[i].score << endl;
-//  	}
-//  	return 0;
-//  }
+// struct score
+// {
+// 	string name;
+// 	float score;
+// } score[101];
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> score[i].name >> score[i].score;
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		for (int j = i; j < n; j++)
+// 		{
+// 			if (score[i].score < score[j].score)
+// 			{
+// 				swap(score[i], score[j]);
+// 			}
+// 		}
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cout << score[i].name << " " << score[i].score << endl;
+// 	}
+// 	return 0;
+// }
 
 // 病人排序
-//  struct patient
-//  {
-//  	string id;
-//  	int age;
-//  } patient[100];
-//  int main()
-//  {
-//  	int n;
-//  	cin >> n;
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		cin >> patient[i].id >> patient[i].age;
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		for (int j = 0; j < n - i; j++)
-//  		{
-//  			if (patient[j].age < patient[j + 1].age && patient[j].age >= 60)
-//  			{
-//  				swap(patient[j], patient[j + 1]);
-//  			}
-//  		}
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		if (patient[i].age >= 60)
-//  		{
-//  			cout << patient[i].id << endl;
-//  		}
-//  	}
-//  	for (int i = 0; i < n; i++)
-//  	{
-//  		if (patient[i].age < 60)
-//  		{
-//  			cout << patient[i].id << endl;
-//  		}
-//  	}
-//  	return 0;
-//  }
+// struct patient
+// {
+// 	string id;
+// 	int age;
+// } patient[100];
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> patient[i].id >> patient[i].age;
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		for (int j = 0; j < n - i; j++)
+// 		{
+// 			if (patient[j].age < patient[j + 1].age && patient[j].age >= 60)
+// 			{
+// 				swap(patient[j], patient[j + 1]);
+// 			}
+// 		}
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		if (patient[i].age >= 60)
+// 		{
+// 			cout << patient[i].id << endl;
+// 		}
+// 	}
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		if (patient[i].age < 60)
+// 		{
+// 			cout << patient[i].id << endl;
+// 		}
+// 	}
+// 	return 0;
+// }
 
 // 1到n的最大质数
-//  int sushu(int x)
-//  {
-//  	int k;
-//  	for (int i = 2; i <= sqrt(x); i++)
-//  	{
-//  		if (x % i == 0)
-//  		{
-//  			k = 0;
-//  			break;
-//  		}
-//  		else
-//  		{
-//  			k++;
-//  		}
-//  	}
-//  	if (k == 0)
-//  	{
-//  		return 0;
-//  	}
-//  	else
-//  	{
-//  		return 1;
-//  	}
-//  }
-//  int main()
-//  {
-//  	int n, maxzhi, maxhe;
-//  	cin >> n;
-//  	for (int i = n; i >= 2; i--)
-//  	{
-//  		if (sushu(i) == 1)
-//  		{
-//  			maxzhi = i;
-//  			break;
-//  		}
-//  	}
-//  	cout << maxzhi << endl;
-//  	return 0;
-//  }
+// int sushu(int x)
+// {
+// 	int k;
+// 	for (int i = 2; i <= sqrt(x); i++)
+// 	{
+// 		if (x % i == 0)
+// 		{
+// 			k = 0;
+// 			break;
+// 		}
+// 		else
+// 		{
+// 			k++;
+// 		}
+// 	}
+// 	if (k == 0)
+// 	{
+// 		return 0;
+// 	}
+// 	else
+// 	{
+// 		return 1;
+// 	}
+// }
+// int main()
+// {
+// 	int n, maxzhi, maxhe;
+// 	cin >> n;
+// 	for (int i = n; i >= 2; i--)
+// 	{
+// 		if (sushu(i) == 1)
+// 		{
+// 			maxzhi = i;
+// 			break;
+// 		}
+// 	}
+// 	cout << maxzhi << endl;
+// 	return 0;
+// }
 
 // 字符解码方式
-//  int numDecodings(string s)
-//  {
-//  	//如果0个阶梯，返回0步
-//  	if (s[0] == '0')
-//  		return 0;
-//  	int n = s.length();
-//  	vector<int> dp(n + 1);
-//  	dp[0] = 1, dp[1] = 1;
-//  	for (int i = 1; i < n; i++)
-//  	{
-//  		if (s[i] == '0') //s[i] == '0'
-//  		{
-//  			//如果 s[i-1]s[i] <= 26, 则 dp[i] = dp[i-2], 这是因为 s[i] 无法翻译
-//  			if (s[i - 1] == '1' || s[i - 1] == '2')
-//  			{
-//  				dp[i + 1] = dp[i - 1];
-//  			}
-//  			//相邻的两个 ‘0’,或者大于等于30，则没有结果
-//  			else
-//  			{
-//  				return 0;
-//  			}
-//  		}
-//  		else //s[i] != '0'
-//  		{
-//  			//如果 s[i-1]s[i] <= 26, 则 dp[i] = dp[i-1] + dp[i-2]
-//  			if (s[i - 1] == '1' || (s[i - 1] == '2' && s[i] <= '6'))
-//  			{
-//  				dp[i + 1] = dp[i] + dp[i - 1];
-//  			}
-//  			//如果 s[i-1]s[i] > 26, 则 dp[i] = dp[i-1], 这是因为 s[i-1]s[i] 组成的两位数无法翻译
-//  			else
-//  			{
-//  				dp[i + 1] = dp[i];
-//  			}
-//  		}
-//  	}
-//  	return dp[n];
-//  }
-//  int main()
-//  {
-//  	string s;
-//  	cin >> s;
-//  	cout << numDecodings(s);
-//  	return 0;
-//  }
+// int numDecodings(string s)
+// {
+// 	// 如果0个阶梯，返回0步
+// 	if (s[0] == '0')
+// 		return 0;
+// 	int n = s.length();
+// 	vector<int> dp(n + 1);
+// 	dp[0] = 1, dp[1] = 1;
+// 	for (int i = 1; i < n; i++)
+// 	{
+// 		if (s[i] == '0') // s[i] == '0'
+// 		{
+// 			// 如果 s[i-1]s[i] <= 26, 则 dp[i] = dp[i-2], 这是因为 s[i] 无法翻译
+// 			if (s[i - 1] == '1' || s[i - 1] == '2')
+// 			{
+// 				dp[i + 1] = dp[i - 1];
+// 			}
+// 			// 相邻的两个 ‘0’,或者大于等于30，则没有结果
+// 			else
+// 			{
+// 				return 0;
+// 			}
+// 		}
+// 		else // s[i] != '0'
+// 		{
+// 			// 如果 s[i-1]s[i] <= 26, 则 dp[i] = dp[i-1] + dp[i-2]
+// 			if (s[i - 1] == '1' || (s[i - 1] == '2' && s[i] <= '6'))
+// 			{
+// 				dp[i + 1] = dp[i] + dp[i - 1];
+// 			}
+// 			// 如果 s[i-1]s[i] > 26, 则 dp[i] = dp[i-1], 这是因为 s[i-1]s[i] 组成的两位数无法翻译
+// 			else
+// 			{
+// 				dp[i + 1] = dp[i];
+// 			}
+// 		}
+// 	}
+// 	return dp[n];
+// }
+// int main()
+// {
+// 	string s;
+// 	cin >> s;
+// 	cout << numDecodings(s);
+// 	return 0;
+// }
 
 // 约瑟夫问题
-//  struct Node
-//  {
-//  	Node *last;
-//  	int data;
-//  	Node *next;
-//  } * head, *tail, *p;
-//  int main()
-//  {
-//  #if 1
-//  	cout.tie(0);
-//  #endif
-//  	freopen("input.txt", "r", stdin);
-//  	int i = 0, n, m;
-//  	while (cin >> n >> m, n || m)
-//  	{
-//  		head = new Node;
-//  		head->data = 1;
-//  		head->next = head->last = NULL;
-//  		tail = head;
-//  		for (int i = 2; i <= n; i++)
-//  		{
-//  			p = new Node;
-//  			p->data = i;
-//  			tail->next = p;
-//  			p->last = tail;
-//  			p->next = NULL;
-//  			tail = p;
-//  		}
-//  		head->last = tail;
-//  		tail->next = head;
-//  		p = head;
-//  		for (int i = 1; i < n; i++)
-//  		{
-//  			for (int j = 1; j < m; j++)
-//  			{
-//  				p = p->next;
-//  			}
-//  			p->next->last = p->last;
-//  			p->last->next = p->next;
-//  			p = p->next;
-//  		}
-//  		cout << p->data << endl;
-//  	}
-//  	return 0;
-//  }
+// struct Node
+// {
+// 	Node *last;
+// 	int data;
+// 	Node *next;
+// } *head, *tail, *p;
+// int main()
+// {
+// #if 1
+// 	cout.tie(0);
+// #endif
+// 	freopen("input.txt", "r", stdin);
+// 	int i = 0, n, m;
+// 	while (cin >> n >> m, n || m)
+// 	{
+// 		head = new Node;
+// 		head->data = 1;
+// 		head->next = head->last = NULL;
+// 		tail = head;
+// 		for (int i = 2; i <= n; i++)
+// 		{
+// 			p = new Node;
+// 			p->data = i;
+// 			tail->next = p;
+// 			p->last = tail;
+// 			p->next = NULL;
+// 			tail = p;
+// 		}
+// 		head->last = tail;
+// 		tail->next = head;
+// 		p = head;
+// 		for (int i = 1; i < n; i++)
+// 		{
+// 			for (int j = 1; j < m; j++)
+// 			{
+// 				p = p->next;
+// 			}
+// 			p->next->last = p->last;
+// 			p->last->next = p->next;
+// 			p = p->next;
+// 		}
+// 		cout << p->data << endl;
+// 	}
+// 	return 0;
+// }
 
 //----------------------------东方博宜OJ----------------------------
 

@@ -3083,7 +3083,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P1074_第一道蓝题 int a[10][10], maxn = -1, tt;
+// ※P1074_第一道蓝题
+// int a[10][10], maxn = -1, tt;
 // struct shun
 // {
 // 	int num, cishu;
@@ -3999,7 +4000,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P1020 int a[100001], dp[100001], ma[100001];
+// ※P1020
+// int a[100001], dp[100001], ma[100001];
 // inline int search(int k, int range)
 // {
 // 	int left = 1, right = range, mid;
@@ -4115,7 +4117,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P1439_LCS模板_第一道绿题 const int R = 100010;
+// ※P1439_LCS模板_第一道绿题
+// const int R = 100010;
 // int a[R], b[R], t[R], num[R], dp[R];
 // int search(int left, int right, int x)
 // {
@@ -5126,7 +5129,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P4779_Dijkstra的优先队列优化模板题 struct Edge
+// ※P4779_Dijkstra的优先队列优化模板题
+// struct Edge
 // {
 // 	int to, len, next;
 // } edge[200010];
@@ -5196,7 +5200,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P2024_高级的（三种）种类并查集 int fa[150010];
+// ※P2024_高级的（三种）种类并查集
+// int fa[150010];
 // int find(int x)
 // {
 // 	if (fa[x] == x)
@@ -5683,7 +5688,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P5663 const int R = 100010;
+// ※P5663
+// const int R = 100010;
 // struct Node
 // {
 // 	int num, len;
@@ -5962,7 +5968,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P5662 long long dp[10010];
+// ※P5662
+// long long dp[10010];
 // int price[110][110];
 // int main()
 // {
@@ -6138,7 +6145,8 @@ int main()
 // 	return 0;
 // }
 
-// P2032_不要用short！ int a[2000010];
+// P2032_不要用short！
+// int a[2000010];
 // int main()
 // {
 // 	int n, k;
@@ -6437,7 +6445,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P1731 int ans = INT_MAX, n, m, s;
+// ※P1731
+// int ans = INT_MAX, n, m, s;
 // int minsce[20], minv[20];
 // void dfs(int lr, int lh, int s, int v, int floor)
 // {
@@ -6672,7 +6681,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P1028_记忆化搜索 int num[1010];
+// ※P1028_记忆化搜索
+// int num[1010];
 // int fun(int x)
 // {
 // 	if (num[x])
@@ -6846,7 +6856,8 @@ int main()
 // 	return 0;
 // }
 
-// P2580_使用Trie树 const int R = 5e5 + 10;
+// P2580_使用Trie树
+// const int R = 5e5 + 10;
 // int ch[R][30], cnt[R], tot;
 // char s[55];
 // void add()
@@ -6904,7 +6915,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P3808_AC自动机模板题 const int N = 1e6 + 10;
+// ※P3808_AC自动机模板题
+// const int N = 1e6 + 10;
 // class AC
 // {
 // private:
@@ -10200,7 +10212,8 @@ int main()
 // 	return 0;
 // }
 
-// AT28_AtCoder特性：结尾必须换行 int n, m,
+// AT28_AtCoder特性：结尾必须换行
+// int n, m,
 // 	xx[5] = {0, 0, 1, 0, -1},
 // 	yy[5] = {0, 1, 0, -1, 0}; // 右1下2左3上4
 // char c[30][30];
@@ -10484,7 +10497,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P2168_哈夫曼树模板题 using ll = long long;
+// ※P2168_哈夫曼树模板题
+// using ll = long long;
 // struct Node
 // {
 // 	ll w, h;
@@ -10616,7 +10630,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P5507_估价函数不要弄错了 struct Node
+// ※P5507_估价函数不要弄错了
+// struct Node
 // {
 // 	string state;
 // 	int step, guess, ans[18]; // 题目说明中给出了最大步数为17
@@ -10980,7 +10995,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P2014_树形背包DP const int R = 310;
+// ※P2014_树形背包DP
+// const int R = 310;
 // vector<int> v[R];
 // int a[R], dp[R][R], m; // dp[x][j]表示以x为根结点的子树，保留j个结点，能够取到的最大值
 // void dfs(int x)
@@ -11178,7 +11194,8 @@ int main()
 // 	return 0;
 // }
 
-// P1577_开变量尽量开int const int R = 1e4 + 10;
+// P1577_开变量尽量开int
+// const int R = 1e4 + 10;
 // int n, k, len[R];
 // inline bool check(int leng)
 // {
@@ -11263,7 +11280,8 @@ int main()
 // 	return 0;
 // }
 
-// SP2 bool pr(int x)
+// SP2
+// bool pr(int x)
 // {
 // 	if (x == 0 || x == 1)
 // 		return false;
@@ -11388,7 +11406,8 @@ int main()
 // 	return 0;
 // }
 
-// AT_arc044_a_素数注意对1的判断！！！ bool pr(int n)
+// AT_arc044_a_素数注意对1的判断！！！
+// bool pr(int n)
 // {
 // 	if (n == 1)
 // 		return false;
@@ -11631,7 +11650,6 @@ int main()
 // {
 // 	T sta[R];
 // 	int tp = 0;
-
 // public:
 // 	T top0() { return sta[tp]; }	 // 返回最顶上的元素
 // 	T top1() { return sta[tp - 1]; } // 返回第二顶上的元素
@@ -12096,7 +12114,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P7913_注意细节！！！_优先队列的妙用：分配大 / 小编号 const int R = 1e5 + 10;
+// ※P7913_注意细节！！！_优先队列的妙用：分配大 / 小编号
+// const int R = 1e5 + 10;
 // struct Node
 // {
 // 	int s, e, num;
@@ -12452,7 +12471,8 @@ int main()
 // 	return 0;
 // }
 
-// P7960_一定要注意最大值的处理！！！_本题有两种方法解决最大的1e7的方法，一种是直接nxt[1e7] = 1e7 + 1，另一种是将X扩大1（详见第二次AC的记录） const int X = 1e7;
+// P7960_一定要注意最大值的处理！！！_本题有两种方法解决最大的1e7的方法，一种是直接nxt[1e7] = 1e7 + 1，另一种是将X扩大1（详见第二次AC的记录）
+// const int X = 1e7;
 // bool b[X + 10];
 // int nxt[X + 10]; // 直接记下一个数字
 // int main()
@@ -13021,7 +13041,8 @@ int main()
 // 	return 0;
 // }
 
-// P4568_一个题_分层图的b[][] 要开二维的，以记录每一层的状态是否被访问过 const int R = 1e4 + 10;
+// P4568_一个题_分层图的b[][] 要开二维的，以记录每一层的状态是否被访问过
+// const int R = 1e4 + 10;
 // int dis[R][15];
 // struct Edge
 // {
@@ -13372,7 +13393,8 @@ int main()
 // 	return 0;
 // }
 
-// ※T293526_强大的STL！！！本题用了珂朵莉树的精髓_set的妙用 struct Con
+// ※T293526_强大的STL！！！本题用了珂朵莉树的精髓_set的妙用
+// struct Con
 // {
 // 	int l, r;
 // 	bool operator<(const Con &x) const
@@ -13646,15 +13668,15 @@ int main()
 // 	return 0;
 // }
 
-// CF896C_珂朵莉树模板题_ULL？？？
-// using ull = unsigned long long;
+// CF896C_珂朵莉树模板题
+// using ll = long long;
 // const int R = 1e5 + 10, MOD = 1e9 + 7;
-// ull a[R];
+// ll a[R], seed;
 // struct Node
 // {
 // 	int l, r;
-// 	mutable ull val;
-// 	Node(int a, int b = 0, ull c = 0) { l = a, r = b, val = c; }
+// 	mutable ll val;
+// 	Node(int a, int b = 0, ll c = 0) { l = a, r = b, val = c; }
 // 	bool operator<(const Node &x) const { return l < x.l; }
 // };
 // set<Node> s;
@@ -13666,28 +13688,27 @@ int main()
 // 		return it;
 // 	--it;
 // 	int l = it->l, r = it->r;
-// 	ull val = it->val;
+// 	ll val = it->val;
 // 	s.erase(it);
 // 	s.insert(Node(l, pos - 1, val));
 // 	return s.insert(Node(pos, r, val)).first;
 // }
-// void assign(int l, int r, ull val)
+// void assign(int l, int r, ll val)
 // {
 // 	st it2 = split(r + 1), it1 = split(l);
 // 	s.erase(it1, it2);
 // 	s.insert(Node(l, r, val));
 // }
-// void add(int l, int r, ull val)
+// void add(int l, int r, ll val)
 // {
 // 	st it2 = split(r + 1), it1 = split(l);
 // 	for (; it1 != it2; ++it1)
 // 		it1->val += val;
 // }
-// ull kth(int l, int r, int k)
+// ll kth(int l, int r, int k)
 // {
 // 	st it2 = split(r + 1), it1 = split(l);
-// 	vector<pair<ull, int>> v;
-// 	// v.clear();
+// 	vector<pair<ll, int>> v;
 // 	for (st t = it1; t != it2; ++t)
 // 		v.push_back({t->val, t->r - t->l + 1});
 // 	sort(v.begin(), v.end());
@@ -13698,41 +13719,43 @@ int main()
 // 		if (k <= 0)
 // 			return v[i].first;
 // 	}
-// 	return ull(-1);
+// 	return ll(-1);
 // }
-// ull pow(ull a, ull p, ull mod)
+// ll pow(ll a, ll p, ll mod)
 // {
 // 	if (p == 0)
 // 		return 1;
-// 	ull res = pow(a, p / 2, mod) % mod;
+// 	ll res = pow(a, p / 2, mod) % mod;
 // 	if (p & 1)
 // 	{
-// 		res = res * res % mod;
-// 		res = res * a % mod;
+// 		res = (res % mod) * (res % mod) % mod;
+// 		res = (res % mod) * (a % mod) % mod;
 // 	}
 // 	else
-// 		res = res * res % mod;
-// 	return res;
+// 		res = (res % mod) * (res % mod) % mod;
+// 	return res % mod;
 // }
-// ull query(int l, int r, ull x, ull mod)
+// ll query(int l, int r, ll x, ll mod)
 // {
 // 	st it2 = split(r + 1), it1 = split(l);
-// 	ull res = 0;
+// 	ll res = 0;
 // 	for (; it1 != it2; ++it1)
-// 		res = (res + ull(it1->r - it1->l + 1) * pow(it1->val, x, mod)) % mod;
+// 		res = (res + ll(it1->r - it1->l + 1) * pow(it1->val, x, mod)) % mod;
 // 	return res;
 // }
-// ull seed;
-// ull rnd()
+// ll rnd()
 // {
-// 	ull res = seed;
+// 	ll res = seed;
 // 	seed = (seed * 7 + 13) % MOD;
 // 	return res;
 // }
 // int main()
 // {
+// 	ios::sync_with_stdio(false);
+// 	cin.tie(nullptr);
+// 	cout.tie(nullptr);
 // 	int n, m, i, op, l, r;
-// 	ull x, y, vmax;
+// 	ll x, y, vmax;
 // 	cin >> n >> m >> seed >> vmax;
 // 	for (i = 1; i <= n; ++i)
 // 	{
@@ -14055,25 +14078,29 @@ int main()
 // 	return 0;
 // }
 
-// ※P3369_平衡树模板_FHQ Treap写法 const int R = 1e5 + 10;
-// struct Node
+// ※P3369_平衡树模板_FHQ Treap写法
+// const int R = 1e5 + 10;
+// /*新的发现：
+// 我们在合并的时候一定要按照分裂的顺序合并
+// 比如：split(x,y),split(y,z)，就要按照merge(x,merge(y,z))或merge(merge(x,y),z)合并
+// 即：后分先合，先分后合，按顺序合并
+// merge(merge(y, z), x)未按照顺序合并*/
+// const int R = 1e5 + 10;
+// struct
 // {
-// 	int l, r, val, key, size;
+// 	int l, r, val, key, sz;
 // } tree[R];
+// int root, tot;
 // mt19937 rd;
-// int tot, root; // 每次操作后都要更新root
-// int create(int val)
+// int crt(int val)
 // {
-// 	tree[++tot].key = rd();
-// 	tree[tot].val = val;
-// 	tree[tot].size = 1;
+// 	tree[++tot].val = val;
+// 	tree[tot].key = rd();
+// 	tree[tot].sz = 1;
 // 	return tot;
 // }
-// void pushup(int k)
-// {
-// 	tree[k].size = tree[tree[k].l].size + tree[tree[k].r].size + 1;
-// }
-// void split(int k, int val, int &x, int &y)
+// void pushup(int k) { tree[k].sz = tree[tree[k].l].sz + tree[tree[k].r].sz + 1; }
+// void split(int k, int val, int &x, int &y) // 按值分裂
 // {
 // 	if (k == 0)
 // 	{
@@ -14095,8 +14122,8 @@ int main()
 // int merge(int x, int y)
 // {
 // 	if (x == 0 || y == 0)
-// 		return (x == 0 ? y : x);
-// 	if (tree[x].key > tree[y].key)
+// 		return x + y;
+// 	if (tree[x].key < tree[y].key)
 // 	{
 // 		tree[x].r = merge(tree[x].r, y);
 // 		pushup(x);
@@ -14109,45 +14136,52 @@ int main()
 // 		return y;
 // 	}
 // }
-// int x, y, z; // 临时变量，干杂活，无实际含义
+// int x, y, z;
 // void insert(int val)
 // {
-// 	split(root, val, x, y);
-// 	root = merge(merge(x, create(val)), y);
+// 	split(root, val - 1, x, y);
+// 	split(y, val, y, z);
+// 	root = merge(x, merge(merge(y, crt(val)), z)); // 注意看，这里也是按照顺序再合并起来的
 // }
 // void del(int val)
 // {
-// 	split(root, val, x, y);
-// 	split(x, val - 1, x, z);
-// 	if (tree[z].size)
-// 	{
-// 		z = merge(tree[z].l, tree[z].r); // 根节点不要了，把两个子树合并起来就相当于去掉根节点
-// 		root = merge(merge(x, z), y);
-// 	}
+// 	split(root, val - 1, x, y);
+// 	split(y, val, y, z);
+// 	y = merge(tree[y].l, tree[y].r);
+// 	root = merge(merge(x, y), z);
+// 	/*新的发现：
+// 	我们在合并的时候一定要按照分裂的顺序合并
+// 	比如：split(x,y),split(y,z)，就要按照merge(x,merge(y,z))或merge(merge(x,y),z)合并
+// 	即：后分先合，先分后合，按顺序合并
+// 	merge(merge(y, z), x)未按照顺序合并*/
 // }
-// int rankx(int val)
+// int rank1(int val)
 // {
-// 	split(root, val - 1, x, y); // 注意是要将所有<val的树分到子树x上，而非<=
-// 	int res = tree[x].size + 1;
+// 	split(root, val - 1, x, y);
+// 	int res = tree[x].sz + 1;
 // 	root = merge(x, y);
 // 	return res;
 // }
 // int kth(int k)
 // {
+// 	int res;
 // 	x = root;
 // 	while (x)
 // 	{
-// 		if (tree[tree[x].l].size + 1 == k)
-// 			return tree[x].val;
-// 		if (tree[tree[x].l].size >= k)
+// 		if (tree[tree[x].l].sz + 1 == k)
+// 		{
+// 			res = tree[x].val;
+// 			break;
+// 		}
+// 		if (tree[tree[x].l].sz >= k)
 // 			x = tree[x].l;
 // 		else
 // 		{
-// 			k = k - (tree[tree[x].l].size + 1); // 注意减的是左子树的大小+1
+// 			k -= (tree[tree[x].l].sz + 1);
 // 			x = tree[x].r;
 // 		}
 // 	}
-// 	return -1;
+// 	return res;
 // }
 // int pre(int val)
 // {
@@ -14172,9 +14206,10 @@ int main()
 // 	ios::sync_with_stdio(false);
 // 	cin.tie(nullptr);
 // 	cout.tie(nullptr);
-// 	int n, opt;
+// 	int n, opt, x;
 // 	cin >> n;
-// 	while (n--)
+// 	int j;
+// 	for (j = 1; j <= n; ++j)
 // 	{
 // 		cin >> opt >> x;
 // 		if (opt == 1)
@@ -14182,7 +14217,7 @@ int main()
 // 		else if (opt == 2)
 // 			del(x);
 // 		else if (opt == 3)
-// 			cout << rankx(x) << '\n';
+// 			cout << rank1(x) << '\n';
 // 		else if (opt == 4)
 // 			cout << kth(x) << '\n';
 // 		else if (opt == 5)
@@ -14708,7 +14743,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P1471 using db = double;
+// ※P1471
+// using db = double;
 // const int R = 1e5 + 10;
 // db a[R]; // 也要开double！！！
 // #define lc k << 1
@@ -14830,7 +14866,8 @@ int main()
 // 	return 0;
 // }
 
-// ※P3834_主席树模板 const int R = 2e5 + 10;
+// ※P3834_主席树模板
+// const int R = 2e5 + 10;
 // struct Node
 // {
 // 	int l, r, sum;
