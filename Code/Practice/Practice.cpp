@@ -5,1791 +5,1795 @@ int main()
 {
 	//----------------------------Practice.cpp----------------------------
 
-	// 输出“*
-	//****
-	//******”
-	//  cout<<"*"<<endl;
-	//  cout<<"****"<<endl;
-	//  cout<<"******"<<endl;
-
-	// 矩形面积
-	//  float a, b, c;
-	//  cin>>a>>b;
-	//  c = a * b;
-	//  cout<<c;
-
-	// 圆面积
-	//  float r, s;
-	//  const float pai = 3.14;  //const是常量
-	//  cin>>r;
-	//  s = pow(r, 2) * pai;
-	//  cout<<fixed<<setprecision(3)<<s<<endl;
-	//  //或使用printf("%.3f", s)
-
-	// 小于等于10斤每斤3元，10~20斤每斤2.6元，大于20斤每斤2元，求n斤要付多少钱
-	//  float n;
-	//  cin>>n;
-	//  if (n <= 10)
-	//  {
-	//  	cout<<n * 3;
-	//  }
-	//  if ((n > 10)&&(n < 20))
-	//  {
-	//  	cout<<n * 2.6;
-	//  }
-	//  if (n >= 20)
-	//  {
-	//  	cout<<n * 2;
-	//  }
-
-	// 小于等于10斤每斤3元，10~20斤超过部分每斤2.6元，大于20斤超过部分每斤2元，求n斤要付多少钱
-	//  float n, a;
-	//  cin>>n;
-	//  if (n <= 10)
-	//  {
-	//  	cout<<n * 3;
-	//  }
-	//  if ((n > 10)&&(n < 20))
-	//  {
-	//  	a = 30 + (n - 10) * 2.6;
-	//  	cout<<a;
-	//  }
-	//  if (n >= 20)
-	//  {
-	//  	a = 56 + (n - 20) * 2;
-	//  	cout<<a;
-	//  }
-
-	// 3个数输出最大
-	//  int a, b, c;
-	//  cin>>a>>b>>c;
-	//  if (a > b)
-	//  {
-	//  	if (a > c)
-	//  	{
-	//  		cout<<a;
-	//  	}
-	//  	else
-	//  	{
-	//  		cout<<c;
-	//  	}
-	//  }
-	//  else
-	//  {
-	//  	if (b > c)
-	//  	{
-	//  		cout<<b;
-	//  	}
-	//  	else
-	//  	{
-	//  		cout<<c;
-	//  	}
-	//  }
-
-	// 喜欢的数字
-	//  int a;
-	//  cin>>a;
-	//  if ((a % 2 == 0)&&(a > 4)&&(a <= 12))
-	//  {
-	//  	cout<<"1"<<" ";
-	//  }
-	//  else
-	//  {
-	//  	cout<<"0"<<" ";
-	//  }
-	//  if ((a % 2 == 0)||((a > 4)&&(a <= 12)))
-	//  {
-	//  	cout<<"1"<<" ";
-	//  }
-	//  else
-	//  {
-	//  	cout<<"0"<<" ";
-	//  }
-	//  if ((a % 2 == 0)^((a > 4)&&(a <= 12)))
-	//  {
-	//  	cout<<"1"<<" ";
-	//  }
-	//  else
-	//  {
-	//  	cout<<"0"<<" ";
-	//  }
-	//  if ((a % 2 == 0)&&(a > 4)&&(a <= 12))
-	//  {
-	//  	cout<<"0"<<" ";
-	//  }
-	//  else
-	//  {
-	//  	cout<<"1"<<" ";
-	//  }
-
-	// 1~n内能被3整除数的个数
-	//  int n, a;
-	//  cin>>n;
-	//  for (int i = 1; i < n; i = i + 3)
-	//  {
-	//  	a++;
-	//  }
-	//  cout<<a<<endl;
-
-	// 1~n内能被3整除或能被5整除数的个数
-	//  int n, a = 0, b = 0;
-	//  cin>>n;
-	//  // for (int i = 1; i < n; i++)
-	//  // {
-	//  // 	if ((i % 3 == 0) || (i % 5 == 0))
-	//  // 	{
-	//  // 		a++;
-	//  // 	}
-	//  // }
-	//  a = n / 3;
-	//  b = n / 5;
-	//  c = n / 15;
-	//  cout<<a + b - c<<endl;
-
-	// 1~n的和
-	// 解法1
-	//  int n;
-	//  long long sum = 0;
-	//  cin>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	sum = sum + i;
-	//  }
-	//  cout<<sum<<endl;
-	// 解法2
-	//  int n;
-	//  long long sum = 0;
-	//  cin>>n;
-	//  sum = (1 + n) * n / 2;
-	//  cout<<sum<<endl;
-
-	// 输出第二个整数
-	//  int a, b, c;
-	//  cin>>a>>b>>c;
-	//  cout<<b<<endl;
-	//  return 0;
-
-	// 对齐输出
-	//  int a, b, c;
-	//  cin>>a>>b>>c;
-	//  printf("%8d" "%8d" "%8d", a, b, c);
-	//  return 0;
-
-	// 字符等腰三角形
-	//  char a;
-	//  cin>>a;
-	//  cout<<"  "<<a<<endl;
-	//  cout<<" "<<a<<a<<a<<endl;
-	//  cout<<a<<a<<a<<a<<a<<endl;
-	//  return 0;
-
-	// 带余除法
-	//  int a, b;
-	//  cin>>a>>b;
-	//  int c, d;
-	//  c = a / b;
-	//  d = a % b;
-	//  cout<<c<<"……"<<d<<endl;
-	//  return 0;
-
-	// 计算分数的浮点数值
-	//  double a, b, c;
-	//  cin>>a>>b;
-	//  c = a / b;
-	//  cout<<fixed<<setprecision(9)<<c<<endl;
-	//  return 0;
-
-	// 概率
-	//  double a, b, c;
-	//  cin>>a>>b;
-	//  c = b / a * 100;
-	//  cout<<fixed<<setprecision(3)<<c<<"%"<<endl;
-	//  return 0;
-
-	// 数据的储存空间大小
-	//  int a;  //整型
-	//  long long int l;  //长整形
-	//  short b;  //短整型
-	//  float x;  //浮点型
-	//  double y;  //双精度浮点型
-	//  bool t;  //布尔型
-	//  char d;  //字符型
-	//  cout<<sizeof(a)<<" "<<sizeof(l)<<" "<<sizeof(b)<<" "<<sizeof(x)<<" "<<sizeof(y)<<" "<<sizeof(t)<<" "<<sizeof(d)<<endl;
-	//  return 0;
-
-	// 输出ASCII编码所对应的字符
-	//  int b;
-	//  cin>>b;
-	//  cout<<(char)b<<endl;
-	//  return 0;
-
-	// 输出除空格外的可见字符的ASCII编码
-	//  char a;
-	//  cin>>a;
-	//  cout<<(int)a<<endl;
-	//  return 0;
-
-	// 已知坐标，求线段长度
-	//  double xa, ya, xb, yb, n;
-	//  cin>>xa>>ya;
-	//  cin>>xb>>yb;
-	//  n = sqrt(pow((xa - xb), 2) + pow((ya - yb), 2));
-	//  cout<<fixed<<setprecision(3)<<n<<endl;
-
-	// 已知坐标，求三角形面积
-	//  float xa, ya, xb, yb, xc, yc, a, b, c, r, s;  //定义单精度实型变量xa,ya,xb,yb,xc,yc,n,a,b,c,r,s
-	//  scanf("f%f%f%f%f%f", &xa, &ya, &xb, &yb, &xc, &yc);  //输入三角形三个角的坐标
-	//  a = sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb));
-	//  b = sqrt((xb - xc) * (xb - xc) + (yb - yc) * (yb - yc));
-	//  c = sqrt((xc - xa) * (xc - xa) + (yc - ya) * (yc - ya));  //a,b,c储存三角形三条边的长度
-	//  r = (a + b + c) / 2;   //r储存(a+b+c)/2的值
-	//  s = sqrt(r * (r - a) * (r - b) * (r - c));  //s储存三角形的面积
-	//  printf("%.2f", s);  //输出s
-
-	// 求绝对值
-	//  double a;
-	//  cin>>a;
-	//  if (a < 0)
-	//  {
-	//  	a = -a;
-	//  }
-	//  cout<<a<<endl;
-
-	// 骑车与走路
-	//  double a, t1, t2;
-	//  cin>>a;
-	//  t1 = a / 1.2;
-	//  t2 = a / 3.0 + 27 + 23;
-	//  if (t1 < t2)
-	//  {
-	//  	cout<<"Walk";
-	//  }
-	//  if (t1 == t2)
-	//  {
-	//  	cout<<"All";
-	//  }
-	//  if (t1 > t2)
-	//  {
-	//  	cout<<"Bike";
-	//  }
-
-	// 三边是否能够成三角形
-	//  float a, b, c;
-	//  cin>>a>>b>>c;
-	//  if ((a + b > c)&&(a + c > b)&&(b + c >a))
-	//  {
-	//  	cout<<"Yes"<<endl;
-	//  }
-	//  else
-	//  {
-	//  	cout<<"No"<<endl;
-	//  }
-
-	// 简易计算器
-	//  double a, b;
-	//  char x;
-	//  cin>>a>>x>>b;
-	//  if (x == '+')
-	//  {
-	//  	cout<<a + b<<endl;
-	//  }
-	//  if (x == '-')
-	//  {
-	//  	cout<<a - b<<endl;
-	//  }
-	//  if (x == '*')
-	//  {
-	//  	cout<<a * b<<endl;
-	//  }
-	//  if (x == '/')
-	//  {
-	//  	cout<<a / b<<endl;
-	//  }
-
-	// ASCII是否是奇数
-	//  char a;
-	//  cin>>a;
-	//  if ((int)a % 2 == 0)
-	//  {
-	//  	cout<<"NO"<<endl;
-	//  }
-	//  else
-	//  {
-	//  	cout<<"YES"<<endl;
-	//  }
-
-	// 一个数能否被3,5,7整除
-	//  int n;
-	//  cin>>n;
-	//  if (n % 3 == 0)
-	//  {
-	//  	cout<<"3"<<" ";
-	//  }
-	//  if (n % 5 == 0)
-	//  {
-	//  	cout<<"5"<<" ";
-	//  }
-	//  if (n % 7 == 0)
-	//  {
-	//  	cout<<"7"<<endl;
-	//  }
-	//  else
-	//  {
-	//  	cout<<"n"<<endl;
-	//  }
-
-	// 计算平均值
-	//  double b, x = 0;
-	//  int a;
-	//  cin>>a;
-	//  for (int i = 1; i <= a; i++)
-	//  {
-	//  	cin>>b;
-	//  	x = x + b;
-	//  }
-	//  cout<<fixed<<setprecision(2)<<x / a<<endl;
-
-	// 计算一组数的和与平均值
-	//  double b, x = 0;
-	//  int a;
-	//  cin>>a;
-	//  for (int i = 1; i <= a; i++)
-	//  {
-	//  	cin>>b;
-	//  	x = x + b;
-	//  }
-	//  cout<<x<<endl;
-	//  cout<<fixed<<setprecision(5)<<x / a<<endl;
-
-	// 求极差
-	//  long long int n, max = -99999, min = 99999;
-	//  int a[99999];
-	//  cin >> n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin >> a[i];
-	//  	if (a[i] > max)
-	//  	{
-	//  		max = a[i];
-	//  	}
-	//  	if (a[i] < min)
-	//  	{
-	//  		min = a[i];
-	//  	}
-	//  }
-	//  cout<<max - min<<endl;
-
-	// 与指定数字相同的数的个数_变量
-	//  int m, n, a, k = 0;
-	//  cin>>n>>m;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cin>>a;
-	//  	if (a == m)
-	//  	{
-	//  		k++;
-	//  	}
-	//  }
-	//  cout<<k<<endl;
-
-	// 乘方运算
-	//  long long int a, b, c;
-	//  cin>>a>>b;
-	//  c = pow(a, b);
-	//  cout<<c<<endl;
-
-	// 斐波那契数列的第k个数
-	//  int a = 1, b = 1;  //第一个数和第二个数总为1
-	//  int c, k;
-	//  cin>>k;
-	//  for (int i = 3; i <= k; i++)  //i从3开始循环
-	//  {
-	//  	c = a + b;
-	//  	a = b;
-	//  	b = c;
-	//  }
-	//  cout<<b<<endl;
-
-	// 鸡尾酒疗法
-	//  long long int a, b, n;
-	//  double x, y;
-	//  cin>>n;
-	//  cin>>a>>b;
-	//  x = b/(a/1.0);  //原疗法
-	//  for (int i = 2; i <= n; i++)
-	//  {
-	//  	cin>>a>>b;
-	//  	y = b/(a/1.0);  //新疗法
-	//  	if (y - x >0.05)
-	//  	{
-	//  		cout<<"better"<<endl;
-	//  	}
-	//  	else if (x - y >0.05)
-	//  	{
-	//  		cout<<"worse"<<endl;
-	//  	}
-	//  	else
-	//  	{
-	//  		cout<<"same"<<endl;
-	//  	}
-	//  }
-
-	// 输出符合条件的四位数
-	//  int a, b, c, d, n, x, s = 0;
-	//  cin>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cin>>x;
-	//  	a = x / 1000;
-	//  	b = (x / 100) % 10;
-	//  	c = (x / 10) % 10;
-	//  	d = x % 10;
-	//  	if (d - a - b - c > 0)
-	//  	{
-	//  		s++;
-	//  	}
-	//  }
-	//  cout<<s<<endl;
-
-	// 与指定数字相同的数的个数_数组
-	//  int a[10000], n, x, m = 0;
-	//  cin>>n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin>>a[i];
-	//  }
-	//  cin>>x;
-	//  for (int j = 0; j < n; j++)
-	//  {
-	//  	if (a[j] == x)
-	//  	{
-	//  		m++;
-	//  	}
-	//  }
-	//  cout<<m<<endl;
-
-	// 数据逆向输出
-	//  int n, a[100001], b;
-	//  cin>>n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin>>a[i];
-	//  }
-	//  for (int j = n - 1; j >= 0; j--)
-	//  {
-	//  	cout<<a[j];
-	//  }
-
-	// 求最小值
-	//  int n, a, min = 0;
-	//  cin>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cin>>a;
-	//  	if (a < min)
-	//  	{
-	//  		min = a;
-	//  	}
-	//  }
-	//  cout<<min;
-
-	// 药房管理
-	//  int m, n, a, b = 0;
-	//  cin>>m>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cin>>a;
-	//  	if (m >= a)
-	//  	{
-	//  		m -= a;
-	//  	}
-	//  	else
-	//  	{
-	//  		b++;
-	//  	}
-	//  }
-	//  cout<<b;
-
-	// 血压正常小时数
-	//  int n, a, b, t = 0, max = 0;
-	//  cin>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cin>>a>>b;
-	//  	if (a >= 90 && a <= 160 && b >= 60 && b <= 90)
-	//  	{
-	//  		t++;
-	//  		if (t > max)
-	//  		{
-	//  			max = t;
-	//  		}
-	//  	}
-	//  	else
-	//  	{
-	//  		t = 0;
-	//  	}
-	//  }
-	//  cout<<max<<endl;
-
-	// 使每个人拿到的苹果数不同
-	//  int n, a = 0;
-	//  cin>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	a += i;
-	//  }
-	//  cout<<a;
-
-	// 植树
-	//  int a[99999];
-	//  int l, m, x, y, s;
-	//  cin>>l>>m;
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	a[i] = 1;  //设所有树都没被移走
-	//  }
-	//  for (int e = 1; e <= m; e++)
-	//  {
-	//  	cin>>x>>y;
-	//  	for (int j = x; j <= y; j++)  //对需要移走的树做标记
-	//  	{
-	//  		a[j] = 0;
-	//  	}
-	//  }
-	//  for (int f = 0; f <= l; f++)
-	//  {
-	//  	if (a[f] == 1)
-	//  	{
-	//  		s++;
-	//  	}
-	//  }
-	//  cout<<s<<endl;
-
-	// 奇数求和
-	//  int m, n, sum;
-	//  cin>>m>>n;
-	//  for (int i = m; i <= n; i++)
-	//  {
-	//  	if (i % 2 != 0)
-	//  	{
-	//  		sum += i;
-	//  	}
-	//  }
-	//  cout<<sum<<endl;
-
-	// a，b，c对x求余(x作为除数)，所得余数相同，求满足此条件的x的最小值
-	//  int a, b, c, x = 2;
-	//  cin>>a>>b>>c;
-	//  int min = a;
-	//  if (min > b)
-	//  {
-	//  	min = b;
-	//  }
-	//  if (min > c)
-	//  {
-	//  	min = c;
-	//  }
-	//  for (int i = x; i <= min; i++)
-	//  {
-	//  	x++;
-	//  	if ((a % x == b % x)&&(b % x == c % x))
-	//  	{
-	//  		cout<<x<<endl;
-	//  		break;
-	//  	}
-	//  }
-
-	// 分离整数的各个数_逆序输出
-	//  int n;
-	//  cin>>n;
-	//  while (n > 0)
-	//  {
-	//  	cout<<n % 10<<" ";
-	//  	n = n / 10;
-	//  }
-
-	// 数字反转
-	//  int n, s = 0, a;
-	//  cin >> n;
-	//  if (n < 0)
-	//  {
-	//  	cout<<"-";
-	//  }
-	//  n = abs(n);  //取n的绝对值
-	//  while(n > 0)
-	//  {
-	//  	a = n % 10;
-	//  	n = n / 10;
-	//  	s = s * 10 + a;
-	//  }
-	//  cout << s;
-
-	// 含k个3的数，且能被19整除
-	//  int n, k, num;
-	//  cin>>n>>k;
-	//  if (n % 19 == 0)
-	//  {
-	//  	while(n > 0)
-	//  	{
-	//  		if (n % 10 == 3)
-	//  		{
-	//  			num++;
-	//  		}
-	//  		n /= 10;
-	//  	}
-	//  	if (k == num)
-	//  	{
-	//  		cout<<"YES";
-	//  	}
-	//  }
-	//  else if (n % 19 != 0)
-	//  {
-	//  	cout<<"NO";
-	//  }
-
-	// 求阶乘的和
-	//  int n;
-	//  long long int s = 0, t = 1;
-	//  cin>>n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	// t = 1;
-	//  	// for (int j = 1; j <= i; j++)
-	//  	// {
-	//  	// 	t = t * j;
-	//  	// }
-	//  	// s += t;
-	//  	t *= i;
-	//  	s += t;
-	//  }
-	//  cout<<s;
-
-	// 质因数分解
-	//  int n, m;
-	//  cin>>n;
-	//  m = sqrt(n);
-	//  for (int i = 2; i <= m; i++)
-	//  {
-	//  	if (n % i == 0)
-	//  	{
-	//  		cout<<n / i;
-	//  	}
-	//  }
-
-	// 画矩形
-	//  int a, b, c;
-	//  char n;
-	//  cin>>a>>b>>n>>c;
-	//  if ((a == 1)&&(b == 1))
-	//  {
-	//  	cout<<n;
-	//  }
-	//  else if ((a == 1)&&(b > 1))
-	//  {
-	//  	for (int i = 0; i < b; i++)
-	//  	{
-	//  		cout<<n;
-	//  	}
-	//  }
-	//  else if ((a > 1)&&(b == 1))
-	//  {
-	//  	for (int i = 0; i < a; i++)
-	//  	{
-	//  		cout<<n;
-	//  		cout<<endl;
-	//  	}
-	//  }
-	//  else if ((a > 1)&&(b > 1))
-	//  {
-	//  	for (int j = 0; j < b; j++)
-	//  	{
-	//  		cout<<n;
-	//  	}
-	//  	cout<<endl;
-	//  	if (c == 1)
-	//  	{
-	//  		for (int x = 0; x < a - 1; x++)
-	//  		{
-	//  			for (int y = 0; y < b; y++)
-	//  			{
-	//  				cout<<n;
-	//  			}
-	//  			cout<<endl;
-	//  		}
-	//  	}
-	//  	if (c == 0)
-	//  	{
-	//  		for (int x = 0; x < a - 2; x++)
-	//  		{
-	//  			cout<<n;
-	//  			for (int z = 0; z < b - 2; z++)
-	//  			{
-	//  				cout<<" ";
-	//  			}
-	//  			cout<<n;
-	//  			cout<<endl;
-	//  		}
-	//  		for (int y = 0; y < b; y++)
-	//  		{
-	//  			cout<<n;
-	//  		}
-	//  	}
-	//  }
-
-	// 开关灯
-	//  int n, m, a[9999], z = 1;
-	//  cin >> n >> m;
-	//  for (int i = 1; i <= m; i++)
-	//  {
-	//  	for (int j = 0; j <= n; j++)
-	//  	{
-	//  		if (j % i == 0)
-	//  		{
-	//  			a[j] = !a[j];
-	//  		}
-	//  	}
-	//  }
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	if (a[i])
-	//  	{
-	//  		if (z)
-	//  		{
-	//  			z = 0;
-	//  		}
-	//  		else
-	//  		{
-	//  			cout << ",";
-	//  		}
-	//  		cout << i;
-	//  	}
-	//  }
-	//  printf("\n");
-
-	// 整数去重_解法1，执行时间长
-	//  int a[99999], n;
-	//  cin>>n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin>>a[i];
-	//  }
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	for (int j = i + 1; j < n; j++)
-	//  	{
-	//  		if (a[i] == a[j])
-	//  		{
-	//  			for (int k = j; k < n; k++)
-	//  			{
-	//  				a[k] = a[k + 1];
-	//  			}
-	//  			n--;
-	//  		}
-	//  	}
-	//  }
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cout<<a[i]<<" ";
-	//  }
-
-	// 整数去重_解法2
-	//  int a[99999], n, s[99999];
-	//  cin>>n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin>>a[i];
-	//  	s[i] = 0;
-	//  }
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	for (int j = i + 1; j < n; j++)
-	//  	{
-	//  		if ((a[i] == a[j])&&(s[j] == 0))
-	//  		{
-	//  			s[j] = 1;
-	//  		}
-	//  	}
-	//  }
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	if (s[i] == 0)
-	//  	{
-	//  		cout<<a[i]<<" ";
-	//  	}
-	//  }
-
-	// 查找数组中某数的下标，若没有则输出-1
-	//  int a[99999];
-	//  long int n, b, temp;
-	//  cin >> n;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cin >> a[i];
-	//  }
-	//  cin >> b;
-	//  for (int j = 1; j <= n; j++)
-	//  {
-	//  	temp = a[j];
-	//  	if (temp == b)
-	//  	{
-	//  		cout << j << endl;
-	//  		return 0;
-	//  	}
-	//  }
-
-	// 除最大数外其他数的和
-	//  long long int n, max = -99999, sum = 0;
-	//  int a[10000];
-	//  cin >> n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin >> a[i];
-	//  	if (a[i] > max)
-	//  	{
-	//  		max = a[i];
-	//  	}
-	//  }
-	//  for (int j = 0; j < n; j++)
-	//  {
-	//  	if (a[j] != max)
-	//  	{
-	//  		sum += a[j];
-	//  	}
-	//  }
-	//  cout << sum;
-
-	// 最长连续数
-	//  int n, k = 0, max = 0;
-	//  int a[999999];
-	//  cin >> n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin >> a[i];
-	//  	if (a[i] == a[i - 1])
-	//  	{
-	//  		k++;
-	//  	}
-	//  	else
-	//  	{
-	//  		k = 1;
-	//  	}
-	//  	if (k > max)
-	//  	{
-	//  		max = k;
-	//  	}
-	//  }
-	//  cout << max;
-
-	// 统计数字的个数
-	//  char c[256];
-	//  int num = 0, l;
-	//  gets(c);
-	//  l = strlen(c);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if ((c[i] >= '0') && (c[i] <= '9'))
-	//  	{
-	//  		num++;
-	//  	}
-	//  }
-	//  cout << num;
-
-	// 统计字符的个数
-	//  char c[256];
-	//  int num = 0, l;
-	//  gets(c);
-	//  l = strlen(c);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (((c[i] >= 'a') && (c[i] <= 'z')) || ((c[i] >= 'A') && (c[i] <= 'Z')))
-	//  	{
-	//  		num++;
-	//  	}
-	//  }
-	//  cout << num;
-
-	// 找到第一个只出现一次的字符
-	//  char s[100001];
-	//  int c[26];
-	//  int l;
-	//  gets(s);
-	//  l = strlen(s);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	c[s[i] - 'a']++;
-	//  	//用于统计，以字符与a的偏差为数组中元素的下标，若有则+1(即如果有重复字符时会大于1)
-	//  	//a是ASCII码中的第一个字母，其他字母在a的基础上做偏差
-	//  }
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (c[s[i] - 'a'] == 1)
-	//  	{
-	//  		cout << s[i];
-	//  		return 0;
-	//  	}
-	//  }
-	//  cout << "no";
-
-	// 基因相关性
-	//  string a, b;
-	//  double n, x, c, len;
-	//  cin >> x;
-	//  cin >> a >> b;
-	//  len = a.size();
-	//  for (int i = 0; i < len; i++)
-	//  {
-	//  	if (a[i] == b[i])
-	//  	{
-	//  		n++;
-	//  	}
-	//  }
-	//  c = n / len;
-	//  if (c >= x)
-	//  {
-	//  	cout << "yes";
-	//  }
-	//  else
-	//  {
-	//  	cout << "no";
-	//  }
-
-	// 亲朋字符串
-	//  int l;
-	//  char a[101];
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l - 1; i++)
-	//  {
-	//  	printf("%c", a[i] + a[i + 1]);
-	//  }
-	//  printf("%c", a[0] + a[l - 1]);
-
-	// 配对碱基链
-	//  int l;
-	//  char a[256];
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (a[i] == 'A')
-	//  	{
-	//  		cout << "T";
-	//  	}
-	//  	if (a[i] == 'T')
-	//  	{
-	//  		cout << "A";
-	//  	}
-	//  	if (a[i] == 'C')
-	//  	{
-	//  		cout << "G";
-	//  	}
-	//  	if (a[i] == 'G')
-	//  	{
-	//  		cout << "C";
-	//  	}
-	//  }
-
-	// 明文译成密码
-	//  int l;
-	//  char a[128];
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if ((a[i] == 'z') || (a[i] == 'Z'))
-	//  	{
-	//  		a[i] = a[i - 25];
-	//  	}
-	//  	else if (((a[i] >= 'a') && (a[i] <= 'z')) || ((a[i] >= 'A') && (a[i] <= 'Z')))
-	//  	{
-	//  		a[i] = a[i] + 1;
-	//  	}
-	//  	cout << a[i];
-	//  }
-
-	// 密码译成明文
-	//  char a[128];
-	//  int l;
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if ((a[i] == 'a') || (a[i] == 'A'))
-	//  	{
-	//  		a[i] = a[i + 25];
-	//  	}
-	//  	else if (((a[i] >= 'a') && (a[i] <= 'z')) || ((a[i] >= 'A') && (a[i] <= 'Z')))
-	//  	{
-	//  		a[i] = a[i] - 1;
-	//  	}
-	//  	cout << a[i];
-	//  }
-
-	// 连续出现的字符
-	//  char a[1001];
-	//  int l, k, t;
-	//  cin >> k >> a;
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	t = i;
-	//  	while (a[i] == a[t])
-	//  	{
-	//  		t++;
-	//  	}
-	//  	if (t - i == k)
-	//  	{
-	//  		cout << a[i];
-	//  		exit(0);
-	//  	}
-	//  }
-	//  cout << "No";
-
-	// 整理药名
-	//  int l, n;
-	//  string a[101], s;
-	//  cin >> n;
-	//  for (int i = 0; i <= n; i++)
-	//  {
-	//  	getline(cin, a[i]);
-	//  }
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	s = a[i];
-	//  	if ((s[0] >= 'a') && (s[0] <= 'z'))
-	//  	{
-	//  		s[0] -= 32;
-	//  	}
-	//  	l = s.size();
-	//  	for (int j = 1; j < l; j++)
-	//  	{
-	//  		if ((s[j] >= 'A') && (s[j] <= 'Z'))
-	//  		{
-	//  			s[j] += 32;
-	//  		}
-	//  	}
-	//  	a[i] = s;
-	//  }
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cout << a[i] << endl;
-	//  }
-
-	// 验证子串
-	//  char a[201], b[201];
-	//  gets(a);
-	//  gets(b);
-	//  if (strstr(a, b))
-	//  {
-	//  	cout << b << " is substring of " << a;
-	//  	return 0;
-	//  }
-	//  if (strstr(b, a))
-	//  {
-	//  	cout << a << " is substring of " << b;
-	//  	return 0;
-	//  }
-	//  cout << "No substring" << endl;
-
-	// 删除单词后缀
-	//  char a[32];
-	//  int l;
-	//  gets(a);
-	//  l = strlen(a);
-	//  if (a[l - 3] == 'i' && a[l - 2] == 'n' && a[l - 1] == 'g')
-	//  {
-	//  	for (int i = 0; i < l - 3; i++)
-	//  	{
-	//  		cout << a[i];
-	//  	}
-	//  	return 0;
-	//  }
-	//  else if (a[l - 2] == 'e' && a[l - 1] == 'r')
-	//  {
-	//  	for (int i = 0; i < l - 2; i++)
-	//  	{
-	//  		cout << a[i];
-	//  	}
-	//  	return 0;
-	//  }
-	//  if (a[l - 2] == 'l' && a[l - 1] == 'y')
-	//  {
-	//  	for (int i = 0; i < l - 2; i++)
-	//  	{
-	//  		cout << a[i];
-	//  	}
-	//  	return 0;
-	//  }
-
-	// 单词长度
-	//  char a[1001];
-	//  int l, t = 0;
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (a[i] != ' ')
-	//  	{
-	//  		t++;
-	//  	}
-	//  	else
-	//  	{
-	//  		if (t > 0)
-	//  		{
-	//  			cout << t << ",";
-	//  		}
-	//  		t = 0;
-	//  	}
-	//  }
-	//  cout << t;
-
-	// 单词反转
-	//  int l, j;
-	//  char a[1001];
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (a[i] == ' ')
-	//  	{
-	//  		cout << " ";
-	//  	}
-	//  	else
-	//  	{
-	//  		int k = 0;
-	//  		for (j = i; a[j] != ' '; j++)
-	//  		{
-	//  			k++;
-	//  			if (j >= l)
-	//  			{
-	//  				break;
-	//  			}
-	//  		}
-	//  		j--;
-	//  		k--;
-	//  		for (j = j; j >= i; j--)
-	//  		{
-	//  			cout << a[j];
-	//  		}
-	//  		i += k;
-	//  	}
-	//  }
-
-	// 字符串p型编码
-	//  int l, t = 1;
-	//  char a[1001];
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (a[i] == a[i + 1])
-	//  	{
-	//  		t++;
-	//  	}
-	//  	else
-	//  	{
-	//  		cout << t << a[i];
-	//  		t = 1;
-	//  	}
-	//  }
-
-	// 判断字符串是否回文
-	//  char a[101];
-	//  int l, f = 0;
-	//  gets(a);
-	//  l = strlen(a);
-	//  cout << l;
-	//  for (int i = 0; i <= l / 2; i++)
-	//  {
-	//  	if (a[i] != a[l - 1 - i])
-	//  	{
-	//  		f = 1;
-	//  		break;
-	//  	}
-	//  }
-	//  if (f == 1)
-	//  {
-	//  	cout << "no";
-	//  }
-	//  else if (f == 0)
-	//  {
-	//  	cout << "yes";
-	//  }
-
-	// 最高分的学生姓名
-	//  int n, l, s, max = -1;
-	//  string a, name;
-	//  cin >> n;
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	cin >> s >> a;
-	//  	if (s > max)
-	//  	{
-	//  		max = s;
-	//  		name = a;
-	//  	}
-	//  }
-	//  cout << name << endl;
-
-	// 连续出现的字符
-	//  int k = 0, x, l;
-	//  char a[1000];
-	//  cin >> x;
-	//  scanf("%s", a);
-	//  l = strlen(a);
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (k == x)
-	//  	{
-	//  		cout << a[i];
-	//  		return 0;
-	//  	}
-	//  	if (a[i] == a[i + 1])
-	//  	{
-	//  		k++;
-	//  	}
-	//  	else
-	//  	{
-	//  		k = 1;
-	//  	}
-	//  }
-	//  cout << "No";
-
-	// 一句话中最长和最短的单词
-	//  char a[200001];
-	//  int t = 0, maxi, maxl, mini, minl = 100, l;
-	//  gets(a);
-	//  l = strlen(a);
-	//  for (int i = 0; i <= l; i++)
-	//  {
-	//  	if ((a[i] != ' ') && (a[i] != '.') && (a[i] != ','))
-	//  	{
-	//  		t++;
-	//  	}
-	//  	else if (t > 0)
-	//  	{
-	//  		if (t > maxl)
-	//  		{
-	//  			maxl = t;	  //长度
-	//  			maxi = i - t; //起始位置
-	//  		}
-	//  		if (t < minl)
-	//  		{
-	//  			minl = t;
-	//  			mini = i - t;
-	//  		}
-	//  		t = 0;
-	//  	}
-	//  }
-	//  for (int i = maxi; i <= maxi + maxl - 1; i++)
-	//  {
-	//  	cout << a[i];
-	//  }
-	//  cout << endl;
-	//  for (int i = mini; i <= mini + minl - 1; i++)
-	//  {
-	//  	cout << a[i];
-	//  }
-
-	// 小写字母转大写，大写字母转小写
-	//  string a;
-	//  int l;
-	//  getline(cin, a);
-	//  l = a.size();
-	//  for (int i = 0; i < l; i++)
-	//  {
-	//  	if (a[i] >= 'a' && a[i] <= 'z')
-	//  	{
-	//  		a[i] -= 32;
-	//  	}
-	//  	else if (a[i] >= 'A' && a[i] <= 'Z')
-	//  	{
-	//  		a[i] += 32;
-	//  	}
-	//  }
-	//  cout << a;
-
-	// 字符串判等，忽略空格和大小写
-	//  string a1, a2, x, y;
-	//  int len1, len2;
-	//  getline(cin, a1);
-	//  getline(cin, a2);
-	//  len1 = a1.size();
-	//  len2 = a2.size();
-	//  for (int i = 0; i < len1; i++)
-	//  {
-	//  	if (a1[i] >= 'A' && a1[i] <= 'Z')
-	//  	{
-	//  		a1[i] += 32;
-	//  	}
-	//  }
-	//  for (int i = 0; i < len2; i++)
-	//  {
-	//  	if (a2[i] >= 'A' && a2[i] <= 'Z')
-	//  	{
-	//  		a2[i] += 32;
-	//  	}
-	//  }
-	//  for (int i = 0; i < len1; i++)
-	//  {
-	//  	if (a1[i] != ' ')
-	//  	{
-	//  		x += a1[i];
-	//  	}
-	//  }
-	//  for (int i = 0; i < len2; i++)
-	//  {
-	//  	if (a2[i] != ' ')
-	//  	{
-	//  		y += a2[i];
-	//  	}
-	//  }
-	//  if (x == y)
-	//  {
-	//  	cout << "YES";
-	//  }
-	//  else
-	//  {
-	//  	cout << "NO";
-	//  }
-
-	// 字符替换
-	//  string s, a, b;
-	//  int lena, k;
-	//  getline(cin, s);
-	//  cin >> a;
-	//  cin >> b;
-	//  lena = a.size();
-	//  k = s.find(a);
-	//  while (k != -1)
-	//  {
-	//  	s.replace(k, lena, b);
-	//  	k = -1;
-	//  }
-	//  cout << s << endl;
-
-	// 数字“2”出现的次数
-	//  char a[100];
-	//  int b, e, k, len;
-	//  cin >> b >> e;
-	//  for (int i = b; i <= e; i++)
-	//  {
-	//  	sprintf(a, "%d", i);
-	//  	len = strlen(a);
-	//  	for (int j = 0; j <= len - 1; j++)
-	//  	{
-	//  		if (a[j] == '2')
-	//  		{
-	//  			k++;
-	//  		}
-	//  	}
-	//  }
-	//  cout << k;
-
-	// 数字反转
-	//  char a[1000], b[1000];
-	//  long len, n;
-	//  cin >> n;
-	//  sprintf(a, "%d", n);
-	//  len = strlen(a);
-	//  for (int i = 0; i < len; i++)
-	//  {
-	//  	b[len - i - 1] = a[i];
-	//  }
-	//  if (n < 0)
-	//  {
-	//  	cout << "-";
-	//  }
-	//  sscanf(b, "%d", &n);
-	//  cout << n;
-
-	// 潜伏者
-	//  string a, b, c; //a加密信息，b所对应的原信息，c要求破译的信息
-	//  long lena, lenc;
-	//  int t[27];
-	//  getline(cin, a);
-	//  getline(cin, b);
-	//  getline(cin, c);
-	//  lena = a.size();
-	//  lenc = c.size();
-	//  for (int i = 0; i < lena; i++)
-	//  {
-	//  	t[a[i] - 64]++;
-	//  }
-	//  for (int i = 1; i <= 26; i++)
-	//  {
-	//  	if (t[i] == 0)
-	//  	{
-	//  		cout << "Failed";
-	//  		return 0;
-	//  	}
-	//  }
-	//  for (int i = 0; i < lena; i++)
-	//  {
-	//  	for (int j = i + 1; j < lena; j++)
-	//  		if (a[j] == a[i] && b[j] != b[i])
-	//  		{
-	//  			cout << "Failed";
-	//  			return 0;
-	//  		}
-	//  }
-	//  for (int i = 0; i < lena; i++)
-	//  {
-	//  	for (int j = i + 1; j < lena; j++)
-	//  		if (b[j] == b[i] && a[j] != a[i])
-	//  		{
-	//  			cout << "Failed";
-	//  			return 0;
-	//  		}
-	//  }
-	//  for (int i = 0; i < lenc; i++)
-	//  {
-	//  	cout << b[a.find(c[i])];
-	//  }
-
-	// 用指针使字符串反向输出
-	//  int len;
-	//  const int Max = 1e5 + 10;
-	//  char *p, a[Max];
-	//  gets(a);
-	//  len = strlen(a);
-	//  p = a + len - 1; //最后一个的地址
-	//  do
-	//  {
-	//  	putchar(*p);
-	//  	p--;
-	//  } while (p >= a);
-
-	// 矩阵交换行
-	//  int m, n;
-	//  int x[5][5];
-	//  for (int i = 0; i < 5; i++)
-	//  {
-	//  	for (int j = 0; j < 5; j++)
-	//  	{
-	//  		cin >> x[i][j];
-	//  	}
-	//  }
-	//  cin >> m >> n;
-	//  for (int i = 0; i < 5; i++)
-	//  {
-	//  	swap(x[m][i], x[n][i]);
-	//  }
-	//  for (int i = 0; i < 5; i++)
-	//  {
-	//  	for (int j = 0; j < 5; j++)
-	//  	{
-	//  		cout << x[i][j] << " ";
-	//  	}
-	//  	cout << endl;
-	//  }
-
-	// 位置信息
-	//  int n, x, y;
-	//  cin >> n;
-	//  int a[n + 1][n + 1];
-	//  cin >> x >> y;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cout << "(" << x << "," << i << ")";
-	//  }
-	//  cout << endl;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	cout << "(" << i << "," << y << ")";
-	//  }
-	//  cout << endl;
-	//  for (int i = 1; i <= n; i++)
-	//  {
-	//  	for (int j = 1; j <= n; j++)
-	//  	{
-	//  		if (x - y == i - j)
-	//  		{
-	//  			cout << "(" << i << "," << j << ")";
-	//  		}
-	//  	}
-	//  }
-	//  cout << endl;
-	//  for (int i = n; i >= 1; i--)
-	//  {
-	//  	for (int j = n; j >= 1; j--)
-	//  	{
-	//  		if (x + y == i + j)
-	//  		{
-	//  			cout << "(" << i << "," << j << ")";
-	//  		}
-	//  	}
-	//  }
-
-	// 矩阵边缘数据和
-	//  int a[100][100], m, n, sum;
-	//  cin >> m >> n;
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		cin >> a[i][j];
-	//  		if (i == 0 || j == 0 || i == m - 1 || j == n - 1)
-	//  		{
-	//  			sum += a[i][j];
-	//  		}
-	//  	}
-	//  }
-	//  cout << sum;
-
-	// 查找鞍点
-	//  int a[6][6], x = 0, y, z;
-	//  bool q;
-	//  for (int i = 1; i <= 5; i++)
-	//  {
-	//  	for (int j = 1; j <= 5; j++)
-	//  	{
-	//  		cin >> a[i][j];
-	//  	}
-	//  }
-	//  for (int i = 1; i <= 5; i++)
-	//  {
-	//  	q = 1;
-	//  	x = 0;
-	//  	for (int j = 1; j <= 5; j++)
-	//  	{
-	//  		if (a[i][j] > x)
-	//  		{
-	//  			x = a[i][j];
-	//  			y = j;
-	//  			z = i;
-	//  		}
-	//  	}
-	//  	for (int j = 1; j <= 5; j++)
-	//  	{
-	//  		if (a[j][y] < x)
-	//  		{
-	//  			q = 0;
-	//  		}
-	//  	}
-	//  	if (q == 1)
-	//  	{
-	//  		cout << z << " " << y << " " << x;
-	//  		return 0;
-	//  	}
-	//  }
-	//  cout << "not found" << endl;
-
-	// 图像相似度
-	//  int a[100][100], b[100][100], m, n;
-	//  float x, s, k;
-	//  cin >> m >> n;
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		cin >> a[i][j];
-	//  	}
-	//  }
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		cin >> b[i][j];
-	//  	}
-	//  }
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		if (a[i][j] == b[i][j])
-	//  		{
-	//  			k = k + 1;
-	//  		}
-	//  	}
-	//  }
-	//  s = m * n;
-	//  x = k / s * 100;
-	//  cout << fixed << setprecision(2) << x << endl;
-
-	// 矩阵行列交换
-	//  int a[100][100], b[100][100], m, n;
-	//  cin >> m >> n;
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		cin >> a[i][j];
-	//  		b[j][i] = a[i][j];
-	//  	}
-	//  }
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		cout << b[i][j] << " ";
-	//  	}
-	//  	cout << endl;
-	//  }
-
-	// 图像旋转
-	//  int a[100][100], m, n;
-	//  cin >> m >> n;
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = 0; j < n; j++)
-	//  	{
-	//  		cin >> a[i][j];
-	//  	}
-	//  }
-	//  for (int i = 0; i < m; i++)
-	//  {
-	//  	for (int j = n - 1; j >= 0; j--)
-	//  	{
-	//  		cout << a[j][i] << " ";
-	//  	}
-	//  	cout << endl;
-	//  }
-
-	// 使用指针交换两个整型数
-	//  int a, b;
-	//  int *p, *q;
-	//  cin >> a >> b;
-	//  p = &a;
-	//  q = &b;
-	//  swap(*p, *q);
-	//  cout << a << " " << b;
-
-	// 实时分数线_CSP-J2020真题
-	//  #if 1
-	//  	ios::sync_with_stdio(false);
-	//  	cin.tie(0);
-	//  	cout.tie(0);
-	//  #endif
-	//  	int n, w, t, tot, score[601];
-	//  	for (int i = 1; i <= n; i++)
-	//  	{
-	//  		cin >> t;
-	//  		score[t]++;
-	//  		tot = max(1, (int)(1.0 * i * w / 100));
-	//  		int sum = 0;
-	//  		for (int j = 600; j >= 0; j--)
-	//  		{
-	//  			sum += score[j];
-	//  			if (sum >= tot)
-	//  			{
-	//  				cout << j << " ";
-	//  				break;
-	//  			}
-	//  		}
-	//  	}
-
-	// 导弹拦截
-	//  int a[30001], k;
-	//  int n = 0;
-	//  do
-	//  {
-	//  	n++;
-	//  	cin >> a[n];
-	//  } while (getchar() != '\n');
-	//  for (int i = 0; i < n; i++)
-	//  {
-	//  	if (a[i] <= a[i + 1])
-	//  	{
-	//  		k++;
-	//  	}
-	//  }
-	//  cout << k;
-
-	// 括号匹配_小、中括号
-	//  string s, a;
-	//  int t = 0;
-	//  getline(cin, s);
-	//  for (int i = 0; i < s.size(); i++)
-	//  {
-	//  	if (s[i] == '(' || s[i] == '[')
-	//  	{
-	//  		a[++t] = s[i];
-	//  	}
-	//  	if (s[i] == ')')
-	//  	{
-	//  		if (a[t] == '(')
-	//  		{
-	//  			t--;
-	//  		}
-	//  	}
-	//  	else
-	//  	{
-	//  		t++;
-	//  	}
-	//  	if (s[i] == ']')
-	//  	{
-	//  		if (a[t] == '[')
-	//  		{
-	//  			t--;
-	//  		}
-	//  	}
-	//  	else
-	//  	{
-	//  		t++;
-	//  	}
-	//  }
-	//  if (t == 0)
-	//  {
-	//  	cout << "OK" << endl;
-	//  }
-	//  else
-	//  {
-	//  	cout << "Wrong" << endl;
-	//  }
-
-	// 小球掉落
-	//  bool tree[1 << 20] = {false};
-	//  int d, k, p, i;
-	//  cin >> d >> i;
-	//  for (int k = 0; k < i; k++)
-	//  {
-	//  	p = 1;
-	//  	for (int j = 2; j <= d; j++)
-	//  	{
-	//  		if (tree[p] == true)
-	//  		{
-	//  			tree[p] = false;
-	//  			p = p * 2 + 1;
-	//  		}
-	//  		else
-	//  		{
-	//  			tree[p] = true;
-	//  			p = p * 2;
-	//  		}
-	//  	}
-	//  }
-	//  cout << p;
-
-	// 斐波那契数对1000取余
-	//  long long int a[10001] = {0, 1, 1}, n, total;
-	//  for (int i = 3; i <= 20; i++)
-	//  {
-	//  	a[i] = (a[i - 1] + a[i - 2]) % 1000;
-	//  }
-	//  cin >> total;
-	//  while (total--)
-	//  {
-	//  	cin >> n;
-	//  	cout << a[n] << " ";
-	//  }
-
-	// 上台阶_动态规划雏形
-	//  int n, a[101], dp[101];
-	//  dp[1] = 1;
-	//  dp[2] = 2;
-	//  dp[3] = 4;
-	//  for (int i = 4; i <= 100; i++)
-	//  {
-	//  	dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
-	//  }
-	//  int input;
-	//  while (cin >> input && input != 0)
-	//  {
-	//  	cout << dp[input] << endl;
-	//  }
-
-	//----------------------------东方博宜OJ----------------------------
+	// 	输出“*\n****\n******”
+	// 	cout << "*" << endl;
+	// 	cout << "****" << endl;
+	// 	cout << "******" << endl;
+
+	// 	矩形面积
+	// 	float a, b, c;
+	// 	cin >> a >> b;
+	// 	c = a * b;
+	// 	cout << c;
+
+	// 	圆面积
+	// 	float r, s;
+	// 	const float pai = 3.14; // const是常量
+	// 	cin >> r;
+	// 	s = pow(r, 2) * pai;
+	// 	cout << fixed << setprecision(3) << s << endl;
+	// 	// 或使用printf("%.3f", s)
+
+	// 	小于等于10斤每斤3元，10 ~20斤每斤2.6元，大于20斤每斤2元，求n斤要付多少钱
+	// 	float n;
+	// 	cin >> n;
+	// 	if (n <= 10)
+	// 	{
+	// 		cout << n * 3;
+	// 	}
+	// 	if ((n > 10) && (n < 20))
+	// 	{
+	// 		cout << n * 2.6;
+	// 	}
+	// 	if (n >= 20)
+	// 	{
+	// 		cout << n * 2;
+	// 	}
+
+	// 	小于等于10斤每斤3元，10 ~20斤超过部分每斤2.6元，大于20斤超过部分每斤2元，求n斤要付多少钱
+	// 	float n, a;
+	// 	cin >> n;
+	// 	if (n <= 10)
+	// 	{
+	// 		cout << n * 3;
+	// 	}
+	// 	if ((n > 10) && (n < 20))
+	// 	{
+	// 		a = 30 + (n - 10) * 2.6;
+	// 		cout << a;
+	// 	}
+	// 	if (n >= 20)
+	// 	{
+	// 		a = 56 + (n - 20) * 2;
+	// 		cout << a;
+	// 	}
+
+	// 	3个数输出最大
+	// 	int a, b, c;
+	// 	cin >> a >> b >> c;
+	// 	if (a > b)
+	// 	{
+	// 		if (a > c)
+	// 		{
+	// 			cout << a;
+	// 		}
+	// 		else
+	// 		{
+	// 			cout << c;
+	// 		}
+	// 	}
+	// 	else
+	// 	{
+	// 		if (b > c)
+	// 		{
+	// 			cout << b;
+	// 		}
+	// 		else
+	// 		{
+	// 			cout << c;
+	// 		}
+	// 	}
+
+	// 	喜欢的数字
+	// 	int a;
+	// 	cin >> a;
+	// 	if ((a % 2 == 0) && (a > 4) && (a <= 12))
+	// 	{
+	// 		cout << "1"
+	// 			 << " ";
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "0"
+	// 			 << " ";
+	// 	}
+	// 	if ((a % 2 == 0) || ((a > 4) && (a <= 12)))
+	// 	{
+	// 		cout << "1"
+	// 			 << " ";
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "0"
+	// 			 << " ";
+	// 	}
+	// 	if ((a % 2 == 0) ^ ((a > 4) && (a <= 12)))
+	// 	{
+	// 		cout << "1"
+	// 			 << " ";
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "0"
+	// 			 << " ";
+	// 	}
+	// 	if ((a % 2 == 0) && (a > 4) && (a <= 12))
+	// 	{
+	// 		cout << "0"
+	// 			 << " ";
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "1"
+	// 			 << " ";
+	// 	}
+
+	// 	1~n内能被3整除数的个数
+	// 	int n, a;
+	// 	cin >> n;
+	// 	for (int i = 1; i < n; i = i + 3)
+	// 	{
+	// 		a++;
+	// 	}
+	// 	cout << a << endl;
+
+	// 	1 ~n内能被3整除或能被5整除数的个数 int n, a = 0, b = 0;
+	// 	cin >> n;
+	// 	// for (int i = 1; i < n; i++)
+	// 	// {
+	// 	// 	if ((i % 3 == 0) || (i % 5 == 0))
+	// 	// 	{
+	// 	// 		a++;
+	// 	// 	}
+	// 	// }
+	// 	a = n / 3;
+	// 	b = n / 5;
+	// 	c = n / 15;
+	// 	cout << a + b - c << endl;
+
+	// 	1~n的和
+	// 		解法1
+	// 	int n;
+	// 	long long sum = 0;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		sum = sum + i;
+	// 	}
+	// 	cout << sum << endl;
+	// 	解法2
+	// 	int n;
+	// 	long long sum = 0;
+	// 	cin >> n;
+	// 	sum = (1 + n) * n / 2;
+	// 	cout << sum << endl;
+
+	// 	输出第二个整数
+	// 	int a, b, c;
+	// 	cin >> a >> b >> c;
+	// 	cout << b << endl;
+	// 	return 0;
+
+	// 	对齐输出
+	// 	int a, b, c;
+	// 	cin >> a >> b >> c;
+	// 	printf("%8d"
+	// 		   "%8d"
+	// 		   "%8d",
+	// 		   a, b, c);
+	// 	return 0;
+
+	// 	字符等腰三角形
+	// 	char a;
+	// 	cin >> a;
+	// 	cout << "  " << a << endl;
+	// 	cout << " " << a << a << a << endl;
+	// 	cout << a << a << a << a << a << endl;
+	// 	return 0;
+
+	// 	带余除法
+	// 	int a, b;
+	// 	cin >> a >> b;
+	// 	int c, d;
+	// 	c = a / b;
+	// 	d = a % b;
+	// 	cout << c << "……" << d << endl;
+	// 	return 0;
+
+	// 	计算分数的浮点数值
+	// 	double a, b, c;
+	// 	cin >> a >> b;
+	// 	c = a / b;
+	// 	cout << fixed << setprecision(9) << c << endl;
+	// 	return 0;
+
+	// 	概率
+	// 	double a, b, c;
+	// 	cin >> a >> b;
+	// 	c = b / a * 100;
+	// 	cout << fixed << setprecision(3) << c << "%" << endl;
+	// 	return 0;
+
+	// 	数据的储存空间大小
+	// 	int a;			 // 整型
+	// 	long long int l; // 长整形
+	// 	short b;		 // 短整型
+	// 	float x;		 // 浮点型
+	// 	double y;		 // 双精度浮点型
+	// 	bool t;			 // 布尔型
+	// 	char d;			 // 字符型
+	// 	cout << sizeof(a) << " " << sizeof(l) << " " << sizeof(b) << " " << sizeof(x) << " " << sizeof(y) << " " << sizeof(t) << " " << sizeof(d) << endl;
+	// 	return 0;
+
+	// 	输出ASCII编码所对应的字符
+	// 	int b;
+	// 	cin >> b;
+	// 	cout << (char)b << endl;
+	// 	return 0;
+
+	// 	输出除空格外的可见字符的ASCII编码
+	// 	char a;
+	// 	cin >> a;
+	// 	cout << (int)a << endl;
+	// 	return 0;
+
+	// 	已知坐标，求线段长度
+	// 	double xa, ya, xb, yb, n;
+	// 	cin >> xa >> ya;
+	// 	cin >> xb >> yb;
+	// 	n = sqrt(pow((xa - xb), 2) + pow((ya - yb), 2));
+	// 	cout << fixed << setprecision(3) << n << endl;
+
+	// 	已知坐标，求三角形面积
+	// 	float xa, ya, xb, yb, xc, yc, a, b, c, r, s;		// 定义单精度实型变量xa,ya,xb,yb,xc,yc,n,a,b,c,r,s
+	// 	scanf("f%f%f%f%f%f", &xa, &ya, &xb, &yb, &xc, &yc); // 输入三角形三个角的坐标
+	// 	a = sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb));
+	// 	b = sqrt((xb - xc) * (xb - xc) + (yb - yc) * (yb - yc));
+	// 	c = sqrt((xc - xa) * (xc - xa) + (yc - ya) * (yc - ya)); // a,b,c储存三角形三条边的长度
+	// 	r = (a + b + c) / 2;									 // r储存(a+b+c)/2的值
+	// 	s = sqrt(r * (r - a) * (r - b) * (r - c));				 // s储存三角形的面积
+	// 	printf("%.2f", s);										 // 输出s
+
+	// 	求绝对值
+	// 	double a;
+	// 	cin >> a;
+	// 	if (a < 0)
+	// 	{
+	// 		a = -a;
+	// 	}
+	// 	cout << a << endl;
+
+	// 	骑车与走路
+	// 	double a, t1, t2;
+	// 	cin >> a;
+	// 	t1 = a / 1.2;
+	// 	t2 = a / 3.0 + 27 + 23;
+	// 	if (t1 < t2)
+	// 	{
+	// 		cout << "Walk";
+	// 	}
+	// 	if (t1 == t2)
+	// 	{
+	// 		cout << "All";
+	// 	}
+	// 	if (t1 > t2)
+	// 	{
+	// 		cout << "Bike";
+	// 	}
+
+	// 	三边是否能够成三角形
+	// 	float a, b, c;
+	// 	cin >> a >> b >> c;
+	// 	if ((a + b > c) && (a + c > b) && (b + c > a))
+	// 	{
+	// 		cout << "Yes" << endl;
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "No" << endl;
+	// 	}
+
+	// 	简易计算器
+	// 	double a, b;
+	// 	char x;
+	// 	cin >> a >> x >> b;
+	// 	if (x == '+')
+	// 	{
+	// 		cout << a + b << endl;
+	// 	}
+	// 	if (x == '-')
+	// 	{
+	// 		cout << a - b << endl;
+	// 	}
+	// 	if (x == '*')
+	// 	{
+	// 		cout << a * b << endl;
+	// 	}
+	// 	if (x == '/')
+	// 	{
+	// 		cout << a / b << endl;
+	// 	}
+
+	// 	ASCII是否是奇数
+	// 	char a;
+	// 	cin >> a;
+	// 	if ((int)a % 2 == 0)
+	// 	{
+	// 		cout << "NO" << endl;
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "YES" << endl;
+	// 	}
+
+	// 	一个数能否被3, 5, 7整除 int n;
+	// 	cin >> n;
+	// 	if (n % 3 == 0)
+	// 	{
+	// 		cout << "3"
+	// 			 << " ";
+	// 	}
+	// 	if (n % 5 == 0)
+	// 	{
+	// 		cout << "5"
+	// 			 << " ";
+	// 	}
+	// 	if (n % 7 == 0)
+	// 	{
+	// 		cout << "7" << endl;
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "n" << endl;
+	// 	}
+
+	// 	计算平均值
+	// 	double b, x = 0;
+	// 	int a;
+	// 	cin >> a;
+	// 	for (int i = 1; i <= a; i++)
+	// 	{
+	// 		cin >> b;
+	// 		x = x + b;
+	// 	}
+	// 	cout << fixed << setprecision(2) << x / a << endl;
+
+	// 	计算一组数的和与平均值
+	// 	double b, x = 0;
+	// 	int a;
+	// 	cin >> a;
+	// 	for (int i = 1; i <= a; i++)
+	// 	{
+	// 		cin >> b;
+	// 		x = x + b;
+	// 	}
+	// 	cout << x << endl;
+	// 	cout << fixed << setprecision(5) << x / a << endl;
+
+	// 	求极差
+	// 	long long int n, max = -99999, min = 99999;
+	// 	int a[99999];
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 		if (a[i] > max)
+	// 		{
+	// 			max = a[i];
+	// 		}
+	// 		if (a[i] < min)
+	// 		{
+	// 			min = a[i];
+	// 		}
+	// 	}
+	// 	cout << max - min << endl;
+
+	// 	与指定数字相同的数的个数_变量
+	// 	int m, n, a, k = 0;
+	// 	cin >> n >> m;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> a;
+	// 		if (a == m)
+	// 		{
+	// 			k++;
+	// 		}
+	// 	}
+	// 	cout << k << endl;
+
+	// 	乘方运算
+	// 	long long int a, b, c;
+	// 	cin >> a >> b;
+	// 	c = pow(a, b);
+	// 	cout << c << endl;
+
+	// 	斐波那契数列的第k个数 int a = 1, b = 1; // 第一个数和第二个数总为1
+	// 	int c, k;
+	// 	cin >> k;
+	// 	for (int i = 3; i <= k; i++) // i从3开始循环
+	// 	{
+	// 		c = a + b;
+	// 		a = b;
+	// 		b = c;
+	// 	}
+	// 	cout << b << endl;
+
+	// 	鸡尾酒疗法
+	// 	long long int a, b, n;
+	// 	double x, y;
+	// 	cin >> n;
+	// 	cin >> a >> b;
+	// 	x = b / (a / 1.0); // 原疗法
+	// 	for (int i = 2; i <= n; i++)
+	// 	{
+	// 		cin >> a >> b;
+	// 		y = b / (a / 1.0); // 新疗法
+	// 		if (y - x > 0.05)
+	// 		{
+	// 			cout << "better" << endl;
+	// 		}
+	// 		else if (x - y > 0.05)
+	// 		{
+	// 			cout << "worse" << endl;
+	// 		}
+	// 		else
+	// 		{
+	// 			cout << "same" << endl;
+	// 		}
+	// 	}
+
+	// 	输出符合条件的四位数
+	// 	int a, b, c, d, n, x, s = 0;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> x;
+	// 		a = x / 1000;
+	// 		b = (x / 100) % 10;
+	// 		c = (x / 10) % 10;
+	// 		d = x % 10;
+	// 		if (d - a - b - c > 0)
+	// 		{
+	// 			s++;
+	// 		}
+	// 	}
+	// 	cout << s << endl;
+
+	// 	与指定数字相同的数的个数_数组
+	// 	int a[10000], n, x, m = 0;
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 	}
+	// 	cin >> x;
+	// 	for (int j = 0; j < n; j++)
+	// 	{
+	// 		if (a[j] == x)
+	// 		{
+	// 			m++;
+	// 		}
+	// 	}
+	// 	cout << m << endl;
+
+	// 	数据逆向输出
+	// 	int n, a[100001], b;
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 	}
+	// 	for (int j = n - 1; j >= 0; j--)
+	// 	{
+	// 		cout << a[j];
+	// 	}
+
+	// 	求最小值
+	// 	int n, a, min = 0;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> a;
+	// 		if (a < min)
+	// 		{
+	// 			min = a;
+	// 		}
+	// 	}
+	// 	cout << min;
+
+	// 	药房管理
+	// 	int m, n, a, b = 0;
+	// 	cin >> m >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> a;
+	// 		if (m >= a)
+	// 		{
+	// 			m -= a;
+	// 		}
+	// 		else
+	// 		{
+	// 			b++;
+	// 		}
+	// 	}
+	// 	cout << b;
+
+	// 	血压正常小时数
+	// 	int n, a, b, t = 0, max = 0;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> a >> b;
+	// 		if (a >= 90 && a <= 160 && b >= 60 && b <= 90)
+	// 		{
+	// 			t++;
+	// 			if (t > max)
+	// 			{
+	// 				max = t;
+	// 			}
+	// 		}
+	// 		else
+	// 		{
+	// 			t = 0;
+	// 		}
+	// 	}
+	// 	cout << max << endl;
+
+	// 	使每个人拿到的苹果数不同
+	// 	int n, a = 0;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		a += i;
+	// 	}
+	// 	cout << a;
+
+	// 	植树
+	// 	int a[99999];
+	// 	int l, m, x, y, s;
+	// 	cin >> l >> m;
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		a[i] = 1; // 设所有树都没被移走
+	// 	}
+	// 	for (int e = 1; e <= m; e++)
+	// 	{
+	// 		cin >> x >> y;
+	// 		for (int j = x; j <= y; j++) // 对需要移走的树做标记
+	// 		{
+	// 			a[j] = 0;
+	// 		}
+	// 	}
+	// 	for (int f = 0; f <= l; f++)
+	// 	{
+	// 		if (a[f] == 1)
+	// 		{
+	// 			s++;
+	// 		}
+	// 	}
+	// 	cout << s << endl;
+
+	// 	奇数求和
+	// 	int m, n, sum;
+	// 	cin >> m >> n;
+	// 	for (int i = m; i <= n; i++)
+	// 	{
+	// 		if (i % 2 != 0)
+	// 		{
+	// 			sum += i;
+	// 		}
+	// 	}
+	// 	cout << sum << endl;
+
+	// 	a，b，c对x求余(x作为除数)，所得余数相同，求满足此条件的x的最小值 int a, b, c, x = 2;
+	// 	cin >> a >> b >> c;
+	// 	int min = a;
+	// 	if (min > b)
+	// 	{
+	// 		min = b;
+	// 	}
+	// 	if (min > c)
+	// 	{
+	// 		min = c;
+	// 	}
+	// 	for (int i = x; i <= min; i++)
+	// 	{
+	// 		x++;
+	// 		if ((a % x == b % x) && (b % x == c % x))
+	// 		{
+	// 			cout << x << endl;
+	// 			break;
+	// 		}
+	// 	}
+
+	// 	分离整数的各个数_逆序输出
+	// 	int n;
+	// 	cin >> n;
+	// 	while (n > 0)
+	// 	{
+	// 		cout << n % 10 << " ";
+	// 		n = n / 10;
+	// 	}
+
+	// 	数字反转
+	// 	int n, s = 0, a;
+	// 	cin >> n;
+	// 	if (n < 0)
+	// 	{
+	// 		cout << "-";
+	// 	}
+	// 	n = abs(n); // 取n的绝对值
+	// 	while (n > 0)
+	// 	{
+	// 		a = n % 10;
+	// 		n = n / 10;
+	// 		s = s * 10 + a;
+	// 	}
+	// 	cout << s;
+
+	// 	含k个3的数，且能被19整除 int n, k, num;
+	// 	cin >> n >> k;
+	// 	if (n % 19 == 0)
+	// 	{
+	// 		while (n > 0)
+	// 		{
+	// 			if (n % 10 == 3)
+	// 			{
+	// 				num++;
+	// 			}
+	// 			n /= 10;
+	// 		}
+	// 		if (k == num)
+	// 		{
+	// 			cout << "YES";
+	// 		}
+	// 	}
+	// 	else if (n % 19 != 0)
+	// 	{
+	// 		cout << "NO";
+	// 	}
+
+	// 	求阶乘的和
+	// 	int n;
+	// 	long long int s = 0, t = 1;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		// t = 1;
+	// 		// for (int j = 1; j <= i; j++)
+	// 		// {
+	// 		// 	t = t * j;
+	// 		// }
+	// 		// s += t;
+	// 		t *= i;
+	// 		s += t;
+	// 	}
+	// 	cout << s;
+
+	// 	质因数分解
+	// 	int n, m;
+	// 	cin >> n;
+	// 	m = sqrt(n);
+	// 	for (int i = 2; i <= m; i++)
+	// 	{
+	// 		if (n % i == 0)
+	// 		{
+	// 			cout << n / i;
+	// 		}
+	// 	}
+
+	// 	画矩形
+	// 	int a, b, c;
+	// 	char n;
+	// 	cin >> a >> b >> n >> c;
+	// 	if ((a == 1) && (b == 1))
+	// 	{
+	// 		cout << n;
+	// 	}
+	// 	else if ((a == 1) && (b > 1))
+	// 	{
+	// 		for (int i = 0; i < b; i++)
+	// 		{
+	// 			cout << n;
+	// 		}
+	// 	}
+	// 	else if ((a > 1) && (b == 1))
+	// 	{
+	// 		for (int i = 0; i < a; i++)
+	// 		{
+	// 			cout << n;
+	// 			cout << endl;
+	// 		}
+	// 	}
+	// 	else if ((a > 1) && (b > 1))
+	// 	{
+	// 		for (int j = 0; j < b; j++)
+	// 		{
+	// 			cout << n;
+	// 		}
+	// 		cout << endl;
+	// 		if (c == 1)
+	// 		{
+	// 			for (int x = 0; x < a - 1; x++)
+	// 			{
+	// 				for (int y = 0; y < b; y++)
+	// 				{
+	// 					cout << n;
+	// 				}
+	// 				cout << endl;
+	// 			}
+	// 		}
+	// 		if (c == 0)
+	// 		{
+	// 			for (int x = 0; x < a - 2; x++)
+	// 			{
+	// 				cout << n;
+	// 				for (int z = 0; z < b - 2; z++)
+	// 				{
+	// 					cout << " ";
+	// 				}
+	// 				cout << n;
+	// 				cout << endl;
+	// 			}
+	// 			for (int y = 0; y < b; y++)
+	// 			{
+	// 				cout << n;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	开关灯
+	// 	int n, m, a[9999], z = 1;
+	// 	cin >> n >> m;
+	// 	for (int i = 1; i <= m; i++)
+	// 	{
+	// 		for (int j = 0; j <= n; j++)
+	// 		{
+	// 			if (j % i == 0)
+	// 			{
+	// 				a[j] = !a[j];
+	// 			}
+	// 		}
+	// 	}
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		if (a[i])
+	// 		{
+	// 			if (z)
+	// 			{
+	// 				z = 0;
+	// 			}
+	// 			else
+	// 			{
+	// 				cout << ",";
+	// 			}
+	// 			cout << i;
+	// 		}
+	// 	}
+	// 	printf("\n");
+
+	// 	整数去重_解法1，执行时间长
+	// 	int a[99999], n;
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 	}
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		for (int j = i + 1; j < n; j++)
+	// 		{
+	// 			if (a[i] == a[j])
+	// 			{
+	// 				for (int k = j; k < n; k++)
+	// 				{
+	// 					a[k] = a[k + 1];
+	// 				}
+	// 				n--;
+	// 			}
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cout << a[i] << " ";
+	// 	}
+
+	// 	整数去重_解法2
+	// 	int a[99999], n, s[99999];
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 		s[i] = 0;
+	// 	}
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		for (int j = i + 1; j < n; j++)
+	// 		{
+	// 			if ((a[i] == a[j]) && (s[j] == 0))
+	// 			{
+	// 				s[j] = 1;
+	// 			}
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		if (s[i] == 0)
+	// 		{
+	// 			cout << a[i] << " ";
+	// 		}
+	// 	}
+
+	// 	查找数组中某数的下标，若没有则输出 - 1 int a[99999];
+	// 	long int n, b, temp;
+	// 	cin >> n;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 	}
+	// 	cin >> b;
+	// 	for (int j = 1; j <= n; j++)
+	// 	{
+	// 		temp = a[j];
+	// 		if (temp == b)
+	// 		{
+	// 			cout << j << endl;
+	// 			return 0;
+	// 		}
+	// 	}
+
+	// 	除最大数外其他数的和
+	// 	long long int n, max = -99999, sum = 0;
+	// 	int a[10000];
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 		if (a[i] > max)
+	// 		{
+	// 			max = a[i];
+	// 		}
+	// 	}
+	// 	for (int j = 0; j < n; j++)
+	// 	{
+	// 		if (a[j] != max)
+	// 		{
+	// 			sum += a[j];
+	// 		}
+	// 	}
+	// 	cout << sum;
+
+	// 	最长连续数
+	// 	int n, k = 0, max = 0;
+	// 	int a[999999];
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> a[i];
+	// 		if (a[i] == a[i - 1])
+	// 		{
+	// 			k++;
+	// 		}
+	// 		else
+	// 		{
+	// 			k = 1;
+	// 		}
+	// 		if (k > max)
+	// 		{
+	// 			max = k;
+	// 		}
+	// 	}
+	// 	cout << max;
+
+	// 	统计数字的个数
+	// 	char c[256];
+	// 	int num = 0, l;
+	// 	gets(c);
+	// 	l = strlen(c);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if ((c[i] >= '0') && (c[i] <= '9'))
+	// 		{
+	// 			num++;
+	// 		}
+	// 	}
+	// 	cout << num;
+
+	// 	统计字符的个数
+	// 	char c[256];
+	// 	int num = 0, l;
+	// 	gets(c);
+	// 	l = strlen(c);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (((c[i] >= 'a') && (c[i] <= 'z')) || ((c[i] >= 'A') && (c[i] <= 'Z')))
+	// 		{
+	// 			num++;
+	// 		}
+	// 	}
+	// 	cout << num;
+
+	// 	找到第一个只出现一次的字符
+	// 	char s[100001];
+	// 	int c[26];
+	// 	int l;
+	// 	gets(s);
+	// 	l = strlen(s);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		c[s[i] - 'a']++;
+	// 		// 用于统计，以字符与a的偏差为数组中元素的下标，若有则+1(即如果有重复字符时会大于1)
+	// 		// a是ASCII码中的第一个字母，其他字母在a的基础上做偏差
+	// 	}
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (c[s[i] - 'a'] == 1)
+	// 		{
+	// 			cout << s[i];
+	// 			return 0;
+	// 		}
+	// 	}
+	// 	cout << "no";
+
+	// 	基因相关性
+	// 	string a, b;
+	// 	double n, x, c, len;
+	// 	cin >> x;
+	// 	cin >> a >> b;
+	// 	len = a.size();
+	// 	for (int i = 0; i < len; i++)
+	// 	{
+	// 		if (a[i] == b[i])
+	// 		{
+	// 			n++;
+	// 		}
+	// 	}
+	// 	c = n / len;
+	// 	if (c >= x)
+	// 	{
+	// 		cout << "yes";
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "no";
+	// 	}
+
+	// 	亲朋字符串
+	// 	int l;
+	// 	char a[101];
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l - 1; i++)
+	// 	{
+	// 		printf("%c", a[i] + a[i + 1]);
+	// 	}
+	// 	printf("%c", a[0] + a[l - 1]);
+
+	// 	配对碱基链
+	// 	int l;
+	// 	char a[256];
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (a[i] == 'A')
+	// 		{
+	// 			cout << "T";
+	// 		}
+	// 		if (a[i] == 'T')
+	// 		{
+	// 			cout << "A";
+	// 		}
+	// 		if (a[i] == 'C')
+	// 		{
+	// 			cout << "G";
+	// 		}
+	// 		if (a[i] == 'G')
+	// 		{
+	// 			cout << "C";
+	// 		}
+	// 	}
+
+	// 	明文译成密码
+	// 	int l;
+	// 	char a[128];
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if ((a[i] == 'z') || (a[i] == 'Z'))
+	// 		{
+	// 			a[i] = a[i - 25];
+	// 		}
+	// 		else if (((a[i] >= 'a') && (a[i] <= 'z')) || ((a[i] >= 'A') && (a[i] <= 'Z')))
+	// 		{
+	// 			a[i] = a[i] + 1;
+	// 		}
+	// 		cout << a[i];
+	// 	}
+
+	// 	密码译成明文
+	// 	char a[128];
+	// 	int l;
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if ((a[i] == 'a') || (a[i] == 'A'))
+	// 		{
+	// 			a[i] = a[i + 25];
+	// 		}
+	// 		else if (((a[i] >= 'a') && (a[i] <= 'z')) || ((a[i] >= 'A') && (a[i] <= 'Z')))
+	// 		{
+	// 			a[i] = a[i] - 1;
+	// 		}
+	// 		cout << a[i];
+	// 	}
+
+	// 	连续出现的字符
+	// 	char a[1001];
+	// 	int l, k, t;
+	// 	cin >> k >> a;
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		t = i;
+	// 		while (a[i] == a[t])
+	// 		{
+	// 			t++;
+	// 		}
+	// 		if (t - i == k)
+	// 		{
+	// 			cout << a[i];
+	// 			exit(0);
+	// 		}
+	// 	}
+	// 	cout << "No";
+
+	// 	整理药名
+	// 	int l, n;
+	// 	string a[101], s;
+	// 	cin >> n;
+	// 	for (int i = 0; i <= n; i++)
+	// 	{
+	// 		getline(cin, a[i]);
+	// 	}
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		s = a[i];
+	// 		if ((s[0] >= 'a') && (s[0] <= 'z'))
+	// 		{
+	// 			s[0] -= 32;
+	// 		}
+	// 		l = s.size();
+	// 		for (int j = 1; j < l; j++)
+	// 		{
+	// 			if ((s[j] >= 'A') && (s[j] <= 'Z'))
+	// 			{
+	// 				s[j] += 32;
+	// 			}
+	// 		}
+	// 		a[i] = s;
+	// 	}
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cout << a[i] << endl;
+	// 	}
+
+	// 	验证子串
+	// 	char a[201], b[201];
+	// 	gets(a);
+	// 	gets(b);
+	// 	if (strstr(a, b))
+	// 	{
+	// 		cout << b << " is substring of " << a;
+	// 		return 0;
+	// 	}
+	// 	if (strstr(b, a))
+	// 	{
+	// 		cout << a << " is substring of " << b;
+	// 		return 0;
+	// 	}
+	// 	cout << "No substring" << endl;
+
+	// 	删除单词后缀
+	// 	char a[32];
+	// 	int l;
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	if (a[l - 3] == 'i' && a[l - 2] == 'n' && a[l - 1] == 'g')
+	// 	{
+	// 		for (int i = 0; i < l - 3; i++)
+	// 		{
+	// 			cout << a[i];
+	// 		}
+	// 		return 0;
+	// 	}
+	// 	else if (a[l - 2] == 'e' && a[l - 1] == 'r')
+	// 	{
+	// 		for (int i = 0; i < l - 2; i++)
+	// 		{
+	// 			cout << a[i];
+	// 		}
+	// 		return 0;
+	// 	}
+	// 	if (a[l - 2] == 'l' && a[l - 1] == 'y')
+	// 	{
+	// 		for (int i = 0; i < l - 2; i++)
+	// 		{
+	// 			cout << a[i];
+	// 		}
+	// 		return 0;
+	// 	}
+
+	// 	单词长度
+	// 	char a[1001];
+	// 	int l, t = 0;
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (a[i] != ' ')
+	// 		{
+	// 			t++;
+	// 		}
+	// 		else
+	// 		{
+	// 			if (t > 0)
+	// 			{
+	// 				cout << t << ",";
+	// 			}
+	// 			t = 0;
+	// 		}
+	// 	}
+	// 	cout << t;
+
+	// 	单词反转
+	// 	int l, j;
+	// 	char a[1001];
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (a[i] == ' ')
+	// 		{
+	// 			cout << " ";
+	// 		}
+	// 		else
+	// 		{
+	// 			int k = 0;
+	// 			for (j = i; a[j] != ' '; j++)
+	// 			{
+	// 				k++;
+	// 				if (j >= l)
+	// 				{
+	// 					break;
+	// 				}
+	// 			}
+	// 			j--;
+	// 			k--;
+	// 			for (j = j; j >= i; j--)
+	// 			{
+	// 				cout << a[j];
+	// 			}
+	// 			i += k;
+	// 		}
+	// 	}
+
+	// 	字符串p型编码 int l, t = 1;
+	// 	char a[1001];
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (a[i] == a[i + 1])
+	// 		{
+	// 			t++;
+	// 		}
+	// 		else
+	// 		{
+	// 			cout << t << a[i];
+	// 			t = 1;
+	// 		}
+	// 	}
+
+	// 	判断字符串是否回文
+	// 	char a[101];
+	// 	int l, f = 0;
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	cout << l;
+	// 	for (int i = 0; i <= l / 2; i++)
+	// 	{
+	// 		if (a[i] != a[l - 1 - i])
+	// 		{
+	// 			f = 1;
+	// 			break;
+	// 		}
+	// 	}
+	// 	if (f == 1)
+	// 	{
+	// 		cout << "no";
+	// 	}
+	// 	else if (f == 0)
+	// 	{
+	// 		cout << "yes";
+	// 	}
+
+	// 	最高分的学生姓名
+	// 	int n, l, s, max = -1;
+	// 	string a, name;
+	// 	cin >> n;
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		cin >> s >> a;
+	// 		if (s > max)
+	// 		{
+	// 			max = s;
+	// 			name = a;
+	// 		}
+	// 	}
+	// 	cout << name << endl;
+
+	// 	连续出现的字符
+	// 	int k = 0, x, l;
+	// 	char a[1000];
+	// 	cin >> x;
+	// 	scanf("%s", a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (k == x)
+	// 		{
+	// 			cout << a[i];
+	// 			return 0;
+	// 		}
+	// 		if (a[i] == a[i + 1])
+	// 		{
+	// 			k++;
+	// 		}
+	// 		else
+	// 		{
+	// 			k = 1;
+	// 		}
+	// 	}
+	// 	cout << "No";
+
+	// 	一句话中最长和最短的单词
+	// 	char a[200001];
+	// 	int t = 0, maxi, maxl, mini, minl = 100, l;
+	// 	gets(a);
+	// 	l = strlen(a);
+	// 	for (int i = 0; i <= l; i++)
+	// 	{
+	// 		if ((a[i] != ' ') && (a[i] != '.') && (a[i] != ','))
+	// 		{
+	// 			t++;
+	// 		}
+	// 		else if (t > 0)
+	// 		{
+	// 			if (t > maxl)
+	// 			{
+	// 				maxl = t;	  // 长度
+	// 				maxi = i - t; // 起始位置
+	// 			}
+	// 			if (t < minl)
+	// 			{
+	// 				minl = t;
+	// 				mini = i - t;
+	// 			}
+	// 			t = 0;
+	// 		}
+	// 	}
+	// 	for (int i = maxi; i <= maxi + maxl - 1; i++)
+	// 	{
+	// 		cout << a[i];
+	// 	}
+	// 	cout << endl;
+	// 	for (int i = mini; i <= mini + minl - 1; i++)
+	// 	{
+	// 		cout << a[i];
+	// 	}
+
+	// 	小写字母转大写，大写字母转小写
+	// 	string a;
+	// 	int l;
+	// 	getline(cin, a);
+	// 	l = a.size();
+	// 	for (int i = 0; i < l; i++)
+	// 	{
+	// 		if (a[i] >= 'a' && a[i] <= 'z')
+	// 		{
+	// 			a[i] -= 32;
+	// 		}
+	// 		else if (a[i] >= 'A' && a[i] <= 'Z')
+	// 		{
+	// 			a[i] += 32;
+	// 		}
+	// 	}
+	// 	cout << a;
+
+	// 	字符串判等，忽略空格和大小写
+	// 	string a1, a2, x, y;
+	// 	int len1, len2;
+	// 	getline(cin, a1);
+	// 	getline(cin, a2);
+	// 	len1 = a1.size();
+	// 	len2 = a2.size();
+	// 	for (int i = 0; i < len1; i++)
+	// 	{
+	// 		if (a1[i] >= 'A' && a1[i] <= 'Z')
+	// 		{
+	// 			a1[i] += 32;
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < len2; i++)
+	// 	{
+	// 		if (a2[i] >= 'A' && a2[i] <= 'Z')
+	// 		{
+	// 			a2[i] += 32;
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < len1; i++)
+	// 	{
+	// 		if (a1[i] != ' ')
+	// 		{
+	// 			x += a1[i];
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < len2; i++)
+	// 	{
+	// 		if (a2[i] != ' ')
+	// 		{
+	// 			y += a2[i];
+	// 		}
+	// 	}
+	// 	if (x == y)
+	// 	{
+	// 		cout << "YES";
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "NO";
+	// 	}
+
+	// 	字符替换
+	// 	string s, a, b;
+	// 	int lena, k;
+	// 	getline(cin, s);
+	// 	cin >> a;
+	// 	cin >> b;
+	// 	lena = a.size();
+	// 	k = s.find(a);
+	// 	while (k != -1)
+	// 	{
+	// 		s.replace(k, lena, b);
+	// 		k = -1;
+	// 	}
+	// 	cout << s << endl;
+
+	// 	数字“2”出现的次数
+	// 	char a[100];
+	// 	int b, e, k, len;
+	// 	cin >> b >> e;
+	// 	for (int i = b; i <= e; i++)
+	// 	{
+	// 		sprintf(a, "%d", i);
+	// 		len = strlen(a);
+	// 		for (int j = 0; j <= len - 1; j++)
+	// 		{
+	// 			if (a[j] == '2')
+	// 			{
+	// 				k++;
+	// 			}
+	// 		}
+	// 	}
+	// 	cout << k;
+
+	// 	数字反转
+	// 	char a[1000], b[1000];
+	// 	long len, n;
+	// 	cin >> n;
+	// 	sprintf(a, "%d", n);
+	// 	len = strlen(a);
+	// 	for (int i = 0; i < len; i++)
+	// 	{
+	// 		b[len - i - 1] = a[i];
+	// 	}
+	// 	if (n < 0)
+	// 	{
+	// 		cout << "-";
+	// 	}
+	// 	sscanf(b, "%d", &n);
+	// 	cout << n;
+
+	// 	潜伏者
+	// 	string a, b, c; // a加密信息，b所对应的原信息，c要求破译的信息
+	// 	long lena, lenc;
+	// 	int t[27];
+	// 	getline(cin, a);
+	// 	getline(cin, b);
+	// 	getline(cin, c);
+	// 	lena = a.size();
+	// 	lenc = c.size();
+	// 	for (int i = 0; i < lena; i++)
+	// 	{
+	// 		t[a[i] - 64]++;
+	// 	}
+	// 	for (int i = 1; i <= 26; i++)
+	// 	{
+	// 		if (t[i] == 0)
+	// 		{
+	// 			cout << "Failed";
+	// 			return 0;
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < lena; i++)
+	// 	{
+	// 		for (int j = i + 1; j < lena; j++)
+	// 			if (a[j] == a[i] && b[j] != b[i])
+	// 			{
+	// 				cout << "Failed";
+	// 				return 0;
+	// 			}
+	// 	}
+	// 	for (int i = 0; i < lena; i++)
+	// 	{
+	// 		for (int j = i + 1; j < lena; j++)
+	// 			if (b[j] == b[i] && a[j] != a[i])
+	// 			{
+	// 				cout << "Failed";
+	// 				return 0;
+	// 			}
+	// 	}
+	// 	for (int i = 0; i < lenc; i++)
+	// 	{
+	// 		cout << b[a.find(c[i])];
+	// 	}
+
+	// 	用指针使字符串反向输出
+	// 	int len;
+	// 	const int Max = 1e5 + 10;
+	// 	char *p, a[Max];
+	// 	gets(a);
+	// 	len = strlen(a);
+	// 	p = a + len - 1; // 最后一个的地址
+	// 	do
+	// 	{
+	// 		putchar(*p);
+	// 		p--;
+	// 	} while (p >= a);
+
+	// 	矩阵交换行
+	// 	int m, n;
+	// 	int x[5][5];
+	// 	for (int i = 0; i < 5; i++)
+	// 	{
+	// 		for (int j = 0; j < 5; j++)
+	// 		{
+	// 			cin >> x[i][j];
+	// 		}
+	// 	}
+	// 	cin >> m >> n;
+	// 	for (int i = 0; i < 5; i++)
+	// 	{
+	// 		swap(x[m][i], x[n][i]);
+	// 	}
+	// 	for (int i = 0; i < 5; i++)
+	// 	{
+	// 		for (int j = 0; j < 5; j++)
+	// 		{
+	// 			cout << x[i][j] << " ";
+	// 		}
+	// 		cout << endl;
+	// 	}
+
+	// 	位置信息
+	// 	int n, x, y;
+	// 	cin >> n;
+	// 	int a[n + 1][n + 1];
+	// 	cin >> x >> y;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cout << "(" << x << "," << i << ")";
+	// 	}
+	// 	cout << endl;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cout << "(" << i << "," << y << ")";
+	// 	}
+	// 	cout << endl;
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		for (int j = 1; j <= n; j++)
+	// 		{
+	// 			if (x - y == i - j)
+	// 			{
+	// 				cout << "(" << i << "," << j << ")";
+	// 			}
+	// 		}
+	// 	}
+	// 	cout << endl;
+	// 	for (int i = n; i >= 1; i--)
+	// 	{
+	// 		for (int j = n; j >= 1; j--)
+	// 		{
+	// 			if (x + y == i + j)
+	// 			{
+	// 				cout << "(" << i << "," << j << ")";
+	// 			}
+	// 		}
+	// 	}
+
+	// 	矩阵边缘数据和
+	// 	int a[100][100], m, n, sum;
+	// 	cin >> m >> n;
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			cin >> a[i][j];
+	// 			if (i == 0 || j == 0 || i == m - 1 || j == n - 1)
+	// 			{
+	// 				sum += a[i][j];
+	// 			}
+	// 		}
+	// 	}
+	// 	cout << sum;
+
+	// 	查找鞍点
+	// 	int a[6][6], x = 0, y, z;
+	// 	bool q;
+	// 	for (int i = 1; i <= 5; i++)
+	// 	{
+	// 		for (int j = 1; j <= 5; j++)
+	// 		{
+	// 			cin >> a[i][j];
+	// 		}
+	// 	}
+	// 	for (int i = 1; i <= 5; i++)
+	// 	{
+	// 		q = 1;
+	// 		x = 0;
+	// 		for (int j = 1; j <= 5; j++)
+	// 		{
+	// 			if (a[i][j] > x)
+	// 			{
+	// 				x = a[i][j];
+	// 				y = j;
+	// 				z = i;
+	// 			}
+	// 		}
+	// 		for (int j = 1; j <= 5; j++)
+	// 		{
+	// 			if (a[j][y] < x)
+	// 			{
+	// 				q = 0;
+	// 			}
+	// 		}
+	// 		if (q == 1)
+	// 		{
+	// 			cout << z << " " << y << " " << x;
+	// 			return 0;
+	// 		}
+	// 	}
+	// 	cout << "not found" << endl;
+
+	// 	图像相似度
+	// 	int a[100][100], b[100][100], m, n;
+	// 	float x, s, k;
+	// 	cin >> m >> n;
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			cin >> a[i][j];
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			cin >> b[i][j];
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			if (a[i][j] == b[i][j])
+	// 			{
+	// 				k = k + 1;
+	// 			}
+	// 		}
+	// 	}
+	// 	s = m * n;
+	// 	x = k / s * 100;
+	// 	cout << fixed << setprecision(2) << x << endl;
+
+	// 	矩阵行列交换
+	// 	int a[100][100], b[100][100], m, n;
+	// 	cin >> m >> n;
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			cin >> a[i][j];
+	// 			b[j][i] = a[i][j];
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			cout << b[i][j] << " ";
+	// 		}
+	// 		cout << endl;
+	// 	}
+
+	// 	图像旋转
+	// 	int a[100][100], m, n;
+	// 	cin >> m >> n;
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = 0; j < n; j++)
+	// 		{
+	// 			cin >> a[i][j];
+	// 		}
+	// 	}
+	// 	for (int i = 0; i < m; i++)
+	// 	{
+	// 		for (int j = n - 1; j >= 0; j--)
+	// 		{
+	// 			cout << a[j][i] << " ";
+	// 		}
+	// 		cout << endl;
+	// 	}
+
+	// 	使用指针交换两个整型数
+	// 	int a, b;
+	// 	int *p, *q;
+	// 	cin >> a >> b;
+	// 	p = &a;
+	// 	q = &b;
+	// 	swap(*p, *q);
+	// 	cout << a << " " << b;
+
+	// 	实时分数线_CSP - J2020真题
+	// #if 1
+	// 						 ios::sync_with_stdio(false);
+	// 	cin.tie(0);
+	// 	cout.tie(0);
+	// #endif
+	// 	int n, w, t, tot, score[601];
+	// 	for (int i = 1; i <= n; i++)
+	// 	{
+	// 		cin >> t;
+	// 		score[t]++;
+	// 		tot = max(1, (int)(1.0 * i * w / 100));
+	// 		int sum = 0;
+	// 		for (int j = 600; j >= 0; j--)
+	// 		{
+	// 			sum += score[j];
+	// 			if (sum >= tot)
+	// 			{
+	// 				cout << j << " ";
+	// 				break;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	导弹拦截
+	// 	int a[30001], k;
+	// 	int n = 0;
+	// 	do
+	// 	{
+	// 		n++;
+	// 		cin >> a[n];
+	// 	} while (getchar() != '\n');
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		if (a[i] <= a[i + 1])
+	// 		{
+	// 			k++;
+	// 		}
+	// 	}
+	// 	cout << k;
+
+	// 	括号匹配_小、中括号
+	// 	string s, a;
+	// 	int t = 0;
+	// 	getline(cin, s);
+	// 	for (int i = 0; i < s.size(); i++)
+	// 	{
+	// 		if (s[i] == '(' || s[i] == '[')
+	// 		{
+	// 			a[++t] = s[i];
+	// 		}
+	// 		if (s[i] == ')')
+	// 		{
+	// 			if (a[t] == '(')
+	// 			{
+	// 				t--;
+	// 			}
+	// 		}
+	// 		else
+	// 		{
+	// 			t++;
+	// 		}
+	// 		if (s[i] == ']')
+	// 		{
+	// 			if (a[t] == '[')
+	// 			{
+	// 				t--;
+	// 			}
+	// 		}
+	// 		else
+	// 		{
+	// 			t++;
+	// 		}
+	// 	}
+	// 	if (t == 0)
+	// 	{
+	// 		cout << "OK" << endl;
+	// 	}
+	// 	else
+	// 	{
+	// 		cout << "Wrong" << endl;
+	// 	}
+
+	// 	小球掉落
+	// 	bool tree[1 << 20] = {false};
+	// 	int d, k, p, i;
+	// 	cin >> d >> i;
+	// 	for (int k = 0; k < i; k++)
+	// 	{
+	// 		p = 1;
+	// 		for (int j = 2; j <= d; j++)
+	// 		{
+	// 			if (tree[p] == true)
+	// 			{
+	// 				tree[p] = false;
+	// 				p = p * 2 + 1;
+	// 			}
+	// 			else
+	// 			{
+	// 				tree[p] = true;
+	// 				p = p * 2;
+	// 			}
+	// 		}
+	// 	}
+	// 	cout << p;
+
+	// 	斐波那契数对1000取余
+	// 	long long int a[10001] = {0, 1, 1}, n, total;
+	// 	for (int i = 3; i <= 20; i++)
+	// 	{
+	// 		a[i] = (a[i - 1] + a[i - 2]) % 1000;
+	// 	}
+	// 	cin >> total;
+	// 	while (total--)
+	// 	{
+	// 		cin >> n;
+	// 		cout << a[n] << " ";
+	// 	}
+
+	// 	上台阶_动态规划雏形
+	// 	int n, a[101], dp[101];
+	// 	dp[1] = 1;
+	// 	dp[2] = 2;
+	// 	dp[3] = 4;
+	// 	for (int i = 4; i <= 100; i++)
+	// 	{
+	// 		dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
+	// 	}
+	// 	int input;
+	// 	while (cin >> input && input != 0)
+	// 	{
+	// 		cout << dp[input] << endl;
+	// 	}
+
+	// ----------------------------东方博宜OJ----------------------------
 
 	// string
 
