@@ -36,7 +36,7 @@ int merge(int x, int y)
 		tree[a].l = merge(x, tree[a].l);
 	}
 	pushup(a);
-	return a; // 两行代码都有,所以提到外边写
+	return a; // 两�?�代码都�?,所以提到�?�边�?
 }
 void split(int k, int val, int &x, int &y)
 {
@@ -71,7 +71,7 @@ int main()
 	for (int j = 1; j <= n; ++j)
 	{
 		cin >> ver >> opt >> x;
-		root[j] = root[ver]; // 应先把这棵树复制出来,再在这棵新树上操作
+		root[j] = root[ver]; // 应先把这棵树复制出来,再在这棵新树上操�?
 		if (opt == 1)
 		{
 			split(root[j], x, a, b);
