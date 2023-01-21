@@ -16,14 +16,14 @@ mt19937 rd;
 stack<int> tc;
 int crt(ll val = 0)
 {
-	if (!tc.empty()) // 垃圾回收
+	if (!tc.empty()) // 鍨冨溇鍥炴敹
 	{
 		int t = tc.top();
 		tc.pop();
 		tree[t].key = rd();
 		tree[t].val = tree[t].sum = val;
 		tree[t].l = tree[t].r = tree[t].tag = 0;
-		tree[t].revtag = false; // 垃圾处理
+		tree[t].revtag = false; // 鍨冨溇澶勭悊
 		tree[t].sz = 1;
 		return t;
 	}
