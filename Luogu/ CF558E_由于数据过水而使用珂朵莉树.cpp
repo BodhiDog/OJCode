@@ -36,7 +36,7 @@ void srt0(int &l, const int &r) // 降序
 	{
 		if (bct[j])
 		{
-			s.insert(Node(l, l + bct[j] - 1, j + 'a'));
+			s.insert(Node(l, l + bct[j] - 1, j + 'a')); // 使用桶，所以自动去重
 			l += bct[j]; // 下一个块的l，在这个块的r+1
 		}
 	}
