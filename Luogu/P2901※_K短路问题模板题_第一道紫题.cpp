@@ -2,7 +2,7 @@
 using namespace std;
 
 #define reg register int
-	const int N = 1e3 + 10;
+const int N = 1e3 + 10;
 struct Node
 {
 	int point, len;
