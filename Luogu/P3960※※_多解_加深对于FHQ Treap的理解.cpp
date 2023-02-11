@@ -1,4 +1,5 @@
 // 程序中有任何不理解的部分都可举例验证
+// 解法1：使得平衡树严格按照heap规则构建
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -109,6 +110,120 @@ int main()
 			cout << tree[b].start + y - 1 << '\n';
 			root[0] = merge(root[0], crt(tree[b].start + y - 1, 1));
 			root[x] = merge(merge(a, crt(tree[b].start, y - 1)), merge(crt(tree[b].start + y, tree[b].len - y), c));
+		}
+	}
+	return 0;
+}
+
+// 解法2（推荐）：带点分裂，更好理解，主函数里也更好写，也验证了谷队所说的『所有能用珂朵莉树做的题都能用平衡树做』这句话
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+const int R = 3e5 + 10;
+struct
+{
+	int lc, rc, key;
+	ll lb, rb, sz;
+} tree[R * 4];
+int tot, root[R];
+mt19937 rd;
+int crt(ll l, ll r)
+{
+	tree[++tot].sz = r - l + 1;
+	tree[tot].key = rd();
+	tree[tot].lb = l, tree[tot].rb = r;
+	return tot;
+}
+#define lc(x) tree[x].lc
+#define rc(x) tree[x].rc
+#define len(x) (tree[x].rb - tree[x].lb + 1)
+void pushup(int k)
+{
+	tree[k].sz = tree[lc(k)].sz + tree[rc(k)].sz + len(k);
+}
+int merge(int x, int y)
+{
+	if (!x || !y)
+		return x + y;
+	if (tree[x].key < tree[y].key)
+	{
+		tree[x].rc = merge(tree[x].rc, y);
+		pushup(x);
+		return x;
+	}
+	else
+	{
+		tree[y].lc = merge(x, tree[y].lc);
+		pushup(y);
+		return y;
+	}
+}
+void splitnode(int k, ll sz)
+{
+	if (len(k) <= sz)
+		return;
+	ll r1 = tree[k].lb + sz - 1;
+	int newnode = crt(r1 + 1, tree[k].rb);
+	tree[k].rb = r1;
+	tree[k].rc = merge(newnode, tree[k].rc); // 新的结点要紧靠当前结点，因此newnode要写在前面
+	pushup(k);
+}
+void split(int k, ll sz, int &x, int &y)
+{
+	if (k == 0)
+	{
+		x = y = 0;
+		return;
+	}
+	if (tree[lc(k)].sz >= sz)
+	{
+		y = k;
+		split(tree[y].lc, sz, x, tree[y].lc);
+	}
+	else
+	{
+		x = k;
+		splitnode(x, sz - tree[lc(k)].sz);
+		split(tree[x].rc, sz - tree[lc(k)].sz - (len(k)), tree[x].rc, y);
+	}
+	pushup(k);
+}
+signed main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int n, m, q, x, y, a, b, c, d, e, f;
+	cin >> n >> m >> q;
+	int i, j;
+	for (i = 1; i <= n; ++i)
+	{
+		root[i] = crt(ll(i - 1) * ll(m) + 1, ll(i) * ll(m) - 1); // 右边界是化简之后的式子
+	}
+	for (j = 1; j <= n; ++j)
+	{
+		root[0] = merge(root[0], crt(ll(j) * ll(m), ll(j) * ll(m)));
+	}
+	for (i = 1; i <= q; ++i)
+	{
+		cin >> x >> y;
+		if (y == m)
+		{
+			split(root[0], x - 1, a, b);
+			split(b, 1, b, c);
+			cout << tree[b].lb << '\n';
+			root[0] = merge(merge(a, c), b); // 注意要并到最后！！！
+		}
+		else
+		{
+			split(root[x], y - 1, a, b);
+			split(b, 1, b, c);
+			cout << tree[b].lb << '\n';
+			split(root[0], x - 1, d, e);
+			split(e, 1, e, f);
+			root[x] = merge(merge(a, c), e);
+			root[0] = merge(merge(d, f), b);
 		}
 	}
 	return 0;
