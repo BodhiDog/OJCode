@@ -9,12 +9,12 @@ ll w(ll a, ll b, ll c)
 		return 1;
 	if (a > 20 || b > 20 || c > 20)
 		return w(20, 20, 20);
-	if (f[a][b][c])
+	if (f[a][b][c]) // 记忆化
 		return f[a][b][c];
 	if (a < b && b < c)
-		return f[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
+		return f[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c); // 记忆化
 	else
-		return f[a][b][c] = w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1);
+		return f[a][b][c] = w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1); // 记忆化
 }
 int main()
 {
