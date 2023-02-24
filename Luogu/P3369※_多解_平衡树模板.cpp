@@ -146,7 +146,7 @@ int main()
 	return 0;
 }
 
-//Splay
+// Splay
 #include <bits/stdc++.h>
 using namespace std;
 
