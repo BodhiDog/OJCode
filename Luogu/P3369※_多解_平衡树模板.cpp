@@ -302,3 +302,39 @@ int main()
 	}
 	return 0;
 }
+
+// pd_bs实现
+#include <bits/stdc++.h>
+#include <bits/extc++.h>
+using namespace std;
+using namespace __gnu_pbds;
+
+using pii = pair<int, int>;														   // pbds不会管相同的数，所以要使得插入的每一个元素都有一些不同点
+tree<pii, null_type, less<pii>, rb_tree_tag, tree_order_statistics_node_update> t; // 第五个参数用于操作34
+#define pos(x) make_pair(x, 0)
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int n, opt, x;
+	cin >> n;
+	t.insert(pos(INT_MIN)); // 因为返回的排名从0开始，所以插入一个-∞充当第0个
+	for (int j = 1; j <= n; ++j)
+	{
+		cin >> opt >> x;
+		if (opt == 1)
+			t.insert(make_pair(x, j));
+		else if (opt == 2)
+			t.erase(t.lower_bound(pos(x)));
+		else if (opt == 3)
+			cout << t.order_of_key(*t.lower_bound(pos(x))) << '\n'; // 若不插入INT_MIN，应写成t.order_of_key(*t.lower_bound(pos(x))) + 1
+		else if (opt == 4)
+			cout << (*t.find_by_order(x)).first << '\n'; // 若不插入INT_MIN，应写成(*t.find_by_order(x - 1)).first
+		else if (opt == 5)
+			cout << (*(--t.lower_bound(make_pair(x, INT_MIN)))).first << '\n';
+		else
+			cout << (*(t.upper_bound(make_pair(x, INT_MAX)))).first << '\n'; // INT_MAX同样是为了处理数相同的情况
+	}
+	return 0;
+}
