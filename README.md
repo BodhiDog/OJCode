@@ -15,13 +15,11 @@
 
 B站：[蒟蒻Bodhi](https://space.bilibili.com/394094181)
 
+洛谷：[Bodhi](https://www.luogu.com.cn/user/364848)
+
 **十年OI一场空，不开longlong见祖宗**
 
 [一些有趣的东西](https://www.luogu.com.cn/paste/kionk609)
-
-### 大事祭
-
-2022.11.26：[NOIP2022祭](https://b23.tv/R2TTdC2)
 
 ![](https://www.luogu.com.cn/api/verify/captcha)
 
