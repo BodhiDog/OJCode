@@ -85,3 +85,73 @@ int main()
 	put(ans.a[1][1] % g);
 	return 0;
 }
+
+// 龟速乘法
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+ll mod, a;
+ll mult(ll x, ll y)
+{
+	ll res = 0;
+	while (y)
+	{
+		if (y & 1)
+			res = (res + x) % mod;
+		x = (x + x) % mod;
+		y >>= 1;
+	}
+	return res;
+}
+struct Matrix
+{
+	ll a[4][4];
+	int row, col;
+	Matrix() { memset(a, 0, sizeof(a)); }
+	Matrix operator*(const Matrix &x) const
+	{
+		int i, j, k;
+		Matrix res;
+		res.row = row, res.col = x.col;
+		for (i = 1; i <= row; ++i)
+			for (j = 1; j <= x.col; ++j)
+				for (k = 1; k <= col; ++k)
+					res.a[i][j] = (res.a[i][j] + mult(a[i][k], x.a[k][j])) % mod;
+		return res;
+	}
+};
+Matrix ans;
+void qpow(ll p)
+{
+	Matrix tmp;
+	tmp.row = tmp.col = 2;
+	tmp.a[1][1] = a, tmp.a[1][2] = 1;
+	tmp.a[2][2] = 1;
+	while (p)
+	{
+		if (p & 1)
+			ans = tmp * ans;
+		tmp = tmp * tmp;
+		p >>= 1;
+	}
+}
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	ll c, x0, n, g;
+	cin >> mod >> a >> c >> x0 >> n >> g;
+	if (n == 1)
+	{
+		cout << (mult(a, x0) + c % mod) % mod << '\n';
+		return 0;
+	}
+	ans.row = 2, ans.col = 1;
+	ans.a[1][1] = x0 % mod; // x0
+	ans.a[2][1] = c % mod;	// c
+	qpow(n);
+	cout << ans.a[1][1] % g;
+	return 0;
+}
