@@ -9,7 +9,7 @@ struct Q
 struct
 {
 	int lc, rc, pos, l, r;
-	// pos代表该[l,r]内 最小数 第一次 出现的位置，l、r代表该树管理的值域
+	// pos代表该[l,r]内 最小数 第一次 出现的位置，l、r代表该子树管理的值域
 } t[R * 4];
 #define lc(x) t[x].lc
 #define rc(x) t[x].rc
