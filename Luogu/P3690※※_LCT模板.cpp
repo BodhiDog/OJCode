@@ -16,7 +16,7 @@ public:
 #define rc(k) t[k].son[1]
 #define fa(k) t[k].fa
 #define isrc(k) (rc(fa(k)) == k)
-#define reverse(k) swap(lc(k), rc(k)), t[k].tag ^= 1
+#define reverse(k) t[k].tag ^= 1
 #define notroot(k) (lc(fa(k)) == k || rc(fa(k)) == k) // 只要它是一个父亲的子结点，那它就不是根
 #define connect(x, f, k) fa(x) = f, t[f].son[k] = x
 	void pushup(int k)
@@ -27,12 +27,11 @@ public:
 	{
 		if (t[k].tag)
 		{
-			if (lc(k))
-				reverse(lc(k));
-			if (rc(k))
-				reverse(rc(k));
+			swap(lc(k), rc(k));
+			t[lc(k)].tag ^= 1;
+			t[rc(k)].tag ^= 1;
+			t[k].tag = false;
 		}
-		t[k].tag = false;
 	}
 	void pushdown_all(int x) // 由于之后出现了从下往上splay的情况，如果不先提前放下所有标记就会出问题
 	{
