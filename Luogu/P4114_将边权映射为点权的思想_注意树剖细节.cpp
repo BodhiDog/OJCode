@@ -3,8 +3,6 @@ using namespace std;
 
 const int R = 1e5 + 10;
 int a[R], sz[R], top[R], son[R], dep[R], fa[R], dfn[R], tme, val[R];
-// nfd:time->x
-// dfn:x->time
 class Segment
 {
 public:
