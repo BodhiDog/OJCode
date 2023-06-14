@@ -13,11 +13,6 @@ public:
 #define lc(k) (k << 1)
 #define rc(k) (k << 1 | 1)
 #define pushup(k) t[k].val = max(t[lc(k)].val, t[rc(k)].val)
-	void clear(int n)
-	{
-		for (int j = 0; j <= (n << 2); ++j)
-			t[j].l = t[j].r = t[j].val = 0;
-	}
 	// 线段树
 	void build(int k, int l, int r)
 	{
@@ -63,23 +58,16 @@ public:
 // 树剖
 struct Edge
 {
-	int to, next, len, id;
+	int to, next, len;
 } e[R * 2];
 int head[R], tot;
-void add(int x, int y, int w, int d)
+void add(int x, int y, int w)
 {
 	e[++tot] = {
 		.to = y,
 		.next = head[x],
-		.len = w,
-		.id = d};
+		.len = w};
 	head[x] = tot;
-}
-void clear(int n)
-{
-	tot = 0;
-	for (int j = 1; j <= (n << 1); ++n)
-		head[j] = e[j].next = e[j].to = e[j].len = 0;
 }
 void dfs1(int x, int f)
 {
@@ -174,8 +162,8 @@ int main()
 	for (j = 1; j < n; ++j)
 	{
 		cin >> x >> y >> val;
-		add(x, y, val, j);
-		add(y, x, val, j);
+		add(x, y, val);
+		add(y, x, val);
 		q[j] = {.x = x, .y = y};
 	}
 	dfs1(1, 0);
