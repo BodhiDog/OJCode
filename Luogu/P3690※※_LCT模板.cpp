@@ -66,7 +66,7 @@ public:
 	// 以下为LCT操作
 	void access(int x)
 	{
-		for (int y = 0; x; x = fa(y = x))
+		for (int y = 0; x; x = fa(y = x)/*y=x一定要写在x=fa(x)之前！！！*/)
 		{
 			splay(x);
 			rc(x) = y; // x到达树的最右下角，因为总是在往右儿子上挂
