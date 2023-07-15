@@ -100,6 +100,5 @@ int main()
 			update(1, x, x + y - 1, 2);
 		}
 	}
-	// cout << t[1].sum;
 	return 0;
 }
