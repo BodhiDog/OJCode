@@ -21,6 +21,4 @@ B站：[蒟蒻Bodhi](https://space.bilibili.com/394094181)
 
 [一些有趣的东西](https://www.luogu.com.cn/paste/kionk609)
 
-![](https://www.luogu.com.cn/api/verify/captcha)
-
 [图论工具](https://csacademy.com/app/graph_editor/)
