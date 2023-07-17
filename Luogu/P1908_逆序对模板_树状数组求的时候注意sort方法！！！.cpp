@@ -42,7 +42,7 @@ int main()
 		a[i].pos = i;
 	}
 	sort(a + 1, a + n + 1, [](Node &x, Node &y)
-		 { return x.val == y.val ? x.pos > y.pos : x.val > y.val; });
+		 { return x.val == y.val ? x.pos > y.pos : x.val > y.val; }); // 举例验证！！！
 	ll ans = 0;
 	for (i = 1; i <= n; ++i)
 	{
