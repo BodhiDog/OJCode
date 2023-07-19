@@ -1,3 +1,4 @@
+// 普通离散化
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -68,4 +69,90 @@ int read()
 		c = getchar();
 	}
 	return (fh ? x : -x);
+}
+
+// map离散化
+#include <bits/stdc++.h>
+using namespace std;
+
+const int R = 2e5 + 10;
+struct
+{
+	int son[2], val;
+} t[R * 40];
+struct Org
+{
+	int val, pos;
+} a[R];
+unordered_map<int, int> atomp, mptoa;
+#define lc(k) t[k].son[0]
+#define rc(k) t[k].son[1]
+int root[R], tot;
+void pushup(int k) { t[k].val = t[lc(k)].val + t[rc(k)].val; }
+void update(int oldk, int &k, int l, int r, int p, int x)
+{
+	k = ++tot;
+	t[k] = t[oldk];
+	if (l == r)
+	{
+		t[k].val += x;
+		return;
+	}
+	int mid = (l + r) >> 1;
+	if (p <= mid)
+		update(lc(oldk), lc(k), l, mid, p, x);
+	else
+		update(rc(oldk), rc(k), mid + 1, r, p, x);
+	pushup(k);
+}
+int query(int oldk, int k, int l, int r, int p)
+{
+	if (l == r)
+		return l;
+	int sum = t[lc(k)].val - t[lc(oldk)].val, mid = (l + r) >> 1; // 是左孩子的大小而不是当前点的大小！！！
+	if (sum >= p)
+		return query(lc(oldk), lc(k), l, mid, p);
+	else
+		return query(rc(oldk), rc(k), mid + 1, r, p - sum);
+}
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int n, m, l, r, k, i;
+	cin >> n >> m;
+	for (i = 1; i <= n; ++i)
+	{
+		cin >> a[i].val;
+		a[i].pos = i;
+	}
+	// map
+	sort(a + 1, a + n + 1, [](Org &u, Org &v)
+		 { return u.val < v.val; });
+	int tot = 0;
+	a[0].val = INT_MAX; // 如果有0，那么在一开始代码就停止了，就不对了，所以要给一个不可能的值
+	for (i = 1; i <= n; ++i)
+	{
+		if (a[i].val == a[i - 1].val)
+			continue;
+		++tot;
+		atomp[a[i].val] = tot;
+		mptoa[tot] = a[i].val;
+	}
+	// build
+	sort(a + 1, a + n + 1, [](Org &u, Org &v)
+		 { return u.pos < v.pos; });
+	for (i = 1; i <= n; ++i)
+	{
+		root[i] = root[i - 1];
+		update(root[i - 1], root[i], 1, n, atomp[a[i].val], 1);
+	}
+	// query
+	while (m--)
+	{
+		cin >> l >> r >> k;
+		cout << mptoa[query(root[l - 1], root[r], 1, n, k)] << '\n';
+	}
+	return 0;
 }
