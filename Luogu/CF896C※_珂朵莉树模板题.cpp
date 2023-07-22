@@ -13,7 +13,7 @@ struct Node
 };
 set<Node> s;
 using st = set<Node>::iterator;
-st split(int pos)
+st split(int pos) // 将结点分成<p和>=p的两部分
 {
 	st it = s.lower_bound(Node(pos));
 	if (it != s.end() && it->l == pos)
