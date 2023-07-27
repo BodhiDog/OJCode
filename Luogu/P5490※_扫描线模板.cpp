@@ -64,7 +64,7 @@ int main()
 	sort(yp.begin(), yp.end());
 	sort(line + 1, line + tot + 1);
 	int sz = yp.erase(unique(yp.begin(), yp.end()), yp.end()) - yp.begin();
-	build(root, 1, sz - 1);
+	build(root, 1, sz - 1); // 有sz条线，那么这sz条线就构成了sz-1个区间，分别为[1,2],[2,3],[3,4],...,[sz-1,sz]
 	ll ans = 0, last = 0;
 	for (j = 1; j <= (n << 1); ++j)
 	{
