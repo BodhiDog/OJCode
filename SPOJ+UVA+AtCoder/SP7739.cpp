@@ -5,7 +5,7 @@ const int R = 1e6 + 10;
 int a[R];
 struct Segt
 {
-	int l, r, mx, mu; // maxºÍmin
+	int l, r, mx, mu; // maxmin
 	Segt() { mx = -1, mu = INT_MAX; }
 } tree[R * 4];
 int tot;
