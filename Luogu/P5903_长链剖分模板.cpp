@@ -40,6 +40,7 @@ void dfs2(int x, int head)
 	if (x == head)
 	{
 		for (int i = 0, k = x; i <= t[x].maxdep - t[x].dep && k; ++i)
+		// 跳一次之后，剩余还要跳的长度一定小于 这条链的maxdep-第一次跳到的点的dep，所以最多记录往上跳t[x].maxdep-t[x].dep个点即可
 		{
 			up[x].push_back(k);
 			k = anc[k][0];
@@ -63,8 +64,8 @@ int query(int x, int k)
 	if (k == 0)
 		return x;
 	int lg = log2(k);
-	x = anc[x][lg], k -= (1 << lg);
-	k -= t[x].dep - t[t[x].head].dep, x = t[x].head;
+	x = anc[x][lg], k -= (1 << lg);					 // 先跳log2(k)步
+	k -= t[x].dep - t[t[x].head].dep, x = t[x].head; // 再跳到x的head上，注意语句顺序！
 	return (k >= 0 ? up[x][k] : down[x][-k]);
 }
 int main()
