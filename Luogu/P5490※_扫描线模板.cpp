@@ -1,4 +1,68 @@
-// 离散化
+// 动态开点线段树写法（清爽好写）
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+const int R = 1e5 + 10;
+struct
+{
+	int son[2];
+	ll res, tag;
+} t[R * 40];
+int root, tot;
+#define lc(k) t[k].son[0]
+#define rc(k) t[k].son[1]
+#define len (r - l + 1)
+struct Line
+{
+	int x, up, down;
+	ll v;
+	bool operator<(const Line &e) const { return x < e.x; }
+} l[R * 2];
+void pushup(int k, int l, int r) { t[k].res = (t[k].tag ? len : t[lc(k)].res + t[rc(k)].res); }
+void update(int &k, int l, int r, int x, int y, ll v)
+{
+	if (!k)
+		k = ++tot;
+	if (x <= l && y >= r)
+	{
+		t[k].tag += v;
+		pushup(k, l, r);
+		return;
+	}
+	int mid = (l + r) >> 1;
+	if (x <= mid)
+		update(lc(k), l, mid, x, y, v);
+	if (y > mid)
+		update(rc(k), mid + 1, r, x, y, v);
+	pushup(k, l, r);
+}
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int n, cnt = 0, x1, y1, x2, y2, j, last = 0, maxy = -1, miny = INT_MAX;
+	cin >> n;
+	for (j = 1; j <= n; ++j)
+	{
+		cin >> x1 >> y1 >> x2 >> y2;
+		l[++cnt] = {.x = x1, .up = y2, .down = y1, .v = 1};
+		l[++cnt] = {.x = x2, .up = y2, .down = y1, .v = -1};
+		maxy = max(maxy, y2), miny = min(miny, y1);
+	}
+	ll ans = 0;
+	sort(l + 1, l + cnt + 1);
+	for (j = 1; j <= cnt; ++j)
+	{
+		ans += ll(l[j].x - last) * t[root].res, last = l[j].x;
+		update(root, miny, maxy, l[j].down + 1, l[j].up, l[j].v);
+	}
+	cout << ans << '\n';
+	return 0;
+}
+
+// 离散化写法
 #include <bits/stdc++.h>
 using namespace std;
 
