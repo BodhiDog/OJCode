@@ -115,6 +115,5 @@ int main()
 			cout << fixed << setprecision(1) << query(root, l, r) << '\n';
 		}
 	}
-
 	return 0;
 }
