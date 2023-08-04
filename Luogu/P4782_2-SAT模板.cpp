@@ -62,7 +62,7 @@ int main()
 	cout << "POSSIBLE\n";
 	for (j = 1; j <= n; ++j)
 	{
-		cout << (group[j] < group[j + n]) << ' ';
+		cout << (group[j] < group[j + n]) << ' '; // 越是靠近dfs序叶子结点的点，在tarjan时越是先被标记在一个强联通分量中
 	}
 	return 0;
 }
