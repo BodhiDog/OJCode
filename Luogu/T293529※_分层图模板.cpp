@@ -1,56 +1,58 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int R = 1e4 + 5, K = 25;
 using ll = long long;
+const int M = 5e4 + 10, N = 1e4 + 10;
 struct Edge
 {
-	int to;
+	int to, next;
 	ll len;
-};
-struct Q
+} e[M * 2];
+struct Que
 {
-	int p, times;
-	ll sum;
-	bool operator<(const Q &oth) const
+	int x, layer;
+	ll len;
+	bool operator<(const Que &oth) const
 	{
-		return sum > oth.sum;
+		return len > oth.len;
 	}
 };
-int k;
-ll dis[R][K];
-bool b[R][K];
-vector<Edge> v[R];
-void dj()
+int head[M * 2], tot, k;
+ll dis[N][25];
+bool b[N][25];
+void add(int x, int y, ll l)
 {
-	priority_queue<Q> q;
-	int from, to, times;
-	ll sum, len;
+	e[++tot] = {.to = y, .next = head[x], .len = l};
+	head[x] = tot;
+}
+void dijkstra()
+{
 	memset(dis, 0x3f, sizeof(dis));
+	priority_queue<Que> q;
+	q.push({1, 0, 0});
 	dis[1][0] = 0;
-	q.push(Q{1, 0, 0});
-	register int j;
+	int x, layer, i, to;
+	ll len;
 	while (!q.empty())
 	{
-		from = q.top().p;
-		times = q.top().times;
-		sum = q.top().sum;
+		x = q.top().x, layer = q.top().layer;
 		q.pop();
-		if (!b[from][times])
+		if (!b[x][layer])
 		{
-			b[from][times] = true; // 标记更新过
-			dis[from][times] = sum;
-			for (j = 0; j < int(v[from].size()); ++j)
+			b[x][layer] = true;
+			for (i = head[x]; i; i = e[i].next)
 			{
-				to = v[from][j].to;
-				len = v[from][j].len;
-				if (sum + len < dis[to][times])
+				to = e[i].to;
+				len = e[i].len;
+				if (dis[x][layer] + len < dis[to][layer])
 				{
-					q.push({to, times, sum + len});
+					dis[to][layer] = dis[x][layer] + len;
+					q.push({to, layer, dis[to][layer]});
 				}
-				if (times < k && sum < dis[to][times + 1])
+				if (layer + 1 <= k && dis[x][layer] < dis[to][layer + 1])
 				{
-					q.push({to, times + 1, sum});
+					dis[to][layer + 1] = dis[x][layer];
+					q.push({to, layer + 1, dis[to][layer]});
 				}
 			}
 		}
@@ -61,22 +63,20 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
-	int n, m, x, y;
-	ll len;
+	int n, m, j, u, v;
+	ll w;
 	cin >> n >> m >> k;
-	register int j;
 	for (j = 1; j <= m; ++j)
 	{
-		cin >> x >> y >> len;
-		v[x].push_back({y, len});
-		v[y].push_back({x, len});
+		cin >> u >> v >> w;
+		add(u, v, w), add(v, u, w);
 	}
-	dj();
+	dijkstra();
 	ll ans = LLONG_MAX;
 	for (j = 0; j <= k; ++j)
 	{
 		ans = min(ans, dis[n][j]);
 	}
-	cout << ans;
+	cout << ans << '\n';
 	return 0;
 }
