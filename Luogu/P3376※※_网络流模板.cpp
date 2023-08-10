@@ -1,5 +1,102 @@
 // Dinic
+#include <bits/stdc++.h>
+using namespace std;
 
+using ll = long long;
+const int M = 5e3 + 10, N = 210;
+struct Edge
+{
+	int to, next;
+	ll w;
+} e[M * 2];
+int head[M * 2], tot, n, s, t, frome[N], laste[N], dep[N];
+ll flow[M * 2];
+void add(int u, int v, ll w)
+{
+	e[tot] = {v, head[u], w};
+	head[u] = tot;
+	++tot;
+}
+bool bfs()
+{
+	memset(dep, 0, sizeof(dep));
+	memset(laste, 0, sizeof(laste));
+	laste[s] = head[s];
+	queue<int> q;
+	q.push(s);
+	dep[s] = 1;
+	int x, i, to;
+	while (!q.empty())
+	{
+		x = q.front();
+		q.pop();
+		for (i = head[x]; ~i; i = e[i].next)
+		{
+			to = e[i].to;
+			if (!dep[to] && e[i].w > 0)
+			{
+				q.push(to);
+				dep[to] = dep[x] + 1;
+				laste[to] = head[to];
+				if (to == t)
+				{
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
+ll dfs(int x, ll flow)
+{
+	if (x == t)
+	{
+		return flow;
+	}
+	int i, to;
+	ll tot = 0, add, cap; // 一次找出多条增广路，就是Dinic的优点之一
+	for (i = laste[x]; (~i) && flow; i = laste[x] = e[i].next)
+	{
+		to = e[i].to;
+		cap = e[i].w;
+		if (dep[to] == dep[x] + 1 && cap > 0)
+		{
+			add = dfs(to, min(flow, cap));
+			e[i].w -= add;
+			e[i ^ 1].w += add;
+			tot += add;
+			flow -= add; // 还未进行分配的流量减少了
+		}
+	}
+	if (tot == 0)
+	{
+		dep[x] = -1; // 剪枝，没有价值（没有额外流量）的点不再继续搜索
+	}
+	return tot;
+}
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	memset(head, -1, sizeof(head));
+	int m, i, x, y;
+	ll w;
+	cin >> n >> m >> s >> t;
+	for (i = 1; i <= m; ++i)
+	{
+		cin >> x >> y >> w;
+		add(x, y, w);
+		add(y, x, 0);
+	}
+	ll ans = 0;
+	while (bfs())
+	{
+		ans += dfs(s, 1e12);
+	}
+	cout << ans << '\n';
+	return 0;
+}
 
 // EK
 #include <bits/stdc++.h>
