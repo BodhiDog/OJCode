@@ -86,6 +86,6 @@ int main()
 			++ans;
 		}
 	}
-	cout << (ans + 1) / 2 << '\n';
+	cout << (ans + 1) / 2 << '\n'; // 把度为1的点尽可能连起来，就变成了ans=(cnt（度为1的点）+1)/2
 	return 0;
 }
