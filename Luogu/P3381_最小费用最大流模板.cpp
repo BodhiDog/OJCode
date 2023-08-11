@@ -42,7 +42,7 @@ bool spfa() // 关于SPFA，它活了（
 			{
 				dis[to] = dis[x] + len;
 				flow[to] = min(flow[x], cap);
-				pre[to] = i;
+				pre[to] = i; // 记录路径上的边，以便下面更新时减去边的w
 				if (!b[to])
 				{
 					q.push(to);
@@ -70,7 +70,7 @@ int main()
 		add(y, x, 0, -c);
 	}
 	int maxflow = 0, mincost = 0;
-	while (spfa())
+	while (spfa()) // 只要能找到流，就扩展
 	{
 		x = t;
 		maxflow += flow[t];
