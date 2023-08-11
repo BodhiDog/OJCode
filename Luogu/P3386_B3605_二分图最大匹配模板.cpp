@@ -1,3 +1,116 @@
+// ISAP
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 510, M = 5e4 + 10;
+struct Edge
+{
+	int to, next, w;
+} e[2 * (M + N * 2)];
+int head[2 * (M + N * 2)], tot, s, t, last[2 * (M + N * 2)], dep[N + M], depcnt[N + M];
+void add(int x, int y, int w)
+{
+	e[tot] = {y, head[x], w};
+	head[x] = tot++;
+}
+void bfs()
+{
+	queue<int> q;
+	dep[t] = 1;
+	depcnt[1] = 1;
+	q.push(t);
+	int x, i, to;
+	while (!q.empty())
+	{
+		x = q.front();
+		q.pop();
+		for (i = head[x]; ~i; i = e[i].next)
+		{
+			to = e[i].to;
+			if (!dep[to])
+			{
+				q.push(to);
+				dep[to] = dep[x] + 1;
+				++depcnt[dep[to]];
+			}
+		}
+	}
+}
+int dfs(int x, int flow)
+{
+	if (x == t)
+	{
+		return flow;
+	}
+	int cap, i, to, add, res = 0;
+	for (i = last[x]; ~i; i = last[x] = e[i].next)
+	{
+		to = e[i].to;
+		cap = e[i].w;
+		if (dep[x] == dep[to] + 1 && cap > 0)
+		{
+			add = dfs(to, min(cap, flow));
+			if (add)
+			{
+				e[i].w -= add;
+				e[i ^ 1].w += add;
+				flow -= add;
+				res += add;
+			}
+			if (flow == 0)
+			{
+				return res;
+			}
+		}
+	}
+	--depcnt[dep[x]];
+	if (depcnt[dep[x]] == 0)
+	{
+		dep[s] = t + 1;
+	}
+	++dep[x];
+	++depcnt[dep[x]];
+	return res;
+}
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	memset(head, -1, sizeof(head));
+	int n, m, e, j, x, y;
+	cin >> n >> m >> e;
+	s = 1;
+	t = n + m + 2; //[1,n+m+2]，共m+n+2个点
+	for (j = 2; j <= n + 1; ++j)
+	{
+		add(s, j, 1);
+		add(j, s, 0);
+	}
+	for (j = 1; j <= e; ++j)
+	{
+		cin >> x >> y;
+		x += 1;
+		y += n + 1;
+		add(x, y, 1);
+		add(y, x, 0);
+	}
+	for (j = n + 1 + 1; j <= n + m + 1; ++j)
+	{
+		add(j, t, 1);
+		add(t, j, 0);
+	}
+	bfs();
+	int ans = 0;
+	while (dep[s] <= t)
+	{
+		copy(head, head + tot + 1, last);
+		ans += dfs(s, 1000);
+	}
+	cout << ans << '\n';
+	return 0;
+}
+
 // BFS
 #include <bits/stdc++.h>
 using namespace std;
