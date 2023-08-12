@@ -9,7 +9,7 @@ struct Edge
 	int to, next;
 	ll w;
 } e[M * 2];
-int head[M * 2], tot, n, s, t, dep[N], depcnt[N], last[M * 2];
+int head[N], tot, n, s, t, dep[N], depcnt[N], last[N];
 void add(int x, int y, ll w)
 {
 	e[tot] = {y, head[x], w};
@@ -93,7 +93,7 @@ int main()
 	bfs();
 	while (dep[s] <= n)
 	{
-		copy(head, head + tot, last);
+		copy(head, head + n, last);
 		ans += dfs(s, 1e12);
 	}
 	cout << ans << '\n';
