@@ -109,7 +109,7 @@ int main()
 		ans += dfs(s, INT_MAX);
 	}
 	cout << ans << '\n';
-	for (j = 0; j < tot; j += 2)
+	for (j = 0; j < tot; j += 2) // 因为有输入重边，所以不能在搜索的时候判断
 	{
 		if (e[j].to != t && e[j ^ 1].to != s && e[j ^ 1].w > 0) // 边被启用
 		{
