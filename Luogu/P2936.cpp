@@ -85,7 +85,7 @@ int main()
 	int ans = 0;
 	while (dep[s] <= 'Z')
 	{
-		copy(head, head + N, last);
+		copy(head, head + N, last); // head是针对每个点的起始边而不是每条边的！！！
 		ans += dfs(s, INT_MAX);
 	}
 	cout << ans << '\n';
