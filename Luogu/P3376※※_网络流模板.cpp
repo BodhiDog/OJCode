@@ -111,7 +111,7 @@ struct Edge
 	int to, next;
 	ll w;
 } e[M * 2];
-int head[M * 2], tot, n, s, t, frome[N], laste[N], dep[N];
+int head[N], tot, n, s, t, frome[N], laste[N], dep[N];
 ll flow[M * 2];
 void add(int u, int v, ll w)
 {
@@ -211,7 +211,7 @@ struct Edge
 	int to, next;
 	ll w;
 } e[M * 2];
-int head[M * 2], tot, s, t, frome[N];
+int head[N], tot, s, t, frome[N];
 bool b[N];
 ll flow[M * 2];
 void add(int u, int v, ll w)
@@ -297,7 +297,7 @@ struct Edge
 	int to, next;
 	ll w;
 } e[M * 2];
-int head[M * 2], tot, t;
+int head[N], tot, t;
 bool b[N];
 void add(int u, int v, ll w)
 {
