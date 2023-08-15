@@ -160,7 +160,6 @@ int main()
 		cin >> edge[i].x >> edge[i].y >> edge[i].w;
 	}
 	kruskal();
-	seg.build(seg.root[0], 1, htot);
 	for (i = 1; i <= tot; ++i)
 	{
 		if (!rd[i])
