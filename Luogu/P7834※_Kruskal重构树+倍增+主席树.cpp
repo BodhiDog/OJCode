@@ -81,7 +81,7 @@ struct
 } e[M * 4];
 struct Node
 {
-	int val, leftb, rightb;
+	int val, leftb, rightb; // leftb/rightb并非h[]中的（真实的）下标，是在dfs中访问顺序的下标
 	Node() { leftb = INT_MAX, rightb = INT_MIN; }
 } p[N + M];
 vector<int> hh;
