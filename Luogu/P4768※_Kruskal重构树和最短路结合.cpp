@@ -1,3 +1,4 @@
+// 一道好久之前就想做的题，源于P4779的题目背景
 #include <bits/stdc++.h>
 using namespace std;
 
