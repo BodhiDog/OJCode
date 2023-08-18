@@ -1,4 +1,4 @@
-// 
+// 建图方式：https://gitee.com/BodhiDog/OJCode/blob/master/Other/%E6%B4%9B%E8%B0%B7P4001%E5%9B%BE.jpg
 #include <bits/stdc++.h>
 using namespace std;
 
