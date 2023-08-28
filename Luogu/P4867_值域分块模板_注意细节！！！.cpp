@@ -2,7 +2,7 @@
 using namespace std;
 
 const int N = 1e5 + 10, B = 350, M = 1e6 + 10;
-int n, a[N], belong[N], cnt[N], sum[B], ans[M], L[B], R[B];
+int n, a[N], belong[N/*注意是N不是B！！！*/], cnt[N], sum[B], ans[M], L[B], R[B];
 struct Qry
 {
 	int id, l, r, a, b;
