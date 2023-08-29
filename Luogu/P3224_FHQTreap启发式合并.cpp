@@ -10,7 +10,7 @@ struct
 #define lc(k) t[k].son[0]
 #define rc(k) t[k].son[1]
 mt19937 rd(2333);
-int tot, root[R], fa[R]; // 结点x所在树的根结点为root[x]
+int tot, root[R]; // 结点x所在树的根结点为root[x]，同时作为并查集的fa[]
 int findroot(int x) { return x == root[x] ? x : root[x] = findroot(root[x]); }
 int add(int x, int val)
 {
