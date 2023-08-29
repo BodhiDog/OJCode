@@ -57,8 +57,8 @@ int mix(int x, int y)
 {
 	if (!x || !y)
 		return x + y;
-	int a, b; // 这里就需要用到pushup了，经实测，这种把小树混合到大树中的方法能使程序更快，也就是启发式合并思想
-	if (tree[x].sz < tree[y].sz)
+	int a, b;
+	if (tree[x].sz < tree[y].sz) // 这里就需要用到sz了，经实测，这种把小树混合到大树中的方法能使程序更快，也就是启发式合并思想
 		swap(x, y);
 	split(y, tree[x].pos, a, b);
 	tree[x].l = mix(tree[x].l, a);
