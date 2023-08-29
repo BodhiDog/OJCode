@@ -40,7 +40,6 @@ void dfs(int x, int eaten, double dis, int s)
 }
 int main()
 {
-	clock();
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
