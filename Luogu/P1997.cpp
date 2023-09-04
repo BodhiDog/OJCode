@@ -19,6 +19,7 @@ void del(int v)
 		--maxcnt; // 只是相当于减少了一个数，所以-1
 	--sum[bucket[v]];
 	--bucket[v];
+    // 彻底删除一个数，不用再++sum[bucket[v]]
 }
 int main()
 {
