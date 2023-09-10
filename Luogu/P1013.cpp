@@ -42,7 +42,7 @@ bool dfs(int x)
 		if (!b[j])
 		{
 			b[j] = true;
-			toint[s[0][x][0]] = j; // 这里与输入格式有关，所以x要从1开始搜索
+			toint[s[0][x][0]] = j; // 这里与输入格式有关（因为s[0][0]是'+'，要从s[0][1]开始），所以x要从1开始搜索
 			if (dfs(x + 1))
 			{
 				return true;
