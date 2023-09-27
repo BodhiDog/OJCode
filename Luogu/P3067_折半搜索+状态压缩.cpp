@@ -1,3 +1,4 @@
+// 开O2比不开O2快10倍。。。
 #include <bits/stdc++.h>
 using namespace std;
 
