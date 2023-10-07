@@ -65,7 +65,7 @@ void tarjan(int x)
 void spfa(int s)
 {
 	memset(dis, -0x3f, sizeof(dis));
-	dis[s] = sum[s];
+	dis[s] = sum[s]; // 注意这里初始值的赋值！！！
 	queue<int> q;
 	q.push(s);
 	b[s] = true;
