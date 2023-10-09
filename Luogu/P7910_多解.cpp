@@ -4,7 +4,7 @@
 using namespace std;
 using namespace __gnu_pbds;
 
-tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update> t;
+tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update> t; // 因为这题还与数字在原数组中的位置有关，所以即使是手写平衡树也要维护pair
 int a[8010];
 int main()
 {
