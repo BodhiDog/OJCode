@@ -64,7 +64,7 @@ int main()
 	{
 		if (q[i].l == q[i].r)
 		{
-			ans[q[i].id][0] = 0;
+			ans[q[i].id][0] = 0; // 这里也要写q[i].id！！！
 			ans[q[i].id][1] = 1;
 			continue;
 		}
