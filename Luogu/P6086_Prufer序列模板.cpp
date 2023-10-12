@@ -26,7 +26,7 @@ int main()
 				++x;
 			}
 			prufer[i] = fa[x];
-			while (i <= n - 2 && --cd[prufer[i]] == 0 && prufer[i] < x)
+			while (i <= n - 2 && --cd[prufer[i]] == 0 && prufer[i] < x) // 如果父结点变成了叶结点并且比x小，就直接丢进prufer序列中
 			{
 				prufer[i + 1] = fa[prufer[i]];
 				++i;
