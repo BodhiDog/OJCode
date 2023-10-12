@@ -1,3 +1,10 @@
+/*例：
+x1真或x3假
+转换为：
+x1假⇒x3假
+x3真⇒x1真
+这样就建成边了（在写4171的时候忽然想到的）
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
