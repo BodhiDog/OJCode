@@ -70,7 +70,6 @@ int main()
 			}
 			cout << (flag ? "Yes\n" : "No\n");
 		}
-
 	}
 	return 0;
 }
