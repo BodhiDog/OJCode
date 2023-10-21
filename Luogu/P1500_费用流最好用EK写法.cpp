@@ -136,6 +136,9 @@ int main()
 	{
 		add(s, i, 1, 0);
 		add(i, s, 0, 0);
+	}
+	for (i = 1; i <= n; ++i)
+	{
 		for (j = n + 1; j <= n * 2; ++j)
 		{
 			if (distsqr(i, j) <= k * k)
@@ -152,8 +155,11 @@ int main()
 				}
 			}
 		}
-		add(i + n, t, 1, 0);
-		add(t, i + n, 0, 0);
+	}
+	for (i = n + 1; i <= n + n; ++i)
+	{
+		add(i, t, 1, 0);
+		add(t, i, 0, 0);
 	}
 	while (spfa())
 	{
