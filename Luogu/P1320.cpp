@@ -13,13 +13,12 @@ int main()
 		++n;
 		all = all + s;
 	}
-	all = all + '.';
 	cout << n << ' ';
 	if (all[0] == '1') // 从0开始计数！！！
 	{
 		cout << "0 ";
 	}
-	for (i = 0; i < all.size() - 1; ++i)
+	for (i = 0; i < all.size(); ++i)
 	{
 		++cur;
 		if (all[i] != all[i + 1])
