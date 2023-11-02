@@ -1,3 +1,5 @@
+// 一道很久之前就想做的大模拟
+// 作者: Bodhi  公开 发表时间: 2022-07-20 10:31
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -74,6 +76,3 @@ int main()
 	}
 	return 0;
 }
-
-// 一道很久之前就想做的大模拟
-// 作者: Bodhi  公开 发表时间: 2022-07-20 10:31
