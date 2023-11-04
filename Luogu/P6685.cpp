@@ -21,7 +21,7 @@ bool check(ll x)
 				return false;
 			}
 		}
-		x *= x;
+		x *= x; // 可能乘完这一次会超，但同时p也会在下一次变为0，也就是无效的乘
 		p >>= 1;
 	}
 	return res <= n;
