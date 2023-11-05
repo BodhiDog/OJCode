@@ -1,3 +1,4 @@
+// 不妨定义每次len的长度都是1。同时由于sum只需要知道奇偶，所以-1操作不会产生影响
 #include <bits/stdc++.h>
 using namespace std;
 
