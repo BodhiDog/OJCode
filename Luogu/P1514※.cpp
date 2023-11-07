@@ -188,3 +188,123 @@ int main()
 	}
 	return 0;
 }
+
+// P1514
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// #define reg register int
+// const int R = 510,
+// 		  xx[5] = {0, 0, 1, 0, -1},
+// 		  yy[5] = {0, 1, 0, -1, 0};
+// struct Node
+// {
+// 	int x, y, z;
+// 	bool operator<(const Node &a) const
+// 	{
+// 		if (x != a.x)
+// 			return x < a.x;
+// 		else
+// 			return y < a.y;
+// 	}
+// } t[R];
+// int a[R][R], n, m, tot, dp[R][2]; // 区间总数tot
+// bool b[R][R];
+// queue<Node> q;
+// inline Node bfs(int sy) // 返回值中的x表示左端点，y表示右端点
+// {
+// 	q.push({1, sy});
+// 	b[1][sy] = true;
+// 	int tx, ty, x, y, my = INT_MAX, mxy = -1;
+// 	Node temp;
+// 	reg j;
+// 	while (!q.empty())
+// 	{
+// 		temp = q.front();
+// 		q.pop();
+// 		x = temp.x;
+// 		y = temp.y;
+// 		for (j = 1; j <= 4; ++j)
+// 		{
+// 			tx = x + xx[j];
+// 			ty = y + yy[j];
+// 			if (tx >= 1 && tx <= n && ty >= 1 && ty <= m &&
+// 				a[tx][ty] < a[x][y] && !b[tx][ty])
+// 			{
+// 				q.push({tx, ty});
+// 				b[tx][ty] = true;
+// 			}
+// 		}
+// 		if (x == n)
+// 		{
+// 			my = min(my, y);
+// 			mxy = max(mxy, y);
+// 		}
+// 	}
+// 	if (mxy == -1)
+// 	{
+// 		return {-1, -1};
+// 	}
+// 	return {my, mxy, sy};
+// }
+// int main()
+// {
+// 	ios::sync_with_stdio(false);
+// 	cin.tie(0);
+// 	cout.tie(0);
+// 	freopen("test.txt", "r", stdin);
+// 	freopen("test2.txt", "w", stdout);
+// 	cin >> n >> m;
+// 	reg i, j;
+// 	priority_queue<Node> q;
+// 	for (j = 1; j <= m; ++j)
+// 	{
+// 		cin >> a[1][j];
+// 		q.push({a[1][j], j});
+// 	}
+// 	for (i = 2; i <= n; ++i)
+// 	{
+// 		for (j = 1; j <= m; ++j)
+// 		{
+// 			cin >> a[i][j];
+// 		}
+// 	}
+// 	while (!q.empty())
+// 	{
+// 		j = q.top().y;
+// 		if (!b[1][j])
+// 		{
+// 			t[++tot] = bfs(j);
+// 			if (t[tot].x == -1 && t[tot].y == -1)
+// 			{
+// 				--tot;
+// 			}
+// 		}
+// 		q.pop();
+// 	}
+// 	int ans = 0;
+// 	for (j = 1; j <= m; ++j)
+// 	{
+// 		ans += b[n][j];
+// 	}
+// 	if (ans == m)
+// 	{ // 在这里DP
+// 		sort(t + 1, t + tot + 1);
+// 		for (j = 1; j <= tot; ++j)
+// 		{
+// 			cout << t[j].x << ' ' << t[j].y << " 开始列：" << t[j].z << "\n";
+// 		}
+// 		ans = 0;
+// 		for (j = 1; j <= tot; ++j)
+// 		{
+// 		}
+// 		// cout << "1\n"
+// 		// 	 << ans;
+// 	}
+// 	else
+// 	{
+// 		cout << "0\n"
+// 			 << ans;
+// 	}
+// 	return 0;
+// }
