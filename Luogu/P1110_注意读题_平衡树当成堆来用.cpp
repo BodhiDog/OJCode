@@ -12,10 +12,10 @@ public:
 		int son[2], sz, val;
 		unsigned int key;
 	} t[N];
-	#define lc(k) t[k].son[0]
-	#define rc(k) t[k].son[1]
-	#define pushup(k) t[k].sz = t[lc(k)].sz + t[rc(k)].sz + 1
-	int a[N], root, tot;
+#define lc(k) t[k].son[0]
+#define rc(k) t[k].son[1]
+#define pushup(k) t[k].sz = t[lc(k)].sz + t[rc(k)].sz + 1
+	int root, tot;
 	int add(int val)
 	{
 		t[++tot].sz = 1;
@@ -105,7 +105,7 @@ public:
 		b = merge(lc(b), rc(b));
 		root = merge(a, merge(b, c));
 	}
-} t1, t2;//https://www.luogu.com.cn/blog/Althen-Way-Satan/solution-p1110
+} t1, t2; // https://www.luogu.com.cn/blog/Althen-Way-Satan/solution-p1110
 int main()
 {
 	ios::sync_with_stdio(false);
