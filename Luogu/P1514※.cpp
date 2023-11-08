@@ -138,7 +138,7 @@ int main()
 		ans = 1;
 		for (i = 2; i <= m && e[i].l != 0x3f3f3f3f; ++i)
 		{
-			if (e[i].l > lastr + 1)
+			if (e[i].l > lastr + 1) // lastr+1表示上一个右端点+1，即新的线段必须要达到的左端点
 			{
 				lastr = maxr;
 				++ans;
