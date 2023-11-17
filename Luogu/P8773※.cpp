@@ -9,7 +9,7 @@ struct
 #define lc(k) (k << 1)
 #define rc(k) (k << 1 | 1)
 #define pushup(k) t[k].maxpos = max(t[lc(k)].maxpos, t[rc(k)].maxpos)
-int x, a[R], lst[R];
+int x, a[R], lst[1 << 21]; // 注意lst数组范围！！！
 void build(int k, int l, int r)
 {
 	t[k].l = l, t[k].r = r;
