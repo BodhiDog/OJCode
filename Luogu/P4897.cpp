@@ -89,14 +89,14 @@ int dinic()
 	}
 	return res;
 }
-void divwork(int l, int r)
+void divwork(int l, int r) // 我还不明白的分治
 {
 	if (l >= r)
 	{
 		return;
 	}
 	s = node[l], t = node[l + 1];
-	int x = node[l], y = node[l + 1], xx, yy, cnt1 = 0, cnt2 = 0, i, j, ls, rs;
+	int x = node[l], y = node[l + 1], xx, yy, cnt1 = 0, cnt2 = 0, i, j;
 	ans[s][t] = ans[t][s] = dinic();
 	for (i = l; i <= r; ++i)
 	{
