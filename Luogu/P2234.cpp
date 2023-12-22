@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int ll
 using ll = long long;
 const int R = 4e4 + 10;
 struct
@@ -63,7 +62,7 @@ void insert(ll x)
 ll pre(ll x) // 第一个<的
 {
 	int a, b, k;
-	split(root, x-1, a, b);
+	split(root, x - 1, a, b);
 	k = a;
 	while (rc(k))
 	{
@@ -84,7 +83,7 @@ ll succ(ll x) // 第一个>=的
 	root = merge(a, b);
 	return t[k].val;
 }
-signed main()
+int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -106,6 +105,6 @@ signed main()
 		}
 		insert(a);
 	}
-	cout << ans;
+	cout << ans << flush;
 	return 0;
 }
