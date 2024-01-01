@@ -1,3 +1,134 @@
+// 线段树正解
+#include <bits/stdc++.h>
+using namespace std;
+
+const int R = 5e4 + 10;
+class
+{
+public:
+	struct
+	{
+		int l, r, val, tag;
+	} t[R * 4];
+#define lc(k) (k << 1)
+#define rc(k) (k << 1 | 1)
+#define pushup(k) t[k].val = t[lc(k)].val + t[rc(k)].val
+#define edit(k, v) t[k].val = (t[k].r - t[k].l + 1) * v, t[k].tag = v
+	void pushdown(int k)
+	{
+		if (t[k].tag != -1) // 有覆盖为0的情况，所以初始为-1！！！
+		{
+			edit(lc(k), t[k].tag);
+			edit(rc(k), t[k].tag);
+			t[k].tag = -1;
+		}
+	}
+	void build(int k, int l, int r)
+	{
+		t[k].tag = -1;
+		t[k].l = l, t[k].r = r;
+		if (l == r)
+		{
+			return;
+		}
+		int mid = (l + r) >> 1;
+		build(lc(k), l, mid);
+		build(rc(k), mid + 1, r);
+	}
+	void update(int k, int x, int y, int val)
+	{
+		if (x <= t[k].l && t[k].r <= y)
+		{
+			edit(k, val);
+			return;
+		}
+		pushdown(k);
+		int mid = (t[k].l + t[k].r) >> 1;
+		if (x <= mid)
+		{
+			update(lc(k), x, y, val);
+		}
+		if (y > mid)
+		{
+			update(rc(k), x, y, val);
+		}
+		pushup(k);
+	}
+	int query(int k, int x, int y)
+	{
+		if (x <= t[k].l && t[k].r <= y)
+		{
+			return t[k].val;
+		}
+		pushdown(k);
+		int mid = (t[k].l + t[k].r) >> 1, res = 0;
+		if (x <= mid)
+		{
+			res = query(lc(k), x, y);
+		}
+		if (y > mid)
+		{
+			res += query(rc(k), x, y);
+		}
+		return res;
+	}
+} t[30];
+int cnt[30];
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int n, m, op, x, y, i, k, l;
+	char c;
+	cin >> n >> m;
+	for (i = 0; i < 26; ++i)
+	{
+		t[i].build(1, 1, n);
+	}
+	for (i = 1; i <= n; ++i)
+	{
+		cin >> c;
+		k = tolower(c) - 'a';
+		t[k].update(1, i, i, 1);
+	}
+	while (m--)
+	{
+		cin >> op >> x >> y;
+		if (op == 1)
+		{
+			cin >> c;
+			k = tolower(c) - 'a';
+			cout << t[k].query(1, x, y) << '\n';
+		}
+		else if (op == 2)
+		{
+			cin >> c;
+			k = tolower(c) - 'a';
+			for (i = 0; i < 26; ++i)
+			{
+				t[i].update(1, x, y, 0);
+			}
+			t[k].update(1, x, y, 1);
+		}
+		else
+		{
+			for (i = 0; i < 26; ++i)
+			{
+				cnt[i] = t[i].query(1, x, y);
+				t[i].update(1, x, y, 0);
+			}
+			l = x;
+			for (i = 0; i < 26; ++i)
+			{
+				t[i].update(1, l, l + cnt[i] - 1, 1);
+				l = l + cnt[i];
+			}
+		}
+	}
+	return 0;
+}
+
 // 珂朵莉树，非正解，最后一个点被卡
 #include <bits/stdc++.h>
 using namespace std;
