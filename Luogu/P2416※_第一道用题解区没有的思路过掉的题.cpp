@@ -114,7 +114,7 @@ struct
 	bool w; // w代表是否有泡芙
 } e[R + R];
 map<pair<int, int>, int> e_to_p;
-int head[R], tot, dfn[R], low[R], tme, belong[R], scc, sta[R], top;
+int head[R], tot, dfn[R], low[R], tme, belong[R], bcc, sta[R], top;
 bool puff[R];
 void add(int x, int y, bool v)
 {
@@ -140,12 +140,12 @@ void tarjan(int x, int frome)
 	}
 	if (low[x] == dfn[x])
 	{
-		++scc;
+		++bcc;
 		while (sta[top] != x)
 		{
-			belong[sta[top--]] = scc;
+			belong[sta[top--]] = bcc;
 		}
-		belong[sta[top--]] = scc;
+		belong[sta[top--]] = bcc;
 	}
 }
 int main()
@@ -163,7 +163,7 @@ int main()
 		add(y, x, w);
 	}
 	tarjan(1, 0);
-	ptot = scc;
+	ptot = bcc;
 	for (i = 0; i <= tot; i += 2)
 	{
 		x = belong[e[i].x], y = belong[e[i].to];
@@ -172,7 +172,7 @@ int main()
 			puff[x] |= e[i].w;
 		}
 	}
-	for (i = 1; i <= scc; ++i)
+	for (i = 1; i <= bcc; ++i)
 	{
 		lct.t[i].val = lct.t[i].res = puff[i];
 	}
