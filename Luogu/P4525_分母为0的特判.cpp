@@ -1,3 +1,4 @@
+// 用微积分过的第一题
 #include <bits/stdc++.h>
 using namespace std;
 
