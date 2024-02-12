@@ -3,7 +3,7 @@
 using namespace std;
 
 double a, b, c, d, l, r;
-double F(double x) // a!=0
+double F(double x)
 {
 	if (a != 0 && c != 0)
 	{
@@ -24,13 +24,6 @@ int main()
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 	cin >> a >> b >> c >> d >> l >> r;
-	if (a == 0)
-	{
-		cout << fixed << setprecision(6) << F(r) - F(l) << flush;
-	}
-	else
-	{
-		cout << fixed << setprecision(6) << F(r) - F(l) << flush;
-	}
+	cout << fixed << setprecision(6) << F(r) - F(l) << flush;
 	return 0;
 }
