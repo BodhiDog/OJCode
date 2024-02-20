@@ -1,4 +1,4 @@
-// 本题加深了对KDT和卡常的理解
+// 本题加深了对KDT和卡常的理解（笑）
 #include <bits/stdc++.h>
 using namespace std;
 
