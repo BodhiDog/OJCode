@@ -74,7 +74,7 @@ int build(int l, int r, int kd)
 	}
 	int mid = (l + r) >> 1, k = ++tot;
 	nth_element(b + l, b + mid, b + r + 1, [&](_4D x, _4D y)
-				{ return x.pos[kd + 1] < y.pos[kd + 1]; });
+				{ return x.pos[kd + 1] < y.pos[kd + 1]; }); // cmp函数和重载运算符一定不要同时用！！！ 
 	t[k].now = {b[mid].pos[1], b[mid].pos[2], b[mid].pos[3]};
 	t[k].val = 0;
 	lc(k) = build(l, mid - 1, (kd + 1) % 3);
@@ -140,7 +140,7 @@ int main()
 				}
 			}
 			return false;
-		});
+		}); // cmp函数和重载运算符一定不要同时用！！！ 
 	for (i = 1; i <= n; ++i)
 	{
 		a[i] = {b[i].pos[1], b[i].pos[2], b[i].pos[3]};
