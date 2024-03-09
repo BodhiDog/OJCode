@@ -44,7 +44,7 @@ struct Node
 } t[R];
 #define lc(k) t[k].son[0]
 #define rc(k) t[k].son[1]
-int tot, f[R]; // 使用f优化掉一维，不用f的话直接n次取最大
+int tot;
 void pushup(int k)
 {
 	t[k].res = max({t[lc(k)].res, t[rc(k)].res, t[k].val});
@@ -124,7 +124,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
-	int n, i, ans = -1;
+	int n, i, ans = -1, maxlen;
 	cin >> n;
 	for (i = 1; i <= n; ++i)
 	{
@@ -148,9 +148,9 @@ int main()
 	build(1, n, 0);
 	for (i = 1; i <= n; ++i)
 	{
-		f[i] = max(query(1, a[i]), 0) + 1; // 在这个点之前有多少个<=当前点的点
-		update(1, a[i], f[i]);
-		ans = max(ans, f[i]);
+		maxlen = max(query(1, a[i]), 0) + 1; // 在这个点之前有多少个<=当前点的点
+		update(1, a[i], maxlen);
+		ans = max(ans, maxlen);
 	}
 	cout << ans << flush;
 	return 0;
