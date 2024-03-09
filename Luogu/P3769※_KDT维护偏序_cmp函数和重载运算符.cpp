@@ -111,7 +111,7 @@ void update(int k, Point p, int val)
 	}
 	if (t[k].now == p)
 	{
-		t[k].val = val;
+		t[k].val = max(t[k].val, val); // 可能有重复的点坐标
 		pushup(k);
 		return;
 	}
