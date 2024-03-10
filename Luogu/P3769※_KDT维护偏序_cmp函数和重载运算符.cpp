@@ -74,7 +74,7 @@ int build(int l, int r, int kd)
 	}
 	int mid = (l + r) >> 1, k = ++tot;
 	nth_element(b + l, b + mid, b + r + 1, [&](_4D x, _4D y)
-				{ return x.pos[kd + 1] < y.pos[kd + 1]; }); // cmp函数和重载运算符一定不要同时用！！！ 
+				{ return x.pos[kd + 1] < y.pos[kd + 1]; }); // cmp函数和重载运算符一定不要同时用！！！
 	t[k].now = {b[mid].pos[1], b[mid].pos[2], b[mid].pos[3]};
 	t[k].val = 0;
 	lc(k) = build(l, mid - 1, (kd + 1) % 3);
@@ -86,13 +86,13 @@ int query(int k, Point p)
 {
 	if (!k || t[k].mn[0] > p.pos[0] || t[k].mn[1] > p.pos[1] || t[k].mn[2] > p.pos[2])
 	{
-		return -1;
+		return 0;
 	}
 	if (t[k].mx[0] <= p.pos[0] && t[k].mx[1] <= p.pos[1] && t[k].mx[2] <= p.pos[2])
 	{
 		return t[k].res;
 	}
-	int res = -1;
+	int res = 0;
 	if (t[k].now <= p)
 	{
 		res = t[k].val;
@@ -100,7 +100,7 @@ int query(int k, Point p)
 	res = max({res, query(lc(k), p), query(rc(k), p)});
 	return res;
 }
-void update(int k, Point p, int val)
+void update(int k, Point p, int val, int kd)
 {
 	if (!k ||
 		t[k].mn[0] > p.pos[0] || t[k].mx[0] < p.pos[0] ||
@@ -111,12 +111,23 @@ void update(int k, Point p, int val)
 	}
 	if (t[k].now == p)
 	{
-		t[k].val = max(t[k].val, val); // 可能有重复的点坐标
+		t[k].val = max(t[k].val, val);
 		pushup(k);
 		return;
 	}
-	update(lc(k), p, val);
-	update(rc(k), p, val);
+	if (p.pos[kd] < t[k].now.pos[kd])
+	{
+		update(lc(k), p, val, (kd + 1) % 3);
+	}
+	else if (p.pos[kd] == t[k].now.pos[kd])
+	{
+		update(lc(k), p, val, (kd + 1) % 3);
+		update(rc(k), p, val, (kd + 1) % 3);
+	}
+	else
+	{
+		update(rc(k), p, val, (kd + 1) % 3);
+	}
 	pushup(k);
 }
 int main()
@@ -131,7 +142,7 @@ int main()
 		cin >> b[i].pos[0] >> b[i].pos[1] >> b[i].pos[2] >> b[i].pos[3];
 	}
 	sort(b + 1, b + n + 1, [&](_4D x, _4D y)
-		{
+		 {
 			for (int i = 0; i < 4; ++i)
 			{
 				if (x.pos[i] ^ y.pos[i])
@@ -139,8 +150,8 @@ int main()
 					return x.pos[i] < y.pos[i];
 				}
 			}
-			return false;
-		}); // cmp函数和重载运算符一定不要同时用！！！ 
+			return false; 
+		 }); // cmp函数和重载运算符一定不要同时用！！！
 	for (i = 1; i <= n; ++i)
 	{
 		a[i] = {b[i].pos[1], b[i].pos[2], b[i].pos[3]};
@@ -148,8 +159,8 @@ int main()
 	build(1, n, 0);
 	for (i = 1; i <= n; ++i)
 	{
-		maxlen = max(query(1, a[i]), 0) + 1; // 在这个点之前有多少个<=当前点的点
-		update(1, a[i], maxlen);
+		maxlen = query(1, a[i]) + 1; // 在这个点之前有多少个<=当前点的点
+		update(1, a[i], maxlen, 0);
 		ans = max(ans, maxlen);
 	}
 	cout << ans << flush;
